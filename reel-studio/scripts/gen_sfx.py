@@ -1,7 +1,7 @@
 """Synthesize the music bed and SFX used by the reel (no samples, no licensing issues).
 
-python3 scripts/gen_sfx.py [duration_seconds]
-Writes public/sfx/*.wav and public/music.wav
+python3 scripts/gen_sfx.py [duration_seconds] [music_out]
+Writes public/sfx/*.wav and the music bed (default public/music.wav)
 """
 import sys, os, wave
 import numpy as np
@@ -120,5 +120,5 @@ for i in range(int(dur / beat)):
 # fade in/out
 mus *= np.clip(tt / 1.5, 0, 1) * np.clip((dur - tt) / 2.0, 0, 1)
 stereo = np.stack([mus, np.roll(mus, 300)], 1)
-save("public/music.wav", stereo)
+save(sys.argv[2] if len(sys.argv) > 2 else "public/music.wav", stereo)
 print("ok", dur)

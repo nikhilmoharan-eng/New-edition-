@@ -292,12 +292,13 @@ export const PostCard: React.FC<{
 
 /* ------------------------------------------------------------ silhouette */
 /** Bust silhouette with a disc "head" carrying initials (the refs' logo-for-a-face trick). */
-export const Bust: React.FC<{ label: string; size?: number; disc?: string; suit?: string; tie?: string }> = ({
+export const Bust: React.FC<{ label: string; size?: number; disc?: string; suit?: string; tie?: string; logo?: string }> = ({
   label,
   size = 520,
   disc = "#0a0a0a",
   suit = "#111",
   tie = "#1d1d1d",
+  logo,
 }) => {
   const { u } = useU();
   return (
@@ -307,9 +308,13 @@ export const Bust: React.FC<{ label: string; size?: number; disc?: string; suit?
       <path d="M -16 112 L 16 112 L 26 250 L 0 285 L -26 250 Z" fill={tie} />
       <path d="M -70 92 L -10 220 L -120 140 Z" fill="#0b0b0b" />
       <path d="M 70 92 L 10 220 L 120 140 Z" fill="#0b0b0b" />
-      <circle cx="0" cy="-70" r="150" fill={disc} />
+      <circle cx="0" cy="-70" r="150" fill={logo ? "#fff" : disc} />
       <circle cx="0" cy="-70" r="150" fill="none" stroke="rgba(255,255,255,0.12)" strokeWidth="3" />
+      {logo ? (
+        <image href={logo} x={-112} y={-182} width={224} height={224} preserveAspectRatio="xMidYMid meet" />
+      ) : null}
       <text
+        opacity={logo ? 0 : 1}
         x="0"
         y="-52"
         textAnchor="middle"
