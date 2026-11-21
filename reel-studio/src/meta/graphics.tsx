@@ -1,10 +1,9 @@
 import React from "react";
-import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import {
   Bust,
   C,
   clamp,
-  CreamBG,
   DarkBG,
   DISPLAY,
   INOUT,
@@ -17,19 +16,27 @@ import {
 } from "../reel/kit";
 
 export const M = (f: string) => staticFile(`meta-scale/media/${f}`);
+
+/** Graphics are timed in 30 fps "beats" so they play at the same speed at any frame rate. */
+const useF = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  return (frame * 30) / fps;
+};
+/** dur and mark are in 30 fps beats. */
 export type GProps = { dur: number; mark?: number; logo?: string; label?: string };
 
 /* Logo on cream; a red line strikes through it at `mark`. */
 export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png", label }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u } = useU();
   const s = prog(f, mark, mark + 7, INOUT);
   const pop = prog(f, 0, 10, Easing.bezier(0.3, 1.4, 0.5, 1));
   return (
     <AbsoluteFill>
-      <CreamBG />
-      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
-        <div style={{ position: "relative", scale: String(interpolate(pop, [0, 1], [0.85, 1])), opacity: pop }}>
+      <DarkBG tint="#1e1a26" />
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-40 * u}px` }}>
+        <div style={{ position: "relative", scale: String(interpolate(pop, [0, 1], [0.85, 1])), opacity: interpolate(pop, [0, 1], [0.6, 1]) }}>
           <Img src={M(logo)} style={{ width: 820 * u, opacity: interpolate(s, [0, 1], [1, 0.35]) }} />
           <div
             style={{
@@ -45,7 +52,7 @@ export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png
             }}
           />
           {label ? (
-            <div style={{ textAlign: "center", fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#6c6656", marginTop: 30 * u }}>
+            <div style={{ textAlign: "center", fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#b9b2c9", marginTop: 30 * u }}>
               {label}
             </div>
           ) : null}
@@ -57,17 +64,17 @@ export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png
 
 /* Logo card on cream with a small caption under it. */
 export const GLogoCard: React.FC<GProps> = ({ logo = "logo-scale.png", label }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u } = useU();
   const pop = prog(f, 0, 12, Easing.bezier(0.3, 1.4, 0.5, 1));
   return (
     <AbsoluteFill>
-      <CreamBG />
+      <DarkBG tint="#1e1a26" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-60 * u}px` }}>
-        <div style={{ scale: String(interpolate(pop, [0, 1], [0.7, 1])), opacity: pop, textAlign: "center" }}>
+        <div style={{ scale: String(interpolate(pop, [0, 1], [0.8, 1])), opacity: interpolate(pop, [0, 1], [0.6, 1]), textAlign: "center", filter: `drop-shadow(0 0 ${40 * u}px rgba(200,90,255,0.35))` }}>
           <Img src={M(logo)} style={{ width: 760 * u }} />
           {label ? (
-            <div style={{ fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#6c6656", marginTop: 40 * u, opacity: prog(f, 10, 20) }}>
+            <div style={{ fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#b9b2c9", marginTop: 40 * u, opacity: prog(f, 6, 14) }}>
               {label}
             </div>
           ) : null}
@@ -79,7 +86,7 @@ export const GLogoCard: React.FC<GProps> = ({ logo = "logo-scale.png", label }) 
 
 /* Logo pops onto a white disc on a dark background with a pulse ring. */
 export const GLogoPop: React.FC<GProps> = ({ logo = "logo-google.png" }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u } = useU();
   const pop = prog(f, 0, 9, Easing.bezier(0.3, 1.6, 0.5, 1));
   const ring = prog(f, 2, 22);
@@ -119,7 +126,7 @@ export const GLogoPop: React.FC<GProps> = ({ logo = "logo-google.png" }) => {
 
 /* Radar sweep for "the US military". */
 export const GRadar: React.FC<GProps> = () => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, w, h } = useU();
   const R = Math.min(w, h) * 0.42;
   const blips = [
@@ -191,7 +198,7 @@ export const GRadar: React.FC<GProps> = () => {
 
 /* "Workers label the data": bounding boxes drawn over photos. */
 export const GLabeling: React.FC<GProps> = () => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, portrait } = useU();
   const tiles: { src: string; box: [number, number, number, number]; tag: string; pos?: string }[] = [
     { src: "meta-hq.jpg", box: [0.16, 0.1, 0.86, 0.8], tag: "building 0.98" },
@@ -207,11 +214,11 @@ export const GLabeling: React.FC<GProps> = () => {
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${(portrait ? -120 : -50) * u}px` }}>
         <div style={{ display: "grid", gridTemplateColumns: `repeat(${cols}, ${tw}px)`, gap: 22 * u }}>
           {tiles.map((t, i) => {
-            const a = 2 + i * 6;
+            const a = i * 4;
             const p = prog(f, a, a + 8);
             const [x0, y0, x1, y1] = t.box;
             return (
-              <div key={i} style={{ position: "relative", width: tw, height: th, overflow: "hidden", opacity: prog(f, i * 3, i * 3 + 6) }}>
+              <div key={i} style={{ position: "relative", width: tw, height: th, overflow: "hidden" }}>
                 <Img src={M(t.src)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: t.pos ?? "50% 50%", filter: "saturate(0.7)" }} />
                 <div
                   style={{
@@ -251,7 +258,7 @@ export const GLabeling: React.FC<GProps> = () => {
 
 /* Llama 4 card with a "reception" needle that drops at `mark` (the "shrug"). */
 export const GLlama: React.FC<GProps> = ({ mark = 40 }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u } = useU();
   const inn = prog(f, 0, 12);
   const needle = interpolate(f, [0, 14, mark, mark + 10], [-80, 55, 55, -8], {
@@ -262,7 +269,7 @@ export const GLlama: React.FC<GProps> = ({ mark = 40 }) => {
   return (
     <AbsoluteFill>
       <DarkBG tint="#141a2a" />
-      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-40 * u}px` }}>
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-90 * u}px`, scale: "0.82" }}>
         <div
           style={{
             width: 900 * u,
@@ -271,8 +278,8 @@ export const GLlama: React.FC<GProps> = ({ mark = 40 }) => {
             background: "linear-gradient(160deg,#1d2640,#0e1322)",
             border: `${2 * u}px solid rgba(255,255,255,0.08)`,
             boxShadow: `0 ${40 * u}px ${100 * u}px rgba(0,0,0,0.6)`,
-            opacity: inn,
-            translate: `0px ${interpolate(inn, [0, 1], [80, 0]) * u}px`,
+            opacity: interpolate(inn, [0, 1], [0.6, 1]),
+            translate: `0px ${interpolate(inn, [0, 1], [50, 0]) * u}px`,
             textAlign: "center",
           }}
         >
@@ -297,28 +304,28 @@ export const GLlama: React.FC<GProps> = ({ mark = 40 }) => {
 
 /* The AI race: three runners pull ahead, the Meta runner falls behind. */
 export const GRace: React.FC<GProps> = ({ dur }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, w } = useU();
   const lanes = [0, 1, 2, 3];
   const trackW = w * 0.8;
   return (
     <AbsoluteFill style={{ background: "linear-gradient(#0b0b0f,#15151c)" }}>
-      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
-        <div style={{ width: trackW, display: "flex", flexDirection: "column", gap: 70 * u }}>
-          <div style={{ fontFamily: MONO, fontSize: 30 * u, letterSpacing: 12 * u, color: "#9a9a9a", textAlign: "center" }}>THE AI RACE</div>
+      <div style={{ position: "absolute", top: "15%", width: "100%", fontFamily: MONO, fontSize: 30 * u, letterSpacing: 12 * u, color: "#9a9a9a", textAlign: "center" }}>THE AI RACE</div>
+      <AbsoluteFill style={{ alignItems: "center" }}>
+        <div style={{ position: "absolute", top: "25%", width: trackW, display: "flex", flexDirection: "column", gap: 30 * u }}>
           {lanes.map((l) => {
             const meta = l === 2;
             const speed = meta ? 0.45 : 0.85 + l * 0.04;
-            const x = interpolate(f, [0, dur], [0.05, 0.05 + speed * 0.9], clamp) * (trackW - 90 * u);
+            const x = interpolate(f, [0, dur], [0.05 + (meta ? 0.18 : 0.3), 0.3 + speed * 0.6], clamp) * (trackW - 64 * u);
             return (
-              <div key={l} style={{ position: "relative", height: 90 * u, borderBottom: `${2 * u}px dashed rgba(255,255,255,0.15)` }}>
+              <div key={l} style={{ position: "relative", height: 64 * u, borderBottom: `${2 * u}px dashed rgba(255,255,255,0.15)` }}>
                 <div
                   style={{
                     position: "absolute",
                     left: x,
                     top: 0,
-                    width: 90 * u,
-                    height: 90 * u,
+                    width: 64 * u,
+                    height: 64 * u,
                     borderRadius: "50%",
                     background: meta ? "#fff" : "rgba(255,255,255,0.85)",
                     boxShadow: meta ? `0 0 ${30 * u}px rgba(215,38,43,0.8)` : `0 0 ${24 * u}px rgba(255,255,255,0.4)`,
@@ -328,10 +335,10 @@ export const GRace: React.FC<GProps> = ({ dur }) => {
                     border: meta ? `${5 * u}px solid ${C.red}` : "none",
                   }}
                 >
-                  {meta ? <Img src={M("logo-meta.png")} style={{ width: 64 * u, height: 64 * u, objectFit: "contain", objectPosition: "0% 50%" }} /> : null}
+                  {meta ? <Img src={M("logo-meta.png")} style={{ width: 46 * u, height: 46 * u, objectFit: "contain", objectPosition: "0% 50%" }} /> : null}
                 </div>
                 {!meta ? (
-                  <div style={{ position: "absolute", left: 0, top: 43 * u, height: 4 * u, width: x, background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35))" }} />
+                  <div style={{ position: "absolute", left: 0, top: 30 * u, height: 4 * u, width: x, background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35))" }} />
                 ) : null}
               </div>
             );
@@ -344,7 +351,7 @@ export const GRace: React.FC<GProps> = ({ dur }) => {
 
 /* Logo-head handshake: Meta and Scale figures slide together. */
 export const GHandshake: React.FC<GProps> = () => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, portrait } = useU();
   const p = prog(f, 0, 14);
   const sep = interpolate(p, [0, 1], [760, portrait ? 250 : 300]) * u;
@@ -365,7 +372,7 @@ export const GHandshake: React.FC<GProps> = () => {
 
 /* Term sheet with the 49% stake highlighted. */
 export const GTermSheet: React.FC<GProps> = ({ dur }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, w, portrait } = useU();
   const hl = prog(f, 3, 14, INOUT);
   const row = (k: string, v: React.ReactNode) => (
@@ -402,17 +409,17 @@ export const GTermSheet: React.FC<GProps> = ({ dur }) => {
 
 /* A quoted, attributed headline (not a fake screenshot). */
 export const GQuote: React.FC<GProps> = ({ dur }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, w } = useU();
   const inn = prog(f, 0, 10);
   const hl = prog(f, 14, 30, INOUT);
   return (
-    <AbsoluteFill>
-      <CreamBG />
+    <AbsoluteFill style={{ background: "#000" }}>
+      <Img src={M("google-sign.jpg")} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(22px) brightness(0.35)", scale: "1.15" }} />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", scale: String(interpolate(f, [0, dur], [1.0, 1.06], clamp)) }}>
-        <div style={{ width: Math.min(1300 * u, w * 0.86), opacity: inn, translate: `0px ${interpolate(inn, [0, 1], [40, 0]) * u}px` }}>
+        <div style={{ width: Math.min(1300 * u, w * 0.86), opacity: interpolate(inn, [0, 1], [0.6, 1]), translate: `0px ${interpolate(inn, [0, 1], [30, 0]) * u}px`, background: C.paper, padding: `${50 * u}px ${60 * u}px`, boxShadow: `0 ${40 * u}px ${100 * u}px rgba(0,0,0,0.7)`, rotate: "-1.5deg" }}>
           <div style={{ fontFamily: MONO, fontSize: 28 * u, letterSpacing: 6 * u, color: C.red, marginBottom: 24 * u }}>REUTERS · JUNE 14, 2025</div>
-          <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 84 * u, lineHeight: 1.12, color: C.ink }}>
+          <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 74 * u, lineHeight: 1.12, color: C.ink }}>
             “Google, Scale AI's largest customer,{" "}
             <span style={{ position: "relative", whiteSpace: "nowrap" }}>
               <span style={{ position: "absolute", inset: `${18 * u}px ${-8 * u}px ${4 * u}px`, background: C.yellow, transformOrigin: "left", scale: `${hl} 1`, mixBlendMode: "multiply" }} />
@@ -429,7 +436,7 @@ export const GQuote: React.FC<GProps> = ({ dur }) => {
 
 /* Google ↔ Scale link that snaps at `mark`. */
 export const GSnap: React.FC<GProps> = ({ mark = 20 }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, portrait } = useU();
   const sn = prog(f, mark, mark + 12);
   const gap = (portrait ? 230 : 420) * u;
@@ -470,10 +477,10 @@ export const GSnap: React.FC<GProps> = ({ mark = 20 }) => {
 
 /* Split-screen ending: the person vs the price, then a giant "?". */
 export const GOutro: React.FC<GProps> = ({ dur }) => {
-  const f = useCurrentFrame();
+  const f = useF();
   const { u, portrait } = useU();
-  const l = prog(f, 0, 12);
-  const r = prog(f, 10, 24);
+  const l = 1;
+  const r = prog(f, 0, 14);
   const q = prog(f, dur - 40, dur - 26);
   const half: React.CSSProperties = {
     position: "absolute",
@@ -494,9 +501,9 @@ export const GOutro: React.FC<GProps> = ({ dur }) => {
         />
         <div style={{ position: "absolute", bottom: 40 * u, fontFamily: MONO, fontSize: 26 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>THE PERSON</div>
       </div>
-      <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), background: C.cream, opacity: r }}>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 96 : 100) * u, color: C.ink, scale: String(interpolate(r, [0, 1], [1.2, 1])) }}>$14,300,000,000</div>
-        <div style={{ fontFamily: MONO, fontSize: 26 * u, color: "#6c6656", letterSpacing: 6 * u }}>THE PRICE</div>
+      <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), background: "radial-gradient(ellipse at 50% 50%, #1a1a1a, #000 75%)" }}>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 150 : 170) * u, color: "#fff", opacity: interpolate(r, [0, 1], [0.3, 1]), scale: String(interpolate(r, [0, 1], [1.3, 1])), textShadow: "0 0 40px rgba(255,255,255,.6)" }}>$14.3B</div>
+        <div style={{ fontFamily: MONO, fontSize: 26 * u, color: "#9a9a9a", letterSpacing: 6 * u }}>THE PRICE</div>
       </div>
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", opacity: q, background: `rgba(5,5,5,${0.78 * q})` }}>
         <div style={{ fontFamily: DISPLAY, fontStyle: "italic", fontWeight: 800, fontSize: 420 * u, color: "#fff", scale: String(interpolate(q, [0, 1], [1.4, 1])) }}>?</div>
@@ -505,8 +512,6 @@ export const GOutro: React.FC<GProps> = ({ dur }) => {
   );
 };
 
-export const GCream: React.FC<GProps> = () => <CreamBG />;
-export const GBlack: React.FC<GProps> = () => <DarkBG tint="#0e0e0e" />;
 
 export const GRAPHICS: Record<string, React.FC<GProps>> = {
   strike: GStrikeLogo,
@@ -521,8 +526,6 @@ export const GRAPHICS: Record<string, React.FC<GProps>> = {
   quote: GQuote,
   snap: GSnap,
   outro: GOutro,
-  cream: GCream,
-  black: GBlack,
 };
 
 export { SERIF };

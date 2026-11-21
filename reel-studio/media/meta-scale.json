@@ -2,37 +2,245 @@
   "srcDir": "media-src/meta-scale",
   "outDir": "public/meta-scale/media",
   "clips": [
-    { "name": "wang-senra-cu1", "src": "wang-senra.mp4", "ss": 4.2, "to": 6.9, "crop": [0, 0.17, 1, 0.71] },
-    { "name": "wang-senra-cu2", "src": "wang-senra.mp4", "ss": 9.0, "to": 11.9, "crop": [0, 0.17, 1, 0.71] },
-    { "name": "wang-senra-cu3", "src": "wang-senra.mp4", "ss": 13.0, "to": 19.6, "crop": [0, 0.17, 1, 0.71] },
-    { "name": "wang-senra-cu4", "src": "wang-senra.mp4", "ss": 23.0, "to": 24.9, "crop": [0, 0.17, 1, 0.71] },
-    { "name": "wang-senra-med1", "src": "wang-senra.mp4", "ss": 25.0, "to": 27.9, "crop": [0, 0.17, 1, 0.5] },
-    { "name": "wang-senra-med2", "src": "wang-senra.mp4", "ss": 36.0, "to": 38.9, "crop": [0, 0.17, 1, 0.5] },
-    { "name": "wang-yc1", "src": "wang-yc.mp4", "ss": 4.0, "to": 7.2, "crop": [0.12, 0, 1, 0.78] },
-    { "name": "wang-yc2", "src": "wang-yc.mp4", "ss": 8.0, "to": 13.6, "crop": [0.12, 0, 1, 0.78] },
-    { "name": "wang-yc3", "src": "wang-yc.mp4", "ss": 38.0, "to": 41.2, "crop": [0.12, 0, 1, 0.78] },
-    { "name": "wang-yc4", "src": "wang-yc.mp4", "ss": 44.0, "to": 48.2, "crop": [0.12, 0, 1, 0.78] },
-    { "name": "servers1", "src": "servers.mp4", "ss": 0.0, "to": 4.0 },
-    { "name": "servers2", "src": "servers.mp4", "ss": 8.0, "to": 12.0 },
-    { "name": "servers3", "src": "servers.mp4", "ss": 27.5, "to": 31.8 },
-    { "name": "worker1", "src": "worker-desk.mp4", "ss": 0.3, "to": 6.4 },
-    { "name": "worker2", "src": "worker-desk.mp4", "ss": 7.4, "to": 13.5, "crop": [0, 0.31, 1, 0.69] },
-    { "name": "office1", "src": "empty-office.mp4", "ss": 0.0, "to": 5.0 },
-    { "name": "office2", "src": "empty-office.mp4", "ss": 5.2, "to": 10.4 },
-    { "name": "office3", "src": "empty-office.mp4", "ss": 10.6, "to": 16.2 }
+    {
+      "name": "wang-senra-cu1",
+      "src": "wang-senra.mp4",
+      "ss": 4.4,
+      "to": 6.8,
+      "crop": [
+        0,
+        0.17,
+        1,
+        0.71
+      ]
+    },
+    {
+      "name": "wang-senra-cu2",
+      "src": "wang-senra.mp4",
+      "ss": 9.5,
+      "to": 11.9,
+      "crop": [
+        0,
+        0.17,
+        1,
+        0.71
+      ]
+    },
+    {
+      "name": "wang-senra-cu3",
+      "src": "wang-senra.mp4",
+      "ss": 13.2,
+      "to": 19.4,
+      "crop": [
+        0,
+        0.17,
+        1,
+        0.71
+      ]
+    },
+    {
+      "name": "wang-senra-cu4",
+      "src": "wang-senra.mp4",
+      "ss": 23.3,
+      "to": 24.8,
+      "crop": [
+        0,
+        0.17,
+        1,
+        0.71
+      ]
+    },
+    {
+      "name": "wang-senra-med1",
+      "src": "wang-senra.mp4",
+      "ss": 25.3,
+      "to": 27.7,
+      "crop": [
+        0,
+        0.17,
+        1,
+        0.44
+      ]
+    },
+    {
+      "name": "wang-senra-med2",
+      "src": "wang-senra.mp4",
+      "ss": 36.3,
+      "to": 38.7,
+      "crop": [
+        0,
+        0.17,
+        1,
+        0.44
+      ]
+    },
+    {
+      "name": "wang-yc1",
+      "src": "wang-yc.mp4",
+      "ss": 4.0,
+      "to": 7.2,
+      "crop": [
+        0.12,
+        0,
+        1,
+        0.78
+      ]
+    },
+    {
+      "name": "wang-yc2",
+      "src": "wang-yc.mp4",
+      "ss": 8.0,
+      "to": 13.6,
+      "crop": [
+        0.12,
+        0,
+        1,
+        0.78
+      ]
+    },
+    {
+      "name": "wang-yc3",
+      "src": "wang-yc.mp4",
+      "ss": 38.0,
+      "to": 41.2,
+      "crop": [
+        0.12,
+        0,
+        1,
+        0.78
+      ]
+    },
+    {
+      "name": "wang-yc4",
+      "src": "wang-yc.mp4",
+      "ss": 44.0,
+      "to": 48.2,
+      "crop": [
+        0.12,
+        0,
+        1,
+        0.78
+      ]
+    },
+    {
+      "name": "servers1",
+      "src": "servers.mp4",
+      "ss": 0.0,
+      "to": 4.0
+    },
+    {
+      "name": "servers2",
+      "src": "servers.mp4",
+      "ss": 8.0,
+      "to": 12.0
+    },
+    {
+      "name": "servers3",
+      "src": "servers.mp4",
+      "ss": 27.5,
+      "to": 31.8
+    },
+    {
+      "name": "worker1",
+      "src": "worker-desk.mp4",
+      "ss": 0.3,
+      "to": 6.4
+    },
+    {
+      "name": "worker2",
+      "src": "worker-desk.mp4",
+      "ss": 7.4,
+      "to": 13.5,
+      "crop": [
+        0,
+        0.31,
+        1,
+        0.69
+      ]
+    },
+    {
+      "name": "office1",
+      "src": "empty-office.mp4",
+      "ss": 0.0,
+      "to": 5.0
+    },
+    {
+      "name": "office2",
+      "src": "empty-office.mp4",
+      "ss": 5.2,
+      "to": 10.4
+    },
+    {
+      "name": "office3",
+      "src": "empty-office.mp4",
+      "ss": 10.6,
+      "to": 16.2
+    }
   ],
   "images": [
-    { "name": "meta-hq", "src": "meta-hq.jpg" },
-    { "name": "zuck-mwc", "src": "zuck-mwc.jpg" },
-    { "name": "zuck-team", "src": "zuck-team.jpg" },
-    { "name": "wang-redtie", "src": "wang-redtie.jpg" },
-    { "name": "wang-bloomberg", "src": "wang-bloomberg.jpg" },
-    { "name": "mit", "src": "mit.jpg" },
-    { "name": "google-nyt", "src": "google-nyt.jpg", "crop": [0.02, 0.03, 0.98, 0.97] },
-    { "name": "google-sign", "src": "google-bbc.jpg", "crop": [0, 0.09, 1, 0.64] },
-    { "name": "logo-meta", "src": "logo-meta.jpg", "logo": true },
-    { "name": "logo-scale", "src": "logo-scale.jpg", "logo": true },
-    { "name": "logo-google", "src": "logo-google.jpg", "logo": true },
-    { "name": "logo-openai", "src": "logo-openai.jpg", "logo": true }
+    {
+      "name": "meta-hq",
+      "src": "meta-hq.jpg"
+    },
+    {
+      "name": "zuck-mwc",
+      "src": "zuck-mwc.jpg"
+    },
+    {
+      "name": "zuck-team",
+      "src": "zuck-team.jpg"
+    },
+    {
+      "name": "wang-redtie",
+      "src": "wang-redtie.jpg"
+    },
+    {
+      "name": "wang-bloomberg",
+      "src": "wang-bloomberg.jpg"
+    },
+    {
+      "name": "mit",
+      "src": "mit.jpg"
+    },
+    {
+      "name": "google-nyt",
+      "src": "google-nyt.jpg",
+      "crop": [
+        0.02,
+        0.03,
+        0.98,
+        0.7
+      ]
+    },
+    {
+      "name": "google-sign",
+      "src": "google-bbc.jpg",
+      "crop": [
+        0,
+        0.09,
+        1,
+        0.64
+      ]
+    },
+    {
+      "name": "logo-meta",
+      "src": "logo-meta.jpg",
+      "logo": true
+    },
+    {
+      "name": "logo-scale",
+      "src": "logo-scale.jpg",
+      "logo": true
+    },
+    {
+      "name": "logo-google",
+      "src": "logo-google.jpg",
+      "logo": true
+    },
+    {
+      "name": "logo-openai",
+      "src": "logo-openai.jpg",
+      "logo": true
+    }
   ]
 }
