@@ -4,12 +4,12 @@
  "lines": [
   {
    "id": "hook1",
-   "show": "जून 2025 में... मेटा ने $14 बिलियन दे दिए, यानी क़रीब ₹1.2 लाख करोड़!",
+   "show": "June 2025 mein... Meta ne $14 billion de diye, yaani kareeb ₹1.2 lakh crore!",
    "start": 0.02,
    "end": 8.475,
    "words": [
     {
-     "text": "जून",
+     "text": "June",
      "start": 0.08,
      "end": 0.5
     },
@@ -19,17 +19,17 @@
      "end": 1.7
     },
     {
-     "text": "में...",
+     "text": "mein...",
      "start": 1.71,
      "end": 1.85
     },
     {
-     "text": "मेटा",
+     "text": "Meta",
      "start": 2.33,
      "end": 2.77
     },
     {
-     "text": "ने",
+     "text": "ne",
      "start": 2.87,
      "end": 3.01
     },
@@ -39,27 +39,27 @@
      "end": 3.478
     },
     {
-     "text": "बिलियन",
+     "text": "billion",
      "start": 3.47,
      "end": 3.91
     },
     {
-     "text": "दे",
+     "text": "de",
      "start": 4.22,
      "end": 4.36
     },
     {
-     "text": "दिए,",
+     "text": "diye,",
      "start": 4.32,
      "end": 4.905
     },
     {
-     "text": "यानी",
+     "text": "yaani",
      "start": 5.21,
      "end": 5.57
     },
     {
-     "text": "क़रीब",
+     "text": "kareeb",
      "start": 5.597,
      "end": 5.963
     },
@@ -69,12 +69,12 @@
      "end": 6.29
     },
     {
-     "text": "लाख",
+     "text": "lakh",
      "start": 6.32,
      "end": 6.63
     },
     {
-     "text": "करोड़!",
+     "text": "crore!",
      "start": 7.4,
      "end": 7.78
     }
@@ -82,42 +82,42 @@
   },
   {
    "id": "hook2",
-   "show": "किसी कंपनी के लिए नहीं... सिर्फ़ एक 28 साल के लड़के के लिए।",
+   "show": "Kisi company ke liye nahi... sirf ek 28 saal ke ladke ke liye.",
    "start": 8.778,
    "end": 13.105,
    "words": [
     {
-     "text": "किसी",
+     "text": "Kisi",
      "start": 8.838,
      "end": 9.13
     },
     {
-     "text": "कंपनी",
+     "text": "company",
      "start": 9.128,
      "end": 9.552
     },
     {
-     "text": "के",
+     "text": "ke",
      "start": 9.54,
      "end": 9.68
     },
     {
-     "text": "लिए",
+     "text": "liye",
      "start": 9.645,
      "end": 9.835
     },
     {
-     "text": "नहीं...",
+     "text": "nahi...",
      "start": 9.875,
      "end": 10.325
     },
     {
-     "text": "सिर्फ़",
+     "text": "sirf",
      "start": 10.447,
      "end": 10.933
     },
     {
-     "text": "एक",
+     "text": "ek",
      "start": 10.98,
      "end": 11.32
     },
@@ -127,27 +127,27 @@
      "end": 11.909
     },
     {
-     "text": "साल",
+     "text": "saal",
      "start": 11.87,
      "end": 12.19
     },
     {
-     "text": "के",
+     "text": "ke",
      "start": 12.22,
      "end": 12.36
     },
     {
-     "text": "लड़के",
+     "text": "ladke",
      "start": 12.36,
      "end": 12.74
     },
     {
-     "text": "के",
+     "text": "ke",
      "start": 12.72,
      "end": 12.86
     },
     {
-     "text": "लिए।",
+     "text": "liye.",
      "start": 12.835,
      "end": 13.085
     }
@@ -155,32 +155,32 @@
   },
   {
    "id": "name",
-   "show": "उसका नाम है... अलेक्ज़ेंडर वांग।",
+   "show": "Uska naam hai... Alexandr Wang.",
    "start": 13.786,
    "end": 16.317,
    "words": [
     {
-     "text": "उसका",
+     "text": "Uska",
      "start": 13.846,
      "end": 14.213
     },
     {
-     "text": "नाम",
+     "text": "naam",
      "start": 14.2,
      "end": 14.46
     },
     {
-     "text": "है...",
+     "text": "hai...",
      "start": 14.48,
      "end": 14.62
     },
     {
-     "text": "अलेक्ज़ेंडर",
+     "text": "Alexandr",
      "start": 15.164,
      "end": 15.836
     },
     {
-     "text": "वांग।",
+     "text": "Wang.",
      "start": 15.823,
      "end": 16.297
     }
@@ -188,7 +188,7 @@
   },
   {
    "id": "origin",
-   "show": "19 साल की उम्र में उसने MIT छोड़ दिया... और शुरू की, Scale AI.",
+   "show": "19 saal ki umar mein usne MIT chhod diya... aur shuru ki, Scale AI.",
    "start": 16.975,
    "end": 21.446,
    "words": [
@@ -198,27 +198,27 @@
      "end": 17.432
     },
     {
-     "text": "साल",
+     "text": "saal",
      "start": 17.4,
      "end": 17.66
     },
     {
-     "text": "की",
+     "text": "ki",
      "start": 17.65,
      "end": 17.79
     },
     {
-     "text": "उम्र",
+     "text": "umar",
      "start": 17.75,
      "end": 18.01
     },
     {
-     "text": "में",
+     "text": "mein",
      "start": 18.0,
      "end": 18.14
     },
     {
-     "text": "उसने",
+     "text": "usne",
      "start": 18.14,
      "end": 18.44
     },
@@ -228,27 +228,27 @@
      "end": 18.795
     },
     {
-     "text": "छोड़",
+     "text": "chhod",
      "start": 18.783,
      "end": 19.052
     },
     {
-     "text": "दिया...",
+     "text": "diya...",
      "start": 19.04,
      "end": 19.3
     },
     {
-     "text": "और",
+     "text": "aur",
      "start": 19.595,
      "end": 19.885
     },
     {
-     "text": "शुरू",
+     "text": "shuru",
      "start": 19.89,
      "end": 20.17
     },
     {
-     "text": "की,",
+     "text": "ki,",
      "start": 20.23,
      "end": 20.37
     },
@@ -266,7 +266,7 @@
   },
   {
    "id": "feeds",
-   "show": "Scale ख़ुद AI नहीं बनाती... वो AI को खाना खिलाती है।",
+   "show": "Scale khud AI nahi banati... woh AI ko khaana khilaati hai.",
    "start": 22.47,
    "end": 26.32,
    "words": [
@@ -276,7 +276,7 @@
      "end": 22.963
     },
     {
-     "text": "ख़ुद",
+     "text": "khud",
      "start": 22.946,
      "end": 23.208
     },
@@ -286,17 +286,17 @@
      "end": 23.39
     },
     {
-     "text": "नहीं",
+     "text": "nahi",
      "start": 23.362,
      "end": 23.614
     },
     {
-     "text": "बनाती...",
+     "text": "banati...",
      "start": 23.587,
      "end": 23.993
     },
     {
-     "text": "वो",
+     "text": "woh",
      "start": 24.75,
      "end": 24.89
     },
@@ -306,22 +306,22 @@
      "end": 25.356
     },
     {
-     "text": "को",
+     "text": "ko",
      "start": 25.29,
      "end": 25.43
     },
     {
-     "text": "खाना",
+     "text": "khaana",
      "start": 25.415,
      "end": 25.745
     },
     {
-     "text": "खिलाती",
+     "text": "khilaati",
      "start": 25.767,
      "end": 26.173
     },
     {
-     "text": "है।",
+     "text": "hai.",
      "start": 26.16,
      "end": 26.3
     }
@@ -329,42 +329,42 @@
   },
   {
    "id": "labels",
-   "show": "उसके लोग डेटा लेबल करते हैं, जिससे Google, OpenAI... और यहाँ तक कि अमेरिकी सेना का AI ट्रेन होता है।",
+   "show": "Uske log data label karte hain, jisse Google, OpenAI... aur yahan tak ki American sena ka AI train hota hai.",
    "start": 27.052,
    "end": 33.69,
    "words": [
     {
-     "text": "उसके",
+     "text": "Uske",
      "start": 27.112,
      "end": 27.46
     },
     {
-     "text": "लोग",
+     "text": "log",
      "start": 27.485,
      "end": 27.755
     },
     {
-     "text": "डेटा",
+     "text": "data",
      "start": 27.76,
      "end": 28.06
     },
     {
-     "text": "लेबल",
+     "text": "label",
      "start": 28.043,
      "end": 28.357
     },
     {
-     "text": "करते",
+     "text": "karte",
      "start": 28.317,
      "end": 28.683
     },
     {
-     "text": "हैं,",
+     "text": "hain,",
      "start": 28.66,
      "end": 28.8
     },
     {
-     "text": "जिससे",
+     "text": "jisse",
      "start": 29.077,
      "end": 29.443
     },
@@ -379,37 +379,37 @@
      "end": 30.737
     },
     {
-     "text": "और",
+     "text": "aur",
      "start": 30.735,
      "end": 31.185
     },
     {
-     "text": "यहाँ",
+     "text": "yahan",
      "start": 31.275,
      "end": 31.565
     },
     {
-     "text": "तक",
+     "text": "tak",
      "start": 31.58,
      "end": 31.88
     },
     {
-     "text": "कि",
+     "text": "ki",
      "start": 31.795,
      "end": 31.935
     },
     {
-     "text": "अमेरिकी",
+     "text": "American",
      "start": 31.85,
      "end": 32.35
     },
     {
-     "text": "सेना",
+     "text": "sena",
      "start": 32.32,
      "end": 32.7
     },
     {
-     "text": "का",
+     "text": "ka",
      "start": 32.68,
      "end": 32.82
     },
@@ -419,17 +419,17 @@
      "end": 32.95
     },
     {
-     "text": "ट्रेन",
+     "text": "train",
      "start": 32.92,
      "end": 33.28
     },
     {
-     "text": "होता",
+     "text": "hota",
      "start": 33.255,
      "end": 33.532
     },
     {
-     "text": "है।",
+     "text": "hai.",
      "start": 33.53,
      "end": 33.67
     }
@@ -437,77 +437,77 @@
   },
   {
    "id": "billionaire",
-   "show": "और इसी ने उसे बना दिया... दुनिया का सबसे कम उम्र का सेल्फ़-मेड बिलियनेयर।",
+   "show": "Aur isi ne use bana diya... duniya ka sabse kam umar ka self-made billionaire.",
    "start": 34.426,
    "end": 39.404,
    "words": [
     {
-     "text": "और",
+     "text": "Aur",
      "start": 34.486,
      "end": 34.726
     },
     {
-     "text": "इसी",
+     "text": "isi",
      "start": 34.725,
      "end": 34.995
     },
     {
-     "text": "ने",
+     "text": "ne",
      "start": 35.01,
      "end": 35.15
     },
     {
-     "text": "उसे",
+     "text": "use",
      "start": 35.12,
      "end": 35.37
     },
     {
-     "text": "बना",
+     "text": "bana",
      "start": 35.34,
      "end": 35.6
     },
     {
-     "text": "दिया...",
+     "text": "diya...",
      "start": 35.595,
      "end": 35.885
     },
     {
-     "text": "दुनिया",
+     "text": "duniya",
      "start": 35.943,
      "end": 36.577
     },
     {
-     "text": "का",
+     "text": "ka",
      "start": 36.65,
      "end": 36.79
     },
     {
-     "text": "सबसे",
+     "text": "sabse",
      "start": 36.815,
      "end": 37.28
     },
     {
-     "text": "कम",
+     "text": "kam",
      "start": 37.29,
      "end": 37.53
     },
     {
-     "text": "उम्र",
+     "text": "umar",
      "start": 37.49,
      "end": 37.83
     },
     {
-     "text": "का",
+     "text": "ka",
      "start": 37.88,
      "end": 38.02
     },
     {
-     "text": "सेल्फ़-मेड",
+     "text": "self-made",
      "start": 38.09,
      "end": 38.796
     },
     {
-     "text": "बिलियनेयर।",
+     "text": "billionaire.",
      "start": 38.796,
      "end": 39.384
     }
@@ -515,57 +515,57 @@
   },
   {
    "id": "why",
-   "show": "तो सवाल ये है... मेटा ने इतना पैसा क्यों दिया?",
+   "show": "Toh sawaal yeh hai... Meta ne itna paisa kyun diya?",
    "start": 40.298,
    "end": 43.35,
    "words": [
     {
-     "text": "तो",
+     "text": "Toh",
      "start": 40.358,
      "end": 40.598
     },
     {
-     "text": "सवाल",
+     "text": "sawaal",
      "start": 40.54,
      "end": 40.92
     },
     {
-     "text": "ये",
+     "text": "yeh",
      "start": 40.88,
      "end": 41.02
     },
     {
-     "text": "है...",
+     "text": "hai...",
      "start": 40.96,
      "end": 41.1
     },
     {
-     "text": "मेटा",
+     "text": "Meta",
      "start": 41.967,
      "end": 42.14
     },
     {
-     "text": "ने",
+     "text": "ne",
      "start": 42.033,
      "end": 42.173
     },
     {
-     "text": "इतना",
+     "text": "itna",
      "start": 42.067,
      "end": 42.373
     },
     {
-     "text": "पैसा",
+     "text": "paisa",
      "start": 42.43,
      "end": 42.83
     },
     {
-     "text": "क्यों",
+     "text": "kyun",
      "start": 42.86,
      "end": 43.08
     },
     {
-     "text": "दिया?",
+     "text": "diya?",
      "start": 43.05,
      "end": 43.33
     }
@@ -573,32 +573,32 @@
   },
   {
    "id": "llama",
-   "show": "क्योंकि मेटा का नया मॉडल, Llama 4... लोगों को ख़ास पसंद नहीं आया। और ज़करबर्ग AI की रेस में पीछे छूट रहे थे।",
+   "show": "Kyunki Meta ka naya model, Llama 4... logon ko khaas pasand nahi aaya. Aur Zuckerberg AI ki race mein peeche chhoot rahe the.",
    "start": 44.027,
    "end": 52.7,
    "words": [
     {
-     "text": "क्योंकि",
+     "text": "Kyunki",
      "start": 44.087,
      "end": 44.327
     },
     {
-     "text": "मेटा",
+     "text": "Meta",
      "start": 44.45,
      "end": 44.765
     },
     {
-     "text": "का",
+     "text": "ka",
      "start": 44.8,
      "end": 44.94
     },
     {
-     "text": "नया",
+     "text": "naya",
      "start": 44.935,
      "end": 45.185
     },
     {
-     "text": "मॉडल,",
+     "text": "model,",
      "start": 45.157,
      "end": 45.523
     },
@@ -613,42 +613,42 @@
      "end": 46.445
     },
     {
-     "text": "लोगों",
+     "text": "logon",
      "start": 47.24,
      "end": 47.58
     },
     {
-     "text": "को",
+     "text": "ko",
      "start": 47.61,
      "end": 47.75
     },
     {
-     "text": "ख़ास",
+     "text": "khaas",
      "start": 47.76,
      "end": 48.06
     },
     {
-     "text": "पसंद",
+     "text": "pasand",
      "start": 48.05,
      "end": 48.395
     },
     {
-     "text": "नहीं",
+     "text": "nahi",
      "start": 48.36,
      "end": 48.62
     },
     {
-     "text": "आया।",
+     "text": "aaya.",
      "start": 48.595,
      "end": 48.845
     },
     {
-     "text": "और",
+     "text": "Aur",
      "start": 49.39,
      "end": 49.67
     },
     {
-     "text": "ज़करबर्ग",
+     "text": "Zuckerberg",
      "start": 49.653,
      "end": 50.277
     },
@@ -658,37 +658,37 @@
      "end": 50.62
     },
     {
-     "text": "की",
+     "text": "ki",
      "start": 50.6,
      "end": 50.74
     },
     {
-     "text": "रेस",
+     "text": "race",
      "start": 50.715,
      "end": 50.965
     },
     {
-     "text": "में",
+     "text": "mein",
      "start": 50.99,
      "end": 51.13
     },
     {
-     "text": "पीछे",
+     "text": "peeche",
      "start": 51.175,
      "end": 51.465
     },
     {
-     "text": "छूट",
+     "text": "chhoot",
      "start": 51.438,
      "end": 51.69
     },
     {
-     "text": "रहे",
+     "text": "rahe",
      "start": 51.777,
      "end": 52.27
     },
     {
-     "text": "थे।",
+     "text": "the.",
      "start": 52.54,
      "end": 52.68
     }
@@ -696,22 +696,22 @@
   },
   {
    "id": "deal",
-   "show": "तो मेटा ने Scale का 49% हिस्सा ख़रीद लिया... और वांग को अपनी नई सुपर-इंटेलिजेंस लैब की कमान सौंप दी।",
+   "show": "Toh Meta ne Scale ka 49% hissa khareed liya... aur Wang ko apni nayi superintelligence lab ki kamaan saunp di.",
    "start": 53.002,
    "end": 59.9,
    "words": [
     {
-     "text": "तो",
+     "text": "Toh",
      "start": 53.062,
      "end": 53.302
     },
     {
-     "text": "मेटा",
+     "text": "Meta",
      "start": 53.26,
      "end": 53.56
     },
     {
-     "text": "ने",
+     "text": "ne",
      "start": 53.58,
      "end": 53.72
     },
@@ -721,7 +721,7 @@
      "end": 54.05
     },
     {
-     "text": "का",
+     "text": "ka",
      "start": 54.05,
      "end": 54.19
     },
@@ -731,72 +731,72 @@
      "end": 55.137
     },
     {
-     "text": "हिस्सा",
+     "text": "hissa",
      "start": 55.093,
      "end": 55.367
     },
     {
-     "text": "ख़रीद",
+     "text": "khareed",
      "start": 55.36,
      "end": 55.745
     },
     {
-     "text": "लिया...",
+     "text": "liya...",
      "start": 55.67,
      "end": 55.875
     },
     {
-     "text": "और",
+     "text": "aur",
      "start": 56.375,
      "end": 56.625
     },
     {
-     "text": "वांग",
+     "text": "Wang",
      "start": 56.64,
      "end": 56.98
     },
     {
-     "text": "को",
+     "text": "ko",
      "start": 57.02,
      "end": 57.16
     },
     {
-     "text": "अपनी",
+     "text": "apni",
      "start": 57.15,
      "end": 57.49
     },
     {
-     "text": "नई",
+     "text": "nayi",
      "start": 57.495,
      "end": 57.802
     },
     {
-     "text": "सुपर-इंटेलिजेंस",
+     "text": "superintelligence",
      "start": 57.83,
      "end": 58.697
     },
     {
-     "text": "लैब",
+     "text": "lab",
      "start": 58.66,
      "end": 58.94
     },
     {
-     "text": "की",
+     "text": "ki",
      "start": 58.94,
      "end": 59.08
     },
     {
-     "text": "कमान",
+     "text": "kamaan",
      "start": 59.103,
      "end": 59.497
     },
     {
-     "text": "सौंप",
+     "text": "saunp",
      "start": 59.48,
      "end": 59.75
     },
     {
-     "text": "दी।",
+     "text": "di.",
      "start": 59.74,
      "end": 59.88
     }
@@ -804,47 +804,47 @@
   },
   {
    "id": "crazy",
-   "show": "और अब आती है... सबसे पागलपन वाली बात।",
+   "show": "Aur ab aati hai... sabse paagalpan waali baat.",
    "start": 60.782,
    "end": 63.49,
    "words": [
     {
-     "text": "और",
+     "text": "Aur",
      "start": 60.842,
      "end": 61.082
     },
     {
-     "text": "अब",
+     "text": "ab",
      "start": 60.962,
      "end": 61.202
     },
     {
-     "text": "आती",
+     "text": "aati",
      "start": 61.185,
      "end": 61.575
     },
     {
-     "text": "है...",
+     "text": "hai...",
      "start": 61.64,
      "end": 61.78
     },
     {
-     "text": "सबसे",
+     "text": "sabse",
      "start": 61.81,
      "end": 62.33
     },
     {
-     "text": "पागलपन",
+     "text": "paagalpan",
      "start": 62.354,
      "end": 62.926
     },
     {
-     "text": "वाली",
+     "text": "waali",
      "start": 62.91,
      "end": 63.19
     },
     {
-     "text": "बात।",
+     "text": "baat.",
      "start": 63.19,
      "end": 63.47
     }
@@ -852,7 +852,7 @@
   },
   {
    "id": "google",
-   "show": "Scale का सबसे बड़ा कस्टमर था, Google. उस साल क़रीब $200 मिलियन का।",
+   "show": "Scale ka sabse bada customer tha, Google. Us saal kareeb $200 million ka.",
    "start": 64.058,
    "end": 69.75,
    "words": [
@@ -862,27 +862,27 @@
      "end": 64.573
     },
     {
-     "text": "का",
+     "text": "ka",
      "start": 64.6,
      "end": 64.74
     },
     {
-     "text": "सबसे",
+     "text": "sabse",
      "start": 64.735,
      "end": 65.1
     },
     {
-     "text": "बड़ा",
+     "text": "bada",
      "start": 65.08,
      "end": 65.34
     },
     {
-     "text": "कस्टमर",
+     "text": "customer",
      "start": 65.3,
      "end": 65.76
     },
     {
-     "text": "था,",
+     "text": "tha,",
      "start": 65.77,
      "end": 65.91
     },
@@ -892,17 +892,17 @@
      "end": 66.613
     },
     {
-     "text": "उस",
+     "text": "Us",
      "start": 67.685,
      "end": 67.915
     },
     {
-     "text": "साल",
+     "text": "saal",
      "start": 67.895,
      "end": 68.185
     },
     {
-     "text": "क़रीब",
+     "text": "kareeb",
      "start": 68.177,
      "end": 68.543
     },
@@ -912,12 +912,12 @@
      "end": 68.819
     },
     {
-     "text": "मिलियन",
+     "text": "million",
      "start": 68.818,
      "end": 69.302
     },
     {
-     "text": "का।",
+     "text": "ka.",
      "start": 69.59,
      "end": 69.73
     }
@@ -925,47 +925,47 @@
   },
   {
    "id": "split",
-   "show": "डील के अगले ही दिन ख़बर आई... कि Google अलग होने की तैयारी में है।",
+   "show": "Deal ke agle hi din khabar aayi... ki Google alag hone ki taiyaari mein hai.",
    "start": 70.523,
    "end": 74.47,
    "words": [
     {
-     "text": "डील",
+     "text": "Deal",
      "start": 70.583,
      "end": 70.96
     },
     {
-     "text": "के",
+     "text": "ke",
      "start": 70.97,
      "end": 71.11
     },
     {
-     "text": "अगले",
+     "text": "agle",
      "start": 71.083,
      "end": 71.397
     },
     {
-     "text": "ही",
+     "text": "hi",
      "start": 71.34,
      "end": 71.48
     },
     {
-     "text": "दिन",
+     "text": "din",
      "start": 71.42,
      "end": 71.64
     },
     {
-     "text": "ख़बर",
+     "text": "khabar",
      "start": 71.616,
      "end": 71.988
     },
     {
-     "text": "आई...",
+     "text": "aayi...",
      "start": 71.892,
      "end": 72.076
     },
     {
-     "text": "कि",
+     "text": "ki",
      "start": 72.21,
      "end": 72.35
     },
@@ -975,32 +975,32 @@
      "end": 72.913
     },
     {
-     "text": "अलग",
+     "text": "alag",
      "start": 72.887,
      "end": 73.213
     },
     {
-     "text": "होने",
+     "text": "hone",
      "start": 73.185,
      "end": 73.455
     },
     {
-     "text": "की",
+     "text": "ki",
      "start": 73.44,
      "end": 73.58
     },
     {
-     "text": "तैयारी",
+     "text": "taiyaari",
      "start": 73.563,
      "end": 73.957
     },
     {
-     "text": "में",
+     "text": "mein",
      "start": 74.09,
      "end": 74.23
     },
     {
-     "text": "है।",
+     "text": "hai.",
      "start": 74.31,
      "end": 74.45
     }
@@ -1008,27 +1008,27 @@
   },
   {
    "id": "layoffs",
-   "show": "और एक महीने बाद... Scale ने अपने 14% कर्मचारियों को निकाल दिया।",
+   "show": "Aur ek mahine baad... Scale ne apne 14% karmchaariyon ko nikaal diya.",
    "start": 74.969,
    "end": 79.4,
    "words": [
     {
-     "text": "और",
+     "text": "Aur",
      "start": 75.029,
      "end": 75.269
     },
     {
-     "text": "एक",
+     "text": "ek",
      "start": 75.275,
      "end": 75.525
     },
     {
-     "text": "महीने",
+     "text": "mahine",
      "start": 75.5,
      "end": 75.88
     },
     {
-     "text": "बाद...",
+     "text": "baad...",
      "start": 75.865,
      "end": 76.135
     },
@@ -1038,12 +1038,12 @@
      "end": 76.8
     },
     {
-     "text": "ने",
+     "text": "ne",
      "start": 76.85,
      "end": 76.99
     },
     {
-     "text": "अपने",
+     "text": "apne",
      "start": 76.97,
      "end": 77.31
     },
@@ -1053,22 +1053,22 @@
      "end": 78.064
     },
     {
-     "text": "कर्मचारियों",
+     "text": "karmchaariyon",
      "start": 78.037,
      "end": 78.743
     },
     {
-     "text": "को",
+     "text": "ko",
      "start": 78.7,
      "end": 78.84
     },
     {
-     "text": "निकाल",
+     "text": "nikaal",
      "start": 78.793,
      "end": 79.147
     },
     {
-     "text": "दिया।",
+     "text": "diya.",
      "start": 79.12,
      "end": 79.38
     }
@@ -1076,77 +1076,77 @@
   },
   {
    "id": "reframe",
-   "show": "मेटा ने कंपनी नहीं ख़रीदी। एक इंसान ख़रीदा। और उसकी क़ीमत चुकाई... कंपनी ने।",
+   "show": "Meta ne company nahi khareedi. Ek insaan khareeda. Aur uski keemat chukaayi... company ne.",
    "start": 80.39,
    "end": 86.65,
    "words": [
     {
-     "text": "मेटा",
+     "text": "Meta",
      "start": 80.45,
      "end": 80.81
     },
     {
-     "text": "ने",
+     "text": "ne",
      "start": 80.86,
      "end": 81.0
     },
     {
-     "text": "कंपनी",
+     "text": "company",
      "start": 80.985,
      "end": 81.395
     },
     {
-     "text": "नहीं",
+     "text": "nahi",
      "start": 81.35,
      "end": 81.59
     },
     {
-     "text": "ख़रीदी।",
+     "text": "khareedi.",
      "start": 81.575,
      "end": 81.96
     },
     {
-     "text": "एक",
+     "text": "Ek",
      "start": 82.825,
      "end": 83.055
     },
     {
-     "text": "इंसान",
+     "text": "insaan",
      "start": 83.012,
      "end": 83.468
     },
     {
-     "text": "ख़रीदा।",
+     "text": "khareeda.",
      "start": 83.498,
      "end": 83.922
     },
     {
-     "text": "और",
+     "text": "Aur",
      "start": 84.635,
      "end": 84.845
     },
     {
-     "text": "उसकी",
+     "text": "uski",
      "start": 84.783,
      "end": 85.097
     },
     {
-     "text": "क़ीमत",
+     "text": "keemat",
      "start": 85.053,
      "end": 85.412
     },
     {
-     "text": "चुकाई...",
+     "text": "chukaayi...",
      "start": 85.383,
      "end": 85.777
     },
     {
-     "text": "कंपनी",
+     "text": "company",
      "start": 85.788,
      "end": 86.452
     },
     {
-     "text": "ने।",
+     "text": "ne.",
      "start": 86.49,
      "end": 86.63
     }
@@ -1154,22 +1154,22 @@
   },
   {
    "id": "outro1",
-   "show": "तो क्या ये AI इतिहास की सबसे स्मार्ट हायरिंग थी?",
+   "show": "Toh kya yeh AI itihaas ki sabse smart hiring thi?",
    "start": 87.515,
    "end": 90.637,
    "words": [
     {
-     "text": "तो",
+     "text": "Toh",
      "start": 87.575,
      "end": 87.815
     },
     {
-     "text": "क्या",
+     "text": "kya",
      "start": 87.75,
      "end": 87.99
     },
     {
-     "text": "ये",
+     "text": "yeh",
      "start": 87.98,
      "end": 88.12
     },
@@ -1179,32 +1179,32 @@
      "end": 88.465
     },
     {
-     "text": "इतिहास",
+     "text": "itihaas",
      "start": 88.44,
      "end": 88.94
     },
     {
-     "text": "की",
+     "text": "ki",
      "start": 88.93,
      "end": 89.07
     },
     {
-     "text": "सबसे",
+     "text": "sabse",
      "start": 89.063,
      "end": 89.457
     },
     {
-     "text": "स्मार्ट",
+     "text": "smart",
      "start": 89.437,
      "end": 89.841
     },
     {
-     "text": "हायरिंग",
+     "text": "hiring",
      "start": 89.777,
      "end": 90.143
     },
     {
-     "text": "थी?",
+     "text": "thi?",
      "start": 90.477,
      "end": 90.617
     }
@@ -1212,37 +1212,37 @@
   },
   {
    "id": "outro2",
-   "show": "या अब तक की... सबसे महंगी?",
+   "show": "Ya ab tak ki... sabse mehngi?",
    "start": 90.89,
    "end": 92.71,
    "words": [
     {
-     "text": "या",
+     "text": "Ya",
      "start": 90.95,
      "end": 91.09
     },
     {
-     "text": "अब",
+     "text": "ab",
      "start": 91.105,
      "end": 91.335
     },
     {
-     "text": "तक",
+     "text": "tak",
      "start": 91.29,
      "end": 91.53
     },
     {
-     "text": "की...",
+     "text": "ki...",
      "start": 91.55,
      "end": 91.69
     },
     {
-     "text": "सबसे",
+     "text": "sabse",
      "start": 91.773,
      "end": 92.367
     },
     {
-     "text": "महंगी?",
+     "text": "mehngi?",
      "start": 92.41,
      "end": 92.69
     }

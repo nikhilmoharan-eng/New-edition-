@@ -108,7 +108,11 @@ for li, ln in enumerate(spec["lines"]):
             for k in range(1, len(say_t)):
                 if say_t[k][0] < say_t[k - 1][0]:
                     say_t[k] = (say_t[k - 1][0] + 0.05, max(say_t[k][1], say_t[k - 1][0] + 0.15))
-    show = ln["show"].split()
+    # `showAlign` (optional) is a caption in the spoken script, used only for timing; `show` is what's
+    # displayed (e.g. Hinglish in Latin letters) and must have the same number of words.
+    show = ln.get("showAlign", ln["show"]).split()
+    shown = ln["show"].split()
+    assert len(shown) == len(show), f"{ln['id']}: show and showAlign need the same word count"
     span = [None] * len(show)
     ops = difflib.SequenceMatcher(None, [norm(x) for x in show], [norm(x) for x in say], autojunk=False).get_opcodes()
     for op, i0, i1, j0, j1 in ops:
@@ -122,7 +126,7 @@ for li, ln in enumerate(spec["lines"]):
                 a0 = jj0 + (jj1 - jj0 + 1) * k // n
                 a1 = max(a0, jj0 + (jj1 - jj0 + 1) * (k + 1) // n - 1)
                 span[i0 + k] = (a0, a1)
-    cap = [{"text": tok, "start": round(max(0, say_t[a0][0] - 0.06), 3), "end": round(say_t[a1][1] + 0.08, 3)} for tok, (a0, a1) in zip(show, span)]
+    cap = [{"text": tok, "start": round(max(0, say_t[a0][0] - 0.06), 3), "end": round(say_t[a1][1] + 0.08, 3)} for tok, (a0, a1) in zip(shown, span)]
     start = round(max(0.0, say_t[0][0] - 0.12), 3)
     end = round(say_t[-1][1] + 0.1, 3)
     timeline.append({"id": ln["id"], "show": ln["show"], "start": start, "end": end, "words": cap})

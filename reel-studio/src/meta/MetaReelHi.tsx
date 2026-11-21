@@ -4,19 +4,19 @@ import { makeMetaReel } from "./MetaReel";
 
 /**
  * Hindi version of "The $14B Hire": same edit, timed to the Hindi ElevenLabs v3 voice.
- * Caption-word indices refer to the `show` text in script/meta-scale-hi.json.
+ * Captions are Hinglish (Latin letters); caption-word indices refer to script/meta-scale-hi.json `show`.
  */
 export const META_HI = makeMetaReel({
   tl: hiRaw as { duration: number; lines: Line[] },
   vo: "meta-scale-hi/vo.wav",
   music: "meta-scale-hi/music.wav",
   hide: {
-    hook1: [5, 6, 11, 12, 13], // $14 बिलियन · ₹1.2 लाख करोड़
+    hook1: [5, 6, 11, 12, 13], // $14 billion · ₹1.2 lakh crore
     hook2: [7], // 28
     origin: [0], // 19
-    billionaire: [13], // बिलियनेयर
+    billionaire: [13], // billionaire
     deal: [5], // 49%
-    google: [10, 11], // $200 मिलियन
+    google: [10, 11], // $200 million
     layoffs: [7], // 14%
   },
   // English word index -> Hindi caption-word index, so the big moments hit on the Hindi word
@@ -36,10 +36,9 @@ export const META_HI = makeMetaReel({
     reframe: { 4: 2, 5: 5, 9: 8 }, // कंपनी, एक, और
     outro1: { 7: 7 }, // स्मार्ट
   },
-  texts: { "billionaire.": "बिलियनेयर।" },
   // the Hindi hook also gives the rupee figure; Hindi lines run longer, so a few extra cuts keep the pace
   extra: (hw) => [
-    { k: "big", text: "₹1.2 लाख करोड़", bg: "cream", at: hw("hook1", 9) - 0.04, cap: "top", tone: "dark" },
+    { k: "big", text: "₹1.2 lakh crore", bg: "cream", at: hw("hook1", 9) - 0.04, cap: "top", tone: "dark" },
     { k: "img", src: "meta-hq.jpg", at: hw("hook1", 13) + 0.35, bw: true, pos: "42% 50%", zoom: [1.2, 1.35] },
     { k: "vid", src: "wang-yc3.mp4", at: hw("name", 3) - 0.04 }, // अलेक्ज़ेंडर
     { k: "vid", src: "wang-yc4.mp4", at: hw("origin", 13) - 0.04 }, // AI.
