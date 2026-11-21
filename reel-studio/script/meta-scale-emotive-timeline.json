@@ -1,0 +1,982 @@
+{
+ "title": "The $14B Hire",
+ "duration": 74.168,
+ "lines": [
+  {
+   "id": "hook1",
+   "show": "In June 2025, Meta paid $14 billion.",
+   "start": 0.0,
+   "end": 4.453,
+   "words": [
+    {
+     "text": "In",
+     "start": 0.04,
+     "end": 0.38
+    },
+    {
+     "text": "June",
+     "start": 0.378,
+     "end": 0.742
+    },
+    {
+     "text": "2025,",
+     "start": 0.693,
+     "end": 2.19
+    },
+    {
+     "text": "Meta",
+     "start": 2.14,
+     "end": 2.4
+    },
+    {
+     "text": "paid",
+     "start": 2.305,
+     "end": 2.595
+    },
+    {
+     "text": "$14",
+     "start": 2.508,
+     "end": 3.017
+    },
+    {
+     "text": "billion.",
+     "start": 2.93,
+     "end": 3.43
+    }
+   ]
+  },
+  {
+   "id": "hook2",
+   "show": "Not for a company. For one 28-year-old.",
+   "start": 4.414,
+   "end": 8.132,
+   "words": [
+    {
+     "text": "Not",
+     "start": 4.474,
+     "end": 4.803
+    },
+    {
+     "text": "for",
+     "start": 4.763,
+     "end": 5.077
+    },
+    {
+     "text": "a",
+     "start": 5.06,
+     "end": 5.2
+    },
+    {
+     "text": "company.",
+     "start": 5.164,
+     "end": 5.596
+    },
+    {
+     "text": "For",
+     "start": 5.561,
+     "end": 5.91
+    },
+    {
+     "text": "one",
+     "start": 5.875,
+     "end": 6.225
+    },
+    {
+     "text": "28-year-old.",
+     "start": 6.19,
+     "end": 8.112
+    }
+   ]
+  },
+  {
+   "id": "name",
+   "show": "His name is Alexandr Wang.",
+   "start": 8.149,
+   "end": 10.482,
+   "words": [
+    {
+     "text": "His",
+     "start": 8.209,
+     "end": 8.449
+    },
+    {
+     "text": "name",
+     "start": 8.397,
+     "end": 8.763
+    },
+    {
+     "text": "is",
+     "start": 8.755,
+     "end": 9.085
+    },
+    {
+     "text": "Alexandr",
+     "start": 9.089,
+     "end": 10.011
+    },
+    {
+     "text": "Wang.",
+     "start": 9.978,
+     "end": 10.462
+    }
+   ]
+  },
+  {
+   "id": "origin",
+   "show": "At 19, he dropped out of MIT and started Scale AI.",
+   "start": 10.945,
+   "end": 14.525,
+   "words": [
+    {
+     "text": "At",
+     "start": 11.005,
+     "end": 11.195
+    },
+    {
+     "text": "19,",
+     "start": 11.133,
+     "end": 11.817
+    },
+    {
+     "text": "he",
+     "start": 11.755,
+     "end": 11.925
+    },
+    {
+     "text": "dropped",
+     "start": 11.823,
+     "end": 12.237
+    },
+    {
+     "text": "out",
+     "start": 12.153,
+     "end": 12.427
+    },
+    {
+     "text": "of",
+     "start": 12.355,
+     "end": 12.565
+    },
+    {
+     "text": "MIT",
+     "start": 12.517,
+     "end": 12.883
+    },
+    {
+     "text": "and",
+     "start": 12.9,
+     "end": 13.44
+    },
+    {
+     "text": "started",
+     "start": 13.423,
+     "end": 13.837
+    },
+    {
+     "text": "Scale",
+     "start": 13.756,
+     "end": 14.184
+    },
+    {
+     "text": "AI.",
+     "start": 14.175,
+     "end": 14.505
+    }
+   ]
+  },
+  {
+   "id": "feeds",
+   "show": "Scale doesn't build AI. It feeds it.",
+   "start": 15.252,
+   "end": 18.335,
+   "words": [
+    {
+     "text": "Scale",
+     "start": 15.312,
+     "end": 15.708
+    },
+    {
+     "text": "doesn't",
+     "start": 15.632,
+     "end": 16.088
+    },
+    {
+     "text": "build",
+     "start": 16.002,
+     "end": 16.318
+    },
+    {
+     "text": "AI.",
+     "start": 16.285,
+     "end": 16.595
+    },
+    {
+     "text": "It",
+     "start": 17.495,
+     "end": 17.705
+    },
+    {
+     "text": "feeds",
+     "start": 17.644,
+     "end": 18.136
+    },
+    {
+     "text": "it.",
+     "start": 18.085,
+     "end": 18.315
+    }
+   ]
+  },
+  {
+   "id": "labels",
+   "show": "Its workers label the data that trains AI for Google, OpenAI, and even the US military.",
+   "start": 18.763,
+   "end": 24.714,
+   "words": [
+    {
+     "text": "Its",
+     "start": 18.823,
+     "end": 19.057
+    },
+    {
+     "text": "workers",
+     "start": 18.96,
+     "end": 19.34
+    },
+    {
+     "text": "label",
+     "start": 19.258,
+     "end": 19.702
+    },
+    {
+     "text": "the",
+     "start": 19.633,
+     "end": 19.907
+    },
+    {
+     "text": "data",
+     "start": 19.835,
+     "end": 20.185
+    },
+    {
+     "text": "that",
+     "start": 20.103,
+     "end": 20.377
+    },
+    {
+     "text": "trains",
+     "start": 20.287,
+     "end": 20.693
+    },
+    {
+     "text": "AI",
+     "start": 20.67,
+     "end": 20.99
+    },
+    {
+     "text": "for",
+     "start": 21.003,
+     "end": 21.397
+    },
+    {
+     "text": "Google,",
+     "start": 21.348,
+     "end": 21.772
+    },
+    {
+     "text": "OpenAI,",
+     "start": 22.2,
+     "end": 22.905
+    },
+    {
+     "text": "and",
+     "start": 23.303,
+     "end": 23.537
+    },
+    {
+     "text": "even",
+     "start": 23.443,
+     "end": 23.717
+    },
+    {
+     "text": "the",
+     "start": 23.633,
+     "end": 23.907
+    },
+    {
+     "text": "US",
+     "start": 23.89,
+     "end": 24.21
+    },
+    {
+     "text": "military.",
+     "start": 24.186,
+     "end": 24.694
+    }
+   ]
+  },
+  {
+   "id": "billionaire",
+   "show": "It made him the world's youngest self-made billionaire.",
+   "start": 25.289,
+   "end": 28.154,
+   "words": [
+    {
+     "text": "It",
+     "start": 25.349,
+     "end": 25.589
+    },
+    {
+     "text": "made",
+     "start": 25.48,
+     "end": 25.74
+    },
+    {
+     "text": "him",
+     "start": 25.643,
+     "end": 25.877
+    },
+    {
+     "text": "the",
+     "start": 25.79,
+     "end": 26.05
+    },
+    {
+     "text": "world's",
+     "start": 25.975,
+     "end": 26.465
+    },
+    {
+     "text": "youngest",
+     "start": 26.384,
+     "end": 26.856
+    },
+    {
+     "text": "self-made",
+     "start": 26.79,
+     "end": 27.542
+    },
+    {
+     "text": "billionaire.",
+     "start": 27.466,
+     "end": 28.134
+    }
+   ]
+  },
+  {
+   "id": "why",
+   "show": "So why did Meta pay so much?",
+   "start": 28.706,
+   "end": 30.678,
+   "words": [
+    {
+     "text": "So",
+     "start": 28.766,
+     "end": 29.006
+    },
+    {
+     "text": "why",
+     "start": 28.95,
+     "end": 29.29
+    },
+    {
+     "text": "did",
+     "start": 29.237,
+     "end": 29.523
+    },
+    {
+     "text": "Meta",
+     "start": 29.46,
+     "end": 29.84
+    },
+    {
+     "text": "pay",
+     "start": 29.777,
+     "end": 30.063
+    },
+    {
+     "text": "so",
+     "start": 30.025,
+     "end": 30.295
+    },
+    {
+     "text": "much?",
+     "start": 30.263,
+     "end": 30.658
+    }
+   ]
+  },
+  {
+   "id": "llama",
+   "show": "Because its newest model, Llama 4, landed with a shrug, and Zuckerberg was falling behind in the AI race.",
+   "start": 31.131,
+   "end": 38.802,
+   "words": [
+    {
+     "text": "Because",
+     "start": 31.191,
+     "end": 31.469
+    },
+    {
+     "text": "its",
+     "start": 31.373,
+     "end": 31.647
+    },
+    {
+     "text": "newest",
+     "start": 31.567,
+     "end": 31.973
+    },
+    {
+     "text": "model,",
+     "start": 31.908,
+     "end": 32.432
+    },
+    {
+     "text": "Llama",
+     "start": 32.707,
+     "end": 33.012
+    },
+    {
+     "text": "4,",
+     "start": 33.141,
+     "end": 34.085
+    },
+    {
+     "text": "landed",
+     "start": 34.213,
+     "end": 34.687
+    },
+    {
+     "text": "with",
+     "start": 34.608,
+     "end": 34.912
+    },
+    {
+     "text": "a",
+     "start": 34.86,
+     "end": 35.0
+    },
+    {
+     "text": "shrug,",
+     "start": 34.96,
+     "end": 35.42
+    },
+    {
+     "text": "and",
+     "start": 35.63,
+     "end": 35.89
+    },
+    {
+     "text": "Zuckerberg",
+     "start": 35.807,
+     "end": 36.433
+    },
+    {
+     "text": "was",
+     "start": 36.363,
+     "end": 36.677
+    },
+    {
+     "text": "falling",
+     "start": 36.603,
+     "end": 37.017
+    },
+    {
+     "text": "behind",
+     "start": 36.938,
+     "end": 37.462
+    },
+    {
+     "text": "in",
+     "start": 37.44,
+     "end": 37.74
+    },
+    {
+     "text": "the",
+     "start": 37.7,
+     "end": 37.92
+    },
+    {
+     "text": "AI",
+     "start": 37.875,
+     "end": 38.165
+    },
+    {
+     "text": "race.",
+     "start": 38.177,
+     "end": 38.782
+    }
+   ]
+  },
+  {
+   "id": "deal",
+   "show": "So Meta bought 49% of Scale, and hired Wang to run its new superintelligence lab.",
+   "start": 39.26,
+   "end": 45.013,
+   "words": [
+    {
+     "text": "So",
+     "start": 39.32,
+     "end": 39.565
+    },
+    {
+     "text": "Meta",
+     "start": 39.52,
+     "end": 39.9
+    },
+    {
+     "text": "bought",
+     "start": 39.818,
+     "end": 40.142
+    },
+    {
+     "text": "49%",
+     "start": 40.063,
+     "end": 41.128
+    },
+    {
+     "text": "of",
+     "start": 41.05,
+     "end": 41.29
+    },
+    {
+     "text": "Scale,",
+     "start": 41.228,
+     "end": 41.592
+    },
+    {
+     "text": "and",
+     "start": 41.573,
+     "end": 42.087
+    },
+    {
+     "text": "hired",
+     "start": 42.074,
+     "end": 42.486
+    },
+    {
+     "text": "Wang",
+     "start": 42.425,
+     "end": 42.835
+    },
+    {
+     "text": "to",
+     "start": 42.81,
+     "end": 43.09
+    },
+    {
+     "text": "run",
+     "start": 43.053,
+     "end": 43.327
+    },
+    {
+     "text": "its",
+     "start": 43.257,
+     "end": 43.543
+    },
+    {
+     "text": "new",
+     "start": 43.48,
+     "end": 43.78
+    },
+    {
+     "text": "superintelligence",
+     "start": 43.705,
+     "end": 44.635
+    },
+    {
+     "text": "lab.",
+     "start": 44.587,
+     "end": 44.993
+    }
+   ]
+  },
+  {
+   "id": "crazy",
+   "show": "And here's the crazy part.",
+   "start": 45.625,
+   "end": 46.995,
+   "words": [
+    {
+     "text": "And",
+     "start": 45.685,
+     "end": 45.925
+    },
+    {
+     "text": "here's",
+     "start": 45.83,
+     "end": 46.21
+    },
+    {
+     "text": "the",
+     "start": 46.117,
+     "end": 46.323
+    },
+    {
+     "text": "crazy",
+     "start": 46.232,
+     "end": 46.628
+    },
+    {
+     "text": "part.",
+     "start": 46.565,
+     "end": 46.975
+    }
+   ]
+  },
+  {
+   "id": "google",
+   "show": "Scale's biggest customer was Google. About $200 million that year.",
+   "start": 47.637,
+   "end": 52.632,
+   "words": [
+    {
+     "text": "Scale's",
+     "start": 47.697,
+     "end": 48.203
+    },
+    {
+     "text": "biggest",
+     "start": 48.116,
+     "end": 48.444
+    },
+    {
+     "text": "customer",
+     "start": 48.355,
+     "end": 48.985
+    },
+    {
+     "text": "was",
+     "start": 48.93,
+     "end": 49.27
+    },
+    {
+     "text": "Google.",
+     "start": 49.207,
+     "end": 49.613
+    },
+    {
+     "text": "About",
+     "start": 50.242,
+     "end": 50.558
+    },
+    {
+     "text": "$200",
+     "start": 50.468,
+     "end": 51.062
+    },
+    {
+     "text": "million",
+     "start": 50.973,
+     "end": 51.507
+    },
+    {
+     "text": "that",
+     "start": 51.492,
+     "end": 52.188
+    },
+    {
+     "text": "year.",
+     "start": 52.188,
+     "end": 52.612
+    }
+   ]
+  },
+  {
+   "id": "split",
+   "show": "The day after the deal, reports said Google planned to walk away.",
+   "start": 52.966,
+   "end": 56.97,
+   "words": [
+    {
+     "text": "The",
+     "start": 53.026,
+     "end": 53.266
+    },
+    {
+     "text": "day",
+     "start": 53.173,
+     "end": 53.447
+    },
+    {
+     "text": "after",
+     "start": 53.364,
+     "end": 53.696
+    },
+    {
+     "text": "the",
+     "start": 53.61,
+     "end": 53.87
+    },
+    {
+     "text": "deal,",
+     "start": 53.802,
+     "end": 54.198
+    },
+    {
+     "text": "reports",
+     "start": 54.567,
+     "end": 55.033
+    },
+    {
+     "text": "said",
+     "start": 54.97,
+     "end": 55.41
+    },
+    {
+     "text": "Google",
+     "start": 55.343,
+     "end": 55.717
+    },
+    {
+     "text": "planned",
+     "start": 55.656,
+     "end": 56.288
+    },
+    {
+     "text": "to",
+     "start": 56.2,
+     "end": 56.42
+    },
+    {
+     "text": "walk",
+     "start": 56.338,
+     "end": 56.582
+    },
+    {
+     "text": "away.",
+     "start": 56.51,
+     "end": 56.95
+    }
+   ]
+  },
+  {
+   "id": "layoffs",
+   "show": "A month later, Scale cut 14% of its staff.",
+   "start": 58.149,
+   "end": 61.528,
+   "words": [
+    {
+     "text": "A",
+     "start": 58.209,
+     "end": 58.449
+    },
+    {
+     "text": "month",
+     "start": 58.342,
+     "end": 58.658
+    },
+    {
+     "text": "later,",
+     "start": 58.588,
+     "end": 59.112
+    },
+    {
+     "text": "Scale",
+     "start": 59.406,
+     "end": 59.754
+    },
+    {
+     "text": "cut",
+     "start": 59.69,
+     "end": 60.03
+    },
+    {
+     "text": "14%",
+     "start": 59.948,
+     "end": 60.893
+    },
+    {
+     "text": "of",
+     "start": 60.81,
+     "end": 61.05
+    },
+    {
+     "text": "its",
+     "start": 60.98,
+     "end": 61.2
+    },
+    {
+     "text": "staff.",
+     "start": 61.112,
+     "end": 61.508
+    }
+   ]
+  },
+  {
+   "id": "reframe",
+   "show": "Meta didn't buy a company. It bought a person. And the company paid the price.",
+   "start": 62.36,
+   "end": 67.496,
+   "words": [
+    {
+     "text": "Meta",
+     "start": 62.42,
+     "end": 62.8
+    },
+    {
+     "text": "didn't",
+     "start": 62.746,
+     "end": 63.254
+    },
+    {
+     "text": "buy",
+     "start": 63.197,
+     "end": 63.483
+    },
+    {
+     "text": "a",
+     "start": 63.46,
+     "end": 63.6
+    },
+    {
+     "text": "company.",
+     "start": 63.561,
+     "end": 63.959
+    },
+    {
+     "text": "It",
+     "start": 64.64,
+     "end": 64.86
+    },
+    {
+     "text": "bought",
+     "start": 64.778,
+     "end": 65.102
+    },
+    {
+     "text": "a",
+     "start": 65.04,
+     "end": 65.18
+    },
+    {
+     "text": "person.",
+     "start": 65.135,
+     "end": 65.625
+    },
+    {
+     "text": "And",
+     "start": 65.587,
+     "end": 65.993
+    },
+    {
+     "text": "the",
+     "start": 65.943,
+     "end": 66.177
+    },
+    {
+     "text": "company",
+     "start": 66.084,
+     "end": 66.516
+    },
+    {
+     "text": "paid",
+     "start": 66.445,
+     "end": 66.855
+    },
+    {
+     "text": "the",
+     "start": 66.79,
+     "end": 67.05
+    },
+    {
+     "text": "price.",
+     "start": 66.984,
+     "end": 67.476
+    }
+   ]
+  },
+  {
+   "id": "outro1",
+   "show": "So was it the smartest hire in AI history?",
+   "start": 68.245,
+   "end": 70.84,
+   "words": [
+    {
+     "text": "So",
+     "start": 68.305,
+     "end": 68.545
+    },
+    {
+     "text": "was",
+     "start": 68.49,
+     "end": 68.75
+    },
+    {
+     "text": "it",
+     "start": 68.665,
+     "end": 68.855
+    },
+    {
+     "text": "the",
+     "start": 68.76,
+     "end": 68.98
+    },
+    {
+     "text": "smartest",
+     "start": 68.884,
+     "end": 69.356
+    },
+    {
+     "text": "hire",
+     "start": 69.29,
+     "end": 69.73
+    },
+    {
+     "text": "in",
+     "start": 69.7,
+     "end": 69.96
+    },
+    {
+     "text": "AI",
+     "start": 69.95,
+     "end": 70.23
+    },
+    {
+     "text": "history?",
+     "start": 70.2,
+     "end": 70.82
+    }
+   ]
+  },
+  {
+   "id": "outro2",
+   "show": "Or the most expensive one ever?",
+   "start": 71.202,
+   "end": 72.965,
+   "words": [
+    {
+     "text": "Or",
+     "start": 71.262,
+     "end": 71.502
+    },
+    {
+     "text": "the",
+     "start": 71.4,
+     "end": 71.622
+    },
+    {
+     "text": "most",
+     "start": 71.522,
+     "end": 71.798
+    },
+    {
+     "text": "expensive",
+     "start": 71.714,
+     "end": 72.406
+    },
+    {
+     "text": "one",
+     "start": 72.343,
+     "end": 72.657
+    },
+    {
+     "text": "ever?",
+     "start": 72.595,
+     "end": 72.945
+    }
+   ]
+  }
+ ]
+}
