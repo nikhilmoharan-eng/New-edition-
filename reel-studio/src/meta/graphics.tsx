@@ -4,7 +4,6 @@ import {
   Bust,
   C,
   clamp,
-  CreamBG,
   SmoothBlur,
   DISPLAY,
   INOUT,
@@ -19,7 +18,7 @@ import {
 export const M = (f: string) => staticFile(`meta-scale/media/${f}`);
 export type GProps = { dur: number; mark?: number; logo?: string; label?: string };
 
-/* Logo on cream; a red line strikes through it at `mark`. */
+/* Logo on the smooth blur; a red line strikes through it at `mark`. */
 export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png", label }) => {
   const f = useCurrentFrame();
   const { u } = useU();
@@ -27,9 +26,9 @@ export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png
   const pop = prog(f, 0, 10, Easing.bezier(0.3, 1.4, 0.5, 1));
   return (
     <AbsoluteFill>
-      <CreamBG />
+      <SmoothBlur seed="strike" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
-        <div style={{ position: "relative", scale: String(interpolate(pop, [0, 1], [0.85, 1])), opacity: pop }}>
+        <div style={{ position: "relative", scale: String(interpolate(pop, [0, 1], [0.85, 1])), opacity: pop, filter: `drop-shadow(0 0 ${36 * u}px rgba(255,255,255,0.35))` }}>
           <Img src={M(logo)} style={{ width: 820 * u, opacity: interpolate(s, [0, 1], [1, 0.35]) }} />
           <div
             style={{
@@ -45,7 +44,7 @@ export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png
             }}
           />
           {label ? (
-            <div style={{ textAlign: "center", fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#6c6656", marginTop: 30 * u }}>
+            <div style={{ textAlign: "center", fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#d8d8d8", marginTop: 30 * u }}>
               {label}
             </div>
           ) : null}
@@ -55,19 +54,19 @@ export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png
   );
 };
 
-/* Logo card on cream with a small caption under it. */
+/* Logo card on the smooth blur with a small caption under it. */
 export const GLogoCard: React.FC<GProps> = ({ logo = "logo-scale.png", label }) => {
   const f = useCurrentFrame();
   const { u } = useU();
   const pop = prog(f, 0, 12, Easing.bezier(0.3, 1.4, 0.5, 1));
   return (
     <AbsoluteFill>
-      <CreamBG />
+      <SmoothBlur seed="logocard" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-60 * u}px` }}>
-        <div style={{ scale: String(interpolate(pop, [0, 1], [0.7, 1])), opacity: pop, textAlign: "center" }}>
+        <div style={{ scale: String(interpolate(pop, [0, 1], [0.7, 1])), opacity: pop, textAlign: "center", filter: `drop-shadow(0 0 ${36 * u}px rgba(255,255,255,0.35))` }}>
           <Img src={M(logo)} style={{ width: 760 * u }} />
           {label ? (
-            <div style={{ fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#6c6656", marginTop: 40 * u, opacity: prog(f, 10, 20) }}>
+            <div style={{ fontFamily: MONO, fontSize: 30 * u, letterSpacing: 8 * u, color: "#d8d8d8", marginTop: 40 * u, opacity: prog(f, 10, 20) }}>
               {label}
             </div>
           ) : null}
@@ -131,7 +130,9 @@ export const GRadar: React.FC<GProps> = () => {
   ];
   const ang = f * 7;
   return (
-    <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 50%, #08170f, #020604 75%)" }}>
+    <AbsoluteFill>
+      <SmoothBlur seed="radar" brightness={0.8} />
+      <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 50%, rgba(10,60,30,0.55), rgba(0,10,4,0.35) 75%)", mixBlendMode: "multiply" }} />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
         <div style={{ position: "relative", width: R * 2, height: R * 2 }}>
           {[1, 0.75, 0.5, 0.25].map((k) => (
@@ -411,11 +412,11 @@ export const GQuote: React.FC<GProps> = ({ dur }) => {
   const hl = prog(f, 14, 30, INOUT);
   return (
     <AbsoluteFill>
-      <CreamBG />
+      <SmoothBlur seed="quote" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", scale: String(interpolate(f, [0, dur], [1.0, 1.06], clamp)) }}>
-        <div style={{ width: Math.min(1300 * u, w * 0.86), opacity: inn, translate: `0px ${interpolate(inn, [0, 1], [40, 0]) * u}px` }}>
+        <div style={{ width: Math.min(1300 * u, w * 0.86), opacity: inn, translate: `0px ${interpolate(inn, [0, 1], [40, 0]) * u}px`, background: C.paper, padding: `${50 * u}px ${60 * u}px`, rotate: "-1.5deg", boxShadow: `0 ${40 * u}px ${100 * u}px rgba(0,0,0,0.6)` }}>
           <div style={{ fontFamily: MONO, fontSize: 28 * u, letterSpacing: 6 * u, color: C.red, marginBottom: 24 * u }}>REUTERS · JUNE 14, 2025</div>
-          <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 84 * u, lineHeight: 1.12, color: C.ink }}>
+          <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 74 * u, lineHeight: 1.12, color: C.ink }}>
             “Google, Scale AI's largest customer,{" "}
             <span style={{ position: "relative", whiteSpace: "nowrap" }}>
               <span style={{ position: "absolute", inset: `${18 * u}px ${-8 * u}px ${4 * u}px`, background: C.yellow, transformOrigin: "left", scale: `${hl} 1`, mixBlendMode: "multiply" }} />
@@ -497,9 +498,12 @@ export const GOutro: React.FC<GProps> = ({ dur }) => {
         />
         <div style={{ position: "absolute", bottom: 40 * u, fontFamily: MONO, fontSize: 26 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>THE PERSON</div>
       </div>
-      <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), background: C.cream, opacity: r }}>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 96 : 100) * u, color: C.ink, scale: String(interpolate(r, [0, 1], [1.2, 1])) }}>$14,300,000,000</div>
-        <div style={{ fontFamily: MONO, fontSize: 26 * u, color: "#6c6656", letterSpacing: 6 * u }}>THE PRICE</div>
+      <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), opacity: r }}>
+        <AbsoluteFill>
+          <SmoothBlur seed="outro" />
+        </AbsoluteFill>
+        <div style={{ position: "relative", fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 96 : 100) * u, color: "#fff", scale: String(interpolate(r, [0, 1], [1.2, 1])), textShadow: "0 0 30px rgba(255,255,255,.55)" }}>$14,300,000,000</div>
+        <div style={{ position: "relative", fontFamily: MONO, fontSize: 26 * u, color: "#d8d8d8", letterSpacing: 6 * u }}>THE PRICE</div>
       </div>
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", opacity: q, background: `rgba(5,5,5,${0.78 * q})` }}>
         <div style={{ fontFamily: DISPLAY, fontStyle: "italic", fontWeight: 800, fontSize: 420 * u, color: "#fff", scale: String(interpolate(q, [0, 1], [1.4, 1])) }}>?</div>
@@ -508,7 +512,7 @@ export const GOutro: React.FC<GProps> = ({ dur }) => {
   );
 };
 
-export const GCream: React.FC<GProps> = () => <CreamBG />;
+export const GCream: React.FC<GProps> = () => <SmoothBlur seed="why" />;
 export const GBlack: React.FC<GProps> = () => <SmoothBlur seed="black" />;
 
 export const GRAPHICS: Record<string, React.FC<GProps>> = {
