@@ -1,0 +1,24 @@
+{
+  "title": "The $14B Hire (English, emotive local voice)",
+  "voice": "am_michael",
+  "note": "Same tags as script/meta-scale-en-v3.md; numbers spelled out for the local voice. Rendered by scripts/emotive_vo.py.",
+  "lines": [
+    { "id": "hook1", "pauseAfter": 0.35, "v3": "[excited] In June, twenty twenty-five... Meta paid fourteen billion dollars!" },
+    { "id": "hook2", "pauseAfter": 0.5, "v3": "[dramatic] Not for a company... [whispers] for one twenty-eight-year-old." },
+    { "id": "name", "pauseAfter": 0.3, "v3": "[curious] His name is... Alexander Wang." },
+    { "id": "origin", "pauseAfter": 0.35, "v3": "At nineteen, he dropped out of MIT... and started Scale AI." },
+    { "id": "feeds", "pauseAfter": 0.4, "v3": "[thoughtful] Scale doesn't build AI. [pause] It feeds it." },
+    { "id": "labels", "pauseAfter": 0.35, "v3": "Its workers label the data that trains AI for Google, OpenAI... [surprised] and even the US military!" },
+    { "id": "billionaire", "pauseAfter": 0.5, "v3": "[impressed] It made him the world's youngest self-made billionaire." },
+    { "id": "why", "pauseAfter": 0.35, "v3": "[curious] So why did Meta pay so much?" },
+    { "id": "llama", "pauseAfter": 0.4, "v3": "Because its newest model, Llama four, [sighs] landed with a shrug... and Zuckerberg was falling behind in the AI race." },
+    { "id": "deal", "pauseAfter": 0.55, "v3": "[serious] So Meta bought forty-nine percent of Scale... and hired Wang to run its new superintelligence lab." },
+    { "id": "crazy", "pauseAfter": 0.5, "v3": "[excited] And here's the crazy part!" },
+    { "id": "google", "pauseAfter": 0.35, "v3": "Scale's biggest customer was Google. [pause] About two hundred million dollars that year." },
+    { "id": "split", "pauseAfter": 0.4, "v3": "[serious] The day after the deal, reports said Google planned to walk away." },
+    { "id": "layoffs", "pauseAfter": 0.55, "v3": "[sighs] A month later... Scale cut fourteen percent of its staff." },
+    { "id": "reframe", "pauseAfter": 0.6, "v3": "[slowly] Meta didn't buy a company. [pause] It bought a person. [sad] And the company paid the price." },
+    { "id": "outro1", "pauseAfter": 0.3, "v3": "[curious] So was it the smartest hire in AI history?" },
+    { "id": "outro2", "pauseAfter": 1.0, "v3": "[mischievously] Or the most expensive one ever?" }
+  ]
+}
