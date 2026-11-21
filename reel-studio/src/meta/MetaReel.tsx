@@ -1,7 +1,7 @@
 import React from "react";
 import { Audio, Video } from "@remotion/media";
 import { AbsoluteFill, Img, interpolate, Sequence, staticFile, useCurrentFrame } from "remotion";
-import { BigType, C, Camera, clamp, Grain, SmoothBlur, MONO, SANS, Stamp, useU, Vignette } from "../reel/kit";
+import { BigType, C, Camera, clamp, CreamBG, DarkBG, Grain, MONO, SANS, SmoothBlur, Stamp, useU, Vignette } from "../reel/kit";
 import { buildChunks, Captions, CapPos, Tone } from "../reel/captions";
 import type { Line } from "../reel/timeline";
 import raw from "../timelines/meta-scale.json";
@@ -43,15 +43,15 @@ const SHOTS: Shot[] = [
   // HOOK
   { k: "img", src: "meta-hq.jpg", at: 0, pos: "42% 50%", zoom: [1.0, 1.12] },
   { k: "img", src: "zuck-mwc.jpg", at: at("hook1", 3), pos: "50% 16%" },
-  { k: "big", text: "$14,300,000,000", bg: "cream", at: at("hook1", 5), cap: "top" },
-  { k: "g", g: "strike", logo: "logo-scale.png", at: at("hook2", 0), mark: w("hook2", 3), cap: "low" },
+  { k: "big", text: "$14,300,000,000", bg: "cream", at: at("hook1", 5), cap: "top", tone: "dark" },
+  { k: "g", g: "strike", logo: "logo-scale.png", at: at("hook2", 0), mark: w("hook2", 3), cap: "low", tone: "dark" },
   { k: "img", src: "wang-redtie.jpg", at: at("hook2", 4), pos: "45% 35%", zoom: [1.18, 1.05] },
-  { k: "big", text: "28.", bg: "cream", at: at("hook2", 6), cap: "top" },
+  { k: "big", text: "28.", bg: "cream", at: at("hook2", 6), cap: "top", tone: "dark" },
   // NAME + ORIGIN
   { k: "vid", src: "wang-senra-med1.mp4", at: lineStart("name"), label: { title: "ALEXANDR WANG", sub: "Founder, Scale AI" }, cap: "top" },
-  { k: "big", text: "19.", bg: "cream", at: lineStart("origin"), cap: "top" },
+  { k: "big", text: "19.", bg: "cream", at: lineStart("origin"), cap: "top", tone: "dark" },
   { k: "img", src: "mit.jpg", at: at("origin", 2), stamp: { text: "DROPOUT", at: w("origin", 3) + 0.15 } },
-  { k: "g", g: "logoCard", logo: "logo-scale.png", label: "FOUNDED 2016 · SAN FRANCISCO", at: at("origin", 7), cap: "low" },
+  { k: "g", g: "logoCard", logo: "logo-scale.png", label: "FOUNDED 2016 · SAN FRANCISCO", at: at("origin", 7), cap: "low", tone: "dark" },
   // WHAT SCALE DOES
   { k: "vid", src: "wang-yc1.mp4", at: lineStart("feeds") },
   { k: "vid", src: "servers1.mp4", at: at("feeds", 4), zoom: [1.15, 1.0] },
@@ -65,7 +65,7 @@ const SHOTS: Shot[] = [
   { k: "vid", src: "wang-senra-cu2.mp4", at: at("billionaire", 5), fit: "blur", zoom: [1.0, 1.06] },
   { k: "big", text: "billionaire.", bg: "black", italic: true, color: "#fff", at: at("billionaire", 7), cap: "top" },
   // WHY
-  { k: "g", g: "cream", at: lineStart("why"), cap: "center" },
+  { k: "g", g: "cream", at: lineStart("why"), cap: "center", tone: "dark" },
   { k: "img", src: "meta-hq.jpg", at: lineStart("llama"), pos: "45% 50%", bw: true, zoom: [1.2, 1.05] },
   { k: "g", g: "llama", at: at("llama", 4), mark: w("llama", 9) },
   { k: "img", src: "zuck-mwc.jpg", at: at("llama", 11), pos: "50% 14%", bw: true, zoom: [1.0, 1.15] },
@@ -79,15 +79,15 @@ const SHOTS: Shot[] = [
   { k: "g", g: "black", at: lineStart("crazy"), cap: "center" },
   { k: "img", src: "google-nyt.jpg", at: lineStart("google"), pos: "50% 45%" },
   { k: "img", src: "google-sign.jpg", at: at("google", 4), pos: "50% 40%", zoom: [1.2, 1.05] },
-  { k: "big", text: "$200M", bg: "cream", at: at("google", 6), cap: "top" },
+  { k: "big", text: "$200M", bg: "cream", at: at("google", 6), cap: "top", tone: "dark" },
   { k: "g", g: "quote", at: lineStart("split"), cap: "off" },
   { k: "g", g: "snap", at: at("split", 7), mark: w("split", 10) },
   { k: "vid", src: "office1.mp4", at: lineStart("layoffs"), bw: true },
-  { k: "big", text: "14%", bg: "cream", color: C.red, at: at("layoffs", 5), cap: "top" },
+  { k: "big", text: "14%", bg: "cream", color: C.red, at: at("layoffs", 5), cap: "top", tone: "dark" },
   { k: "vid", src: "office2.mp4", at: at("layoffs", 6), bw: true },
   // REFRAME
   { k: "img", src: "meta-hq.jpg", at: lineStart("reframe"), pos: "40% 50%", bw: true, zoom: [1.0, 1.18] },
-  { k: "g", g: "strike", logo: "logo-scale.png", at: at("reframe", 4), mark: w("reframe", 4) + 0.1, cap: "low" },
+  { k: "g", g: "strike", logo: "logo-scale.png", at: at("reframe", 4), mark: w("reframe", 4) + 0.1, cap: "low", tone: "dark" },
   { k: "vid", src: "wang-yc2.mp4", at: at("reframe", 5) },
   { k: "vid", src: "office3.mp4", at: at("reframe", 9), red: true },
   // OUTRO
@@ -113,7 +113,7 @@ const shotAt = (t: number) => {
   return s;
 };
 const lookOf = (s: Shot): { pos: CapPos; tone: Tone } => {
-  if (s.k === "big") return { pos: s.cap ?? "top", tone: s.tone ?? "light" };
+  if (s.k === "big") return { pos: s.cap ?? "top", tone: s.tone ?? (s.bg === "cream" ? "dark" : "light") };
   return { pos: s.cap ?? "low", tone: s.tone ?? "light" };
 };
 
@@ -174,8 +174,8 @@ const ShotView: React.FC<{ s: Shot; dur: number; idx: number }> = ({ s, dur, idx
   if (s.k === "big") {
     return (
       <AbsoluteFill>
-        <SmoothBlur seed={s.text} />
-        <BigType text={s.text} at={6} color={s.color ?? "#fff"} italic={s.italic} glow />
+        {s.bg === "cream" ? <CreamBG /> : <DarkBG />}
+        <BigType text={s.text} at={6} color={s.color ?? (s.bg === "cream" ? C.ink : "#fff")} italic={s.italic} glow={s.bg === "black"} />
       </AbsoluteFill>
     );
   }
@@ -226,9 +226,12 @@ export const MetaReel: React.FC = () => {
           </Sequence>
         );
       })}
-      {/* blur texture over the entire video: drifting soft light + grain, blended gently into every shot */}
-      <AbsoluteFill style={{ mixBlendMode: "soft-light", opacity: 0.45, pointerEvents: "none" }}>
-        <SmoothBlur seed="global" brightness={1.3} />
+      {/* blur texture laid over the entire video (drifting soft light + grain); backgrounds are unchanged */}
+      <AbsoluteFill style={{ mixBlendMode: "overlay", opacity: 0.6, pointerEvents: "none" }}>
+        <SmoothBlur seed="global" brightness={1.4} />
+      </AbsoluteFill>
+      <AbsoluteFill style={{ mixBlendMode: "multiply", opacity: 0.22, pointerEvents: "none" }}>
+        <SmoothBlur seed="global" brightness={1.6} />
       </AbsoluteFill>
       <Vignette strength={0.5} />
       <Grain opacity={0.08} />
