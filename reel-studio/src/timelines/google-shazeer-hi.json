@@ -1,0 +1,1217 @@
+{
+ "title": "Google Rehires Its Quitter (Hindi)",
+ "duration": 87.484,
+ "lines": [
+  {
+   "id": "hook1",
+   "show": "Google ne abhi-abhi $2.7 billion diye... yaani kareeb ₹22,000 crore!",
+   "start": 0.0,
+   "end": 5.841,
+   "words": [
+    {
+     "text": "Google",
+     "start": 0.023,
+     "end": 0.497
+    },
+    {
+     "text": "ne",
+     "start": 0.54,
+     "end": 0.68
+    },
+    {
+     "text": "abhi-abhi",
+     "start": 0.705,
+     "end": 1.235
+    },
+    {
+     "text": "$2.7",
+     "start": 1.241,
+     "end": 2.109
+    },
+    {
+     "text": "billion",
+     "start": 2.114,
+     "end": 2.612
+    },
+    {
+     "text": "diye...",
+     "start": 2.885,
+     "end": 3.22
+    },
+    {
+     "text": "yaani",
+     "start": 3.275,
+     "end": 3.805
+    },
+    {
+     "text": "kareeb",
+     "start": 3.92,
+     "end": 4.33
+    },
+    {
+     "text": "₹22,000",
+     "start": 4.28,
+     "end": 4.917
+    },
+    {
+     "text": "crore!",
+     "start": 4.898,
+     "end": 5.27
+    }
+   ]
+  },
+  {
+   "id": "hook2",
+   "show": "Ek aise aadmi ko wapas laane ke liye... jisne naukri chhod di thi.",
+   "start": 5.983,
+   "end": 10.254,
+   "words": [
+    {
+     "text": "Ek",
+     "start": 6.043,
+     "end": 6.3
+    },
+    {
+     "text": "aise",
+     "start": 6.333,
+     "end": 6.647
+    },
+    {
+     "text": "aadmi",
+     "start": 6.613,
+     "end": 6.967
+    },
+    {
+     "text": "ko",
+     "start": 6.94,
+     "end": 7.08
+    },
+    {
+     "text": "wapas",
+     "start": 7.053,
+     "end": 7.407
+    },
+    {
+     "text": "laane",
+     "start": 7.4,
+     "end": 7.7
+    },
+    {
+     "text": "ke",
+     "start": 7.72,
+     "end": 7.86
+    },
+    {
+     "text": "liye...",
+     "start": 7.86,
+     "end": 8.12
+    },
+    {
+     "text": "jisne",
+     "start": 8.526,
+     "end": 9.119
+    },
+    {
+     "text": "naukri",
+     "start": 9.156,
+     "end": 9.549
+    },
+    {
+     "text": "chhod",
+     "start": 9.583,
+     "end": 9.897
+    },
+    {
+     "text": "di",
+     "start": 9.926,
+     "end": 10.066
+    },
+    {
+     "text": "thi.",
+     "start": 10.094,
+     "end": 10.234
+    }
+   ]
+  },
+  {
+   "id": "name",
+   "show": "Uska naam hai... Noam Shazeer.",
+   "start": 10.943,
+   "end": 12.849,
+   "words": [
+    {
+     "text": "Uska",
+     "start": 11.003,
+     "end": 11.243
+    },
+    {
+     "text": "naam",
+     "start": 11.368,
+     "end": 11.618
+    },
+    {
+     "text": "hai...",
+     "start": 11.632,
+     "end": 11.772
+    },
+    {
+     "text": "Noam",
+     "start": 11.868,
+     "end": 12.278
+    },
+    {
+     "text": "Shazeer.",
+     "start": 12.356,
+     "end": 12.829
+    }
+   ]
+  },
+  {
+   "id": "paper",
+   "show": "2017 mein, usne woh research paper likha jisne Transformer banaya... yaani ChatGPT ka \"T\".",
+   "start": 13.462,
+   "end": 19.49,
+   "words": [
+    {
+     "text": "2017",
+     "start": 13.522,
+     "end": 14.504
+    },
+    {
+     "text": "mein,",
+     "start": 14.442,
+     "end": 14.583
+    },
+    {
+     "text": "usne",
+     "start": 14.572,
+     "end": 14.872
+    },
+    {
+     "text": "woh",
+     "start": 14.832,
+     "end": 14.972
+    },
+    {
+     "text": "research",
+     "start": 14.94,
+     "end": 15.365
+    },
+    {
+     "text": "paper",
+     "start": 15.326,
+     "end": 15.679
+    },
+    {
+     "text": "likha",
+     "start": 15.658,
+     "end": 15.928
+    },
+    {
+     "text": "jisne",
+     "start": 15.909,
+     "end": 16.276
+    },
+    {
+     "text": "Transformer",
+     "start": 16.231,
+     "end": 16.908
+    },
+    {
+     "text": "banaya...",
+     "start": 16.879,
+     "end": 17.286
+    },
+    {
+     "text": "yaani",
+     "start": 17.64,
+     "end": 18.1
+    },
+    {
+     "text": "ChatGPT",
+     "start": 18.18,
+     "end": 19.087
+    },
+    {
+     "text": "ka",
+     "start": 19.12,
+     "end": 19.26
+    },
+    {
+     "text": "\"T\".",
+     "start": 19.33,
+     "end": 19.47
+    }
+   ]
+  },
+  {
+   "id": "chatbot",
+   "show": "Google mein usne ek aisa chatbot banane mein madad ki, jo insaan ki tarah baat karta tha. ChatGPT se saalon pehle.",
+   "start": 20.404,
+   "end": 27.583,
+   "words": [
+    {
+     "text": "Google",
+     "start": 20.464,
+     "end": 20.89
+    },
+    {
+     "text": "mein",
+     "start": 20.91,
+     "end": 21.05
+    },
+    {
+     "text": "usne",
+     "start": 21.03,
+     "end": 21.37
+    },
+    {
+     "text": "ek",
+     "start": 21.31,
+     "end": 21.51
+    },
+    {
+     "text": "aisa",
+     "start": 21.49,
+     "end": 21.75
+    },
+    {
+     "text": "chatbot",
+     "start": 21.723,
+     "end": 22.201
+    },
+    {
+     "text": "banane",
+     "start": 22.147,
+     "end": 22.553
+    },
+    {
+     "text": "mein",
+     "start": 22.54,
+     "end": 22.68
+    },
+    {
+     "text": "madad",
+     "start": 22.637,
+     "end": 22.972
+    },
+    {
+     "text": "ki,",
+     "start": 22.93,
+     "end": 23.07
+    },
+    {
+     "text": "jo",
+     "start": 23.13,
+     "end": 23.27
+    },
+    {
+     "text": "insaan",
+     "start": 23.27,
+     "end": 23.71
+    },
+    {
+     "text": "ki",
+     "start": 23.7,
+     "end": 23.84
+    },
+    {
+     "text": "tarah",
+     "start": 23.81,
+     "end": 24.057
+    },
+    {
+     "text": "baat",
+     "start": 23.965,
+     "end": 24.235
+    },
+    {
+     "text": "karta",
+     "start": 24.21,
+     "end": 24.55
+    },
+    {
+     "text": "tha.",
+     "start": 25.07,
+     "end": 25.21
+    },
+    {
+     "text": "ChatGPT",
+     "start": 25.73,
+     "end": 26.703
+    },
+    {
+     "text": "se",
+     "start": 26.73,
+     "end": 26.87
+    },
+    {
+     "text": "saalon",
+     "start": 26.9,
+     "end": 27.2
+    },
+    {
+     "text": "pehle.",
+     "start": 27.197,
+     "end": 27.563
+    }
+   ]
+  },
+  {
+   "id": "scared",
+   "show": "Lekin Google use launch karne se dar gaya.",
+   "start": 28.044,
+   "end": 30.633,
+   "words": [
+    {
+     "text": "Lekin",
+     "start": 28.104,
+     "end": 28.63
+    },
+    {
+     "text": "Google",
+     "start": 28.68,
+     "end": 29.047
+    },
+    {
+     "text": "use",
+     "start": 29.013,
+     "end": 29.253
+    },
+    {
+     "text": "launch",
+     "start": 29.238,
+     "end": 29.562
+    },
+    {
+     "text": "karne",
+     "start": 29.513,
+     "end": 29.853
+    },
+    {
+     "text": "se",
+     "start": 29.843,
+     "end": 29.983
+    },
+    {
+     "text": "dar",
+     "start": 29.943,
+     "end": 30.183
+    },
+    {
+     "text": "gaya.",
+     "start": 30.213,
+     "end": 30.613
+    }
+   ]
+  },
+  {
+   "id": "quit",
+   "show": "Toh 2021 mein usne Google chhod diya... aur shuru ki, Character.AI.",
+   "start": 31.154,
+   "end": 35.713,
+   "words": [
+    {
+     "text": "Toh",
+     "start": 31.214,
+     "end": 31.454
+    },
+    {
+     "text": "2021",
+     "start": 31.334,
+     "end": 32.073
+    },
+    {
+     "text": "mein",
+     "start": 32.053,
+     "end": 32.193
+    },
+    {
+     "text": "usne",
+     "start": 32.36,
+     "end": 32.647
+    },
+    {
+     "text": "Google",
+     "start": 32.593,
+     "end": 32.933
+    },
+    {
+     "text": "chhod",
+     "start": 32.918,
+     "end": 33.183
+    },
+    {
+     "text": "diya...",
+     "start": 33.168,
+     "end": 33.438
+    },
+    {
+     "text": "aur",
+     "start": 33.553,
+     "end": 34.073
+    },
+    {
+     "text": "shuru",
+     "start": 34.188,
+     "end": 34.458
+    },
+    {
+     "text": "ki,",
+     "start": 34.513,
+     "end": 34.653
+    },
+    {
+     "text": "Character.AI.",
+     "start": 34.7,
+     "end": 35.693
+    }
+   ]
+  },
+  {
+   "id": "billion",
+   "show": "Do saal mein uski value ho gayi... $1 billion.",
+   "start": 36.546,
+   "end": 39.352,
+   "words": [
+    {
+     "text": "Do",
+     "start": 36.606,
+     "end": 36.846
+    },
+    {
+     "text": "saal",
+     "start": 36.922,
+     "end": 37.202
+    },
+    {
+     "text": "mein",
+     "start": 37.232,
+     "end": 37.372
+    },
+    {
+     "text": "uski",
+     "start": 37.366,
+     "end": 37.639
+    },
+    {
+     "text": "value",
+     "start": 37.612,
+     "end": 37.984
+    },
+    {
+     "text": "ho",
+     "start": 37.916,
+     "end": 38.056
+    },
+    {
+     "text": "gayi...",
+     "start": 38.042,
+     "end": 38.309
+    },
+    {
+     "text": "$1",
+     "start": 38.317,
+     "end": 38.627
+    },
+    {
+     "text": "billion.",
+     "start": 38.612,
+     "end": 38.992
+    }
+   ]
+  },
+  {
+   "id": "chatgpt",
+   "show": "Phir ChatGPT ne dhamaka kiya... aur Google achaanak peeche reh gaya.",
+   "start": 39.924,
+   "end": 44.127,
+   "words": [
+    {
+     "text": "Phir",
+     "start": 39.983,
+     "end": 40.224
+    },
+    {
+     "text": "ChatGPT",
+     "start": 40.227,
+     "end": 40.976
+    },
+    {
+     "text": "ne",
+     "start": 40.982,
+     "end": 41.122
+    },
+    {
+     "text": "dhamaka",
+     "start": 41.122,
+     "end": 41.542
+    },
+    {
+     "text": "kiya...",
+     "start": 41.642,
+     "end": 42.122
+    },
+    {
+     "text": "aur",
+     "start": 42.377,
+     "end": 42.567
+    },
+    {
+     "text": "Google",
+     "start": 42.519,
+     "end": 42.926
+    },
+    {
+     "text": "achaanak",
+     "start": 42.909,
+     "end": 43.412
+    },
+    {
+     "text": "peeche",
+     "start": 43.412,
+     "end": 43.712
+    },
+    {
+     "text": "reh",
+     "start": 43.697,
+     "end": 43.927
+    },
+    {
+     "text": "gaya.",
+     "start": 43.877,
+     "end": 44.107
+    }
+   ]
+  },
+  {
+   "id": "deal",
+   "show": "Toh 2024 mein, Google ne kareeb $2.7 billion diye... Character ki technology ke license ke liye, aur Shazeer ko wapas laane ke liye.",
+   "start": 44.828,
+   "end": 53.35,
+   "words": [
+    {
+     "text": "Toh",
+     "start": 44.888,
+     "end": 45.128
+    },
+    {
+     "text": "2024",
+     "start": 45.008,
+     "end": 45.801
+    },
+    {
+     "text": "mein,",
+     "start": 45.79,
+     "end": 45.93
+    },
+    {
+     "text": "Google",
+     "start": 46.117,
+     "end": 46.443
+    },
+    {
+     "text": "ne",
+     "start": 46.43,
+     "end": 46.57
+    },
+    {
+     "text": "kareeb",
+     "start": 46.563,
+     "end": 46.917
+    },
+    {
+     "text": "$2.7",
+     "start": 46.903,
+     "end": 47.674
+    },
+    {
+     "text": "billion",
+     "start": 47.66,
+     "end": 48.1
+    },
+    {
+     "text": "diye...",
+     "start": 48.425,
+     "end": 48.854
+    },
+    {
+     "text": "Character",
+     "start": 49.002,
+     "end": 49.558
+    },
+    {
+     "text": "ki",
+     "start": 49.56,
+     "end": 49.7
+    },
+    {
+     "text": "technology",
+     "start": 49.704,
+     "end": 50.289
+    },
+    {
+     "text": "ke",
+     "start": 50.27,
+     "end": 50.41
+    },
+    {
+     "text": "license",
+     "start": 50.423,
+     "end": 50.857
+    },
+    {
+     "text": "ke",
+     "start": 50.87,
+     "end": 51.01
+    },
+    {
+     "text": "liye,",
+     "start": 51.1,
+     "end": 51.54
+    },
+    {
+     "text": "aur",
+     "start": 51.645,
+     "end": 51.855
+    },
+    {
+     "text": "Shazeer",
+     "start": 51.817,
+     "end": 52.223
+    },
+    {
+     "text": "ko",
+     "start": 52.23,
+     "end": 52.37
+    },
+    {
+     "text": "wapas",
+     "start": 52.363,
+     "end": 52.717
+    },
+    {
+     "text": "laane",
+     "start": 52.7,
+     "end": 52.98
+    },
+    {
+     "text": "ke",
+     "start": 52.99,
+     "end": 53.13
+    },
+    {
+     "text": "liye.",
+     "start": 53.11,
+     "end": 53.33
+    }
+   ]
+  },
+  {
+   "id": "crazy",
+   "show": "Aur ab aati hai... sabse paagalpan waali baat.",
+   "start": 54.31,
+   "end": 56.806,
+   "words": [
+    {
+     "text": "Aur",
+     "start": 54.37,
+     "end": 54.61
+    },
+    {
+     "text": "ab",
+     "start": 54.576,
+     "end": 54.776
+    },
+    {
+     "text": "aati",
+     "start": 54.736,
+     "end": 55.016
+    },
+    {
+     "text": "hai...",
+     "start": 55.016,
+     "end": 55.156
+    },
+    {
+     "text": "sabse",
+     "start": 55.446,
+     "end": 55.796
+    },
+    {
+     "text": "paagalpan",
+     "start": 55.793,
+     "end": 56.331
+    },
+    {
+     "text": "waali",
+     "start": 56.301,
+     "end": 56.551
+    },
+    {
+     "text": "baat.",
+     "start": 56.526,
+     "end": 56.786
+    }
+   ]
+  },
+  {
+   "id": "license",
+   "show": "Google ne company khareedi hi nahi. Character.AI chalti rahi.",
+   "start": 57.512,
+   "end": 61.109,
+   "words": [
+    {
+     "text": "Google",
+     "start": 57.572,
+     "end": 57.996
+    },
+    {
+     "text": "ne",
+     "start": 58.016,
+     "end": 58.156
+    },
+    {
+     "text": "company",
+     "start": 58.143,
+     "end": 58.51
+    },
+    {
+     "text": "khareedi",
+     "start": 58.515,
+     "end": 58.916
+    },
+    {
+     "text": "hi",
+     "start": 58.911,
+     "end": 59.051
+    },
+    {
+     "text": "nahi.",
+     "start": 59.046,
+     "end": 59.586
+    },
+    {
+     "text": "Character.AI",
+     "start": 59.772,
+     "end": 60.476
+    },
+    {
+     "text": "chalti",
+     "start": 60.446,
+     "end": 60.826
+    },
+    {
+     "text": "rahi.",
+     "start": 60.814,
+     "end": 61.089
+    }
+   ]
+  },
+  {
+   "id": "lead",
+   "show": "Aur Google ne Shazeer ko apne sabse bade AI project, Gemini ka co-lead bana diya.",
+   "start": 61.341,
+   "end": 66.137,
+   "words": [
+    {
+     "text": "Aur",
+     "start": 61.401,
+     "end": 61.611
+    },
+    {
+     "text": "Google",
+     "start": 61.57,
+     "end": 61.963
+    },
+    {
+     "text": "ne",
+     "start": 61.976,
+     "end": 62.116
+    },
+    {
+     "text": "Shazeer",
+     "start": 62.133,
+     "end": 62.54
+    },
+    {
+     "text": "ko",
+     "start": 62.556,
+     "end": 62.696
+    },
+    {
+     "text": "apne",
+     "start": 62.696,
+     "end": 63.036
+    },
+    {
+     "text": "sabse",
+     "start": 63.006,
+     "end": 63.406
+    },
+    {
+     "text": "bade",
+     "start": 63.406,
+     "end": 63.666
+    },
+    {
+     "text": "AI",
+     "start": 63.651,
+     "end": 63.921
+    },
+    {
+     "text": "project,",
+     "start": 63.901,
+     "end": 64.499
+    },
+    {
+     "text": "Gemini",
+     "start": 64.487,
+     "end": 64.987
+    },
+    {
+     "text": "ka",
+     "start": 65.027,
+     "end": 65.167
+    },
+    {
+     "text": "co-lead",
+     "start": 65.187,
+     "end": 65.605
+    },
+    {
+     "text": "bana",
+     "start": 65.602,
+     "end": 65.872
+    },
+    {
+     "text": "diya.",
+     "start": 65.857,
+     "end": 66.117
+    }
+   ]
+  },
+  {
+   "id": "doj",
+   "show": "Phir America ke Justice Department ne sawaal uthaya... kya yeh deal merger ke niyamon se bachne ke liye banayi gayi thi?",
+   "start": 67.113,
+   "end": 73.428,
+   "words": [
+    {
+     "text": "Phir",
+     "start": 67.173,
+     "end": 67.413
+    },
+    {
+     "text": "America",
+     "start": 67.346,
+     "end": 67.845
+    },
+    {
+     "text": "ke",
+     "start": 67.847,
+     "end": 67.987
+    },
+    {
+     "text": "Justice",
+     "start": 67.982,
+     "end": 68.392
+    },
+    {
+     "text": "Department",
+     "start": 68.357,
+     "end": 68.987
+    },
+    {
+     "text": "ne",
+     "start": 68.902,
+     "end": 69.042
+    },
+    {
+     "text": "sawaal",
+     "start": 69.011,
+     "end": 69.364
+    },
+    {
+     "text": "uthaya...",
+     "start": 69.341,
+     "end": 69.734
+    },
+    {
+     "text": "kya",
+     "start": 69.842,
+     "end": 70.352
+    },
+    {
+     "text": "yeh",
+     "start": 70.467,
+     "end": 70.607
+    },
+    {
+     "text": "deal",
+     "start": 70.6,
+     "end": 70.872
+    },
+    {
+     "text": "merger",
+     "start": 70.845,
+     "end": 71.27
+    },
+    {
+     "text": "ke",
+     "start": 71.267,
+     "end": 71.407
+    },
+    {
+     "text": "niyamon",
+     "start": 71.432,
+     "end": 71.722
+    },
+    {
+     "text": "se",
+     "start": 71.737,
+     "end": 71.877
+    },
+    {
+     "text": "bachne",
+     "start": 71.867,
+     "end": 72.207
+    },
+    {
+     "text": "ke",
+     "start": 72.187,
+     "end": 72.327
+    },
+    {
+     "text": "liye",
+     "start": 72.287,
+     "end": 72.487
+    },
+    {
+     "text": "banayi",
+     "start": 72.424,
+     "end": 72.751
+    },
+    {
+     "text": "gayi",
+     "start": 72.697,
+     "end": 72.917
+    },
+    {
+     "text": "thi?",
+     "start": 73.268,
+     "end": 73.408
+    }
+   ]
+  },
+  {
+   "id": "reframe",
+   "show": "Google ne koi startup nahi khareeda. Usne us insaan ko wapas khareeda... jise usne jaane diya tha.",
+   "start": 74.081,
+   "end": 80.17,
+   "words": [
+    {
+     "text": "Google",
+     "start": 74.141,
+     "end": 74.5
+    },
+    {
+     "text": "ne",
+     "start": 74.59,
+     "end": 74.73
+    },
+    {
+     "text": "koi",
+     "start": 74.725,
+     "end": 74.975
+    },
+    {
+     "text": "startup",
+     "start": 74.909,
+     "end": 75.42
+    },
+    {
+     "text": "nahi",
+     "start": 75.355,
+     "end": 75.585
+    },
+    {
+     "text": "khareeda.",
+     "start": 75.567,
+     "end": 75.963
+    },
+    {
+     "text": "Usne",
+     "start": 76.536,
+     "end": 77.023
+    },
+    {
+     "text": "us",
+     "start": 77.005,
+     "end": 77.215
+    },
+    {
+     "text": "insaan",
+     "start": 77.246,
+     "end": 77.646
+    },
+    {
+     "text": "ko",
+     "start": 77.61,
+     "end": 77.75
+    },
+    {
+     "text": "wapas",
+     "start": 77.723,
+     "end": 78.076
+    },
+    {
+     "text": "khareeda...",
+     "start": 78.073,
+     "end": 78.496
+    },
+    {
+     "text": "jise",
+     "start": 78.595,
+     "end": 79.065
+    },
+    {
+     "text": "usne",
+     "start": 79.136,
+     "end": 79.463
+    },
+    {
+     "text": "jaane",
+     "start": 79.45,
+     "end": 79.75
+    },
+    {
+     "text": "diya",
+     "start": 79.75,
+     "end": 80.01
+    },
+    {
+     "text": "tha.",
+     "start": 80.01,
+     "end": 80.15
+    }
+   ]
+  },
+  {
+   "id": "outro1",
+   "show": "Toh kya woh sach mein $2.7 billion ke laayak tha?",
+   "start": 81.273,
+   "end": 84.43,
+   "words": [
+    {
+     "text": "Toh",
+     "start": 81.333,
+     "end": 81.573
+    },
+    {
+     "text": "kya",
+     "start": 81.49,
+     "end": 81.71
+    },
+    {
+     "text": "woh",
+     "start": 81.67,
+     "end": 81.813
+    },
+    {
+     "text": "sach",
+     "start": 81.8,
+     "end": 82.08
+    },
+    {
+     "text": "mein",
+     "start": 82.08,
+     "end": 82.22
+    },
+    {
+     "text": "$2.7",
+     "start": 82.178,
+     "end": 82.811
+    },
+    {
+     "text": "billion",
+     "start": 82.77,
+     "end": 83.205
+    },
+    {
+     "text": "ke",
+     "start": 83.46,
+     "end": 83.6
+    },
+    {
+     "text": "laayak",
+     "start": 83.603,
+     "end": 83.956
+    },
+    {
+     "text": "tha?",
+     "start": 84.27,
+     "end": 84.41
+    }
+   ]
+  },
+  {
+   "id": "outro2",
+   "show": "Ya Google ne bas... apni hi galti ki keemat chukaayi?",
+   "start": 84.744,
+   "end": 87.544,
+   "words": [
+    {
+     "text": "Ya",
+     "start": 84.804,
+     "end": 85.044
+    },
+    {
+     "text": "Google",
+     "start": 85.038,
+     "end": 85.391
+    },
+    {
+     "text": "ne",
+     "start": 85.384,
+     "end": 85.524
+    },
+    {
+     "text": "bas...",
+     "start": 85.524,
+     "end": 85.784
+    },
+    {
+     "text": "apni",
+     "start": 85.809,
+     "end": 86.294
+    },
+    {
+     "text": "hi",
+     "start": 86.294,
+     "end": 86.434
+    },
+    {
+     "text": "galti",
+     "start": 86.398,
+     "end": 86.751
+    },
+    {
+     "text": "ki",
+     "start": 86.754,
+     "end": 86.894
+    },
+    {
+     "text": "keemat",
+     "start": 86.832,
+     "end": 87.114
+    },
+    {
+     "text": "chukaayi?",
+     "start": 87.039,
+     "end": 87.524
+    }
+   ]
+  }
+ ]
+}

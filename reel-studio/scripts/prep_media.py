@@ -45,6 +45,9 @@ for im in spec.get("images", []):
     if s > 1:
         img = img.resize((round(img.size[0] * s), round(img.size[1] * s)), Image.LANCZOS)
         img = img.filter(ImageFilter.UnsharpMask(radius=2.2, percent=70, threshold=2))
+    if im.get("invert"):  # light logo on dark -> dark on white, so the logo step can key out the white
+        from PIL import ImageOps
+        img = ImageOps.invert(img)
     if im.get("logo"):
         # white background -> transparent, un-premultiply colours
         rgba = img.convert("RGBA")

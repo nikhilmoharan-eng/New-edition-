@@ -1,5 +1,6 @@
 import React from "react";
 import { AbsoluteFill, Easing, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { SStay } from "../reel/scenes";
 import {
   Bust,
   C,
@@ -17,7 +18,7 @@ import {
 } from "../reel/kit";
 
 export const M = (f: string) => staticFile(`meta-scale/media/${f}`);
-export type GProps = { dur: number; mark?: number; logo?: string; label?: string };
+export type GProps = { dur: number; mark?: number; logo?: string; logo2?: string; label?: string; img?: string; text?: string };
 
 /* Logo on cream; a red line strikes through it at `mark`. */
 export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png", label }) => {
@@ -343,7 +344,7 @@ export const GRace: React.FC<GProps> = ({ dur }) => {
 };
 
 /* Logo-head handshake: Meta and Scale figures slide together. */
-export const GHandshake: React.FC<GProps> = () => {
+export const GHandshake: React.FC<GProps> = ({ logo = "logo-meta.png", logo2 = "logo-scale.png" }) => {
   const f = useCurrentFrame();
   const { u, portrait } = useU();
   const p = prog(f, 0, 14);
@@ -353,10 +354,10 @@ export const GHandshake: React.FC<GProps> = () => {
       <DarkBG tint="#1b2233" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${60 * u}px` }}>
         <div style={{ position: "absolute", translate: `${-sep}px 0px`, filter: `drop-shadow(0 0 ${26 * u}px rgba(80,140,255,0.45))` }}>
-          <Bust label="" logo={M("logo-meta.png")} size={portrait ? 380 : 430} />
+          <Bust label="" logo={M(logo)} size={portrait ? 380 : 430} />
         </div>
         <div style={{ position: "absolute", translate: `${sep}px 0px`, filter: `drop-shadow(0 0 ${26 * u}px rgba(200,90,255,0.45))` }}>
-          <Bust label="" logo={M("logo-scale.png")} size={portrait ? 380 : 430} />
+          <Bust label="" logo={M(logo2)} size={portrait ? 380 : 430} />
         </div>
       </AbsoluteFill>
     </AbsoluteFill>
@@ -428,7 +429,7 @@ export const GQuote: React.FC<GProps> = ({ dur }) => {
 };
 
 /* Google ↔ Scale link that snaps at `mark`. */
-export const GSnap: React.FC<GProps> = ({ mark = 20 }) => {
+export const GSnap: React.FC<GProps> = ({ mark = 20, logo = "logo-google.png", logo2 = "logo-scale.png" }) => {
   const f = useCurrentFrame();
   const { u, portrait } = useU();
   const sn = prog(f, mark, mark + 12);
@@ -461,15 +462,15 @@ export const GSnap: React.FC<GProps> = ({ mark = 20 }) => {
         {/* link: two halves that recoil after the snap */}
         <div style={{ position: "absolute", height: 8 * u, width: half, background: f < mark ? "#fff" : C.red, translate: `${-half / 2 - drift * 0.6}px 0px`, rotate: `${sn * -12}deg`, transformOrigin: "left", opacity: 1 - sn * 0.6 }} />
         <div style={{ position: "absolute", height: 8 * u, width: half, background: f < mark ? "#fff" : C.red, translate: `${half / 2 + drift * 0.6}px 0px`, rotate: `${sn * 12}deg`, transformOrigin: "right", opacity: 1 - sn * 0.6 }} />
-        {disc("logo-google.png", -gap - drift)}
-        {disc("logo-scale.png", gap + drift)}
+        {disc(logo, -gap - drift)}
+        {disc(logo2, gap + drift)}
       </AbsoluteFill>
     </AbsoluteFill>
   );
 };
 
 /* Split-screen ending: the person vs the price, then a giant "?". */
-export const GOutro: React.FC<GProps> = ({ dur }) => {
+export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = "$14,300,000,000" }) => {
   const f = useCurrentFrame();
   const { u, portrait } = useU();
   const l = prog(f, 0, 12);
@@ -489,13 +490,13 @@ export const GOutro: React.FC<GProps> = ({ dur }) => {
     <AbsoluteFill style={{ background: "#000" }}>
       <div style={{ ...half, ...(portrait ? { top: 0 } : { left: 0 }), opacity: l }}>
         <Img
-          src={M("wang-redtie.jpg")}
+          src={M(img)}
           style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", objectPosition: "45% 35%", filter: `grayscale(${1 - prog(f, 20, 60)}) contrast(1.1)`, scale: String(interpolate(f, [0, dur], [1.05, 1.15], clamp)) }}
         />
         <div style={{ position: "absolute", bottom: 40 * u, fontFamily: MONO, fontSize: 26 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>THE PERSON</div>
       </div>
       <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), background: C.cream, opacity: r }}>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 96 : 100) * u, color: C.ink, scale: String(interpolate(r, [0, 1], [1.2, 1])) }}>$14,300,000,000</div>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 96 : 100) * u, color: C.ink, scale: String(interpolate(r, [0, 1], [1.2, 1])) }}>{text}</div>
         <div style={{ fontFamily: MONO, fontSize: 26 * u, color: "#6c6656", letterSpacing: 6 * u }}>THE PRICE</div>
       </div>
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", opacity: q, background: `rgba(5,5,5,${0.78 * q})` }}>
@@ -507,6 +508,91 @@ export const GOutro: React.FC<GProps> = ({ dur }) => {
 
 export const GCream: React.FC<GProps> = () => <CreamBG />;
 export const GBlack: React.FC<GProps> = () => <DarkBG tint="#0e0e0e" />;
+
+
+/* "Chat GPT": the T gets highlighted and labelled TRANSFORMER. */
+export const GChatT: React.FC<GProps> = ({ mark = 18 }) => {
+  const f = useCurrentFrame();
+  const { u } = useU();
+  const inn = prog(f, 0, 10);
+  const hl = prog(f, mark, mark + 10, INOUT);
+  return (
+    <AbsoluteFill>
+      <CreamBG />
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-40 * u}px` }}>
+        <div style={{ position: "relative", fontFamily: DISPLAY, fontWeight: 800, fontSize: 240 * u, color: C.ink, opacity: inn, scale: String(interpolate(inn, [0, 1], [1.15, 1])) }}>
+          <span style={{ opacity: interpolate(hl, [0, 1], [1, 0.35]) }}>ChatGP</span>
+          <span style={{ position: "relative", color: interpolate(hl, [0, 1], [0, 1]) > 0.5 ? C.red : C.ink }}>
+            <span style={{ position: "absolute", inset: `${40 * u}px ${-14 * u}px ${20 * u}px`, background: C.yellow, transformOrigin: "bottom", scale: `1 ${hl}`, mixBlendMode: "multiply", zIndex: -1 }} />
+            T
+          </span>
+          <div style={{ position: "absolute", right: -10 * u, top: "100%", fontFamily: MONO, fontWeight: 500, fontSize: 34 * u, letterSpacing: 8 * u, color: C.red, opacity: hl, whiteSpace: "nowrap", translate: `0px ${interpolate(hl, [0, 1], [20, 0]) * u}px` }}>
+            ↑ TRANSFORMER
+          </div>
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+/* Licence terms as reported (Google x Character.AI). */
+export const GLicense: React.FC<GProps> = ({ dur }) => {
+  const f = useCurrentFrame();
+  const { u, w } = useU();
+  const hl = prog(f, 6, 18, INOUT);
+  const row = (k: string, v: React.ReactNode) => (
+    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: `${1.5 * u}px solid #ddd6c6`, padding: `${14 * u}px 0`, fontFamily: SANS, fontSize: 28 * u, color: "#2a2a2a" }}>
+      <span style={{ fontFamily: MONO, fontSize: 22 * u, color: "#7a7262", letterSpacing: 3 * u }}>{k}</span>
+      {v}
+    </div>
+  );
+  return (
+    <AbsoluteFill style={{ background: "linear-gradient(135deg,#2b2b2b,#0d0d0d)" }}>
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", perspective: 1800 * u, scale: String(interpolate(f, [0, dur], [1.05, 1.18], clamp)) }}>
+        <div style={{ width: Math.min(980 * u, w * 0.9), background: C.paper, padding: `${54 * u}px ${64 * u}px`, transform: "rotateX(18deg) rotateZ(-3deg)", boxShadow: `0 ${50 * u}px ${120 * u}px rgba(0,0,0,0.7)` }}>
+          <div style={{ textAlign: "center", fontFamily: DISPLAY, fontWeight: 700, fontSize: 38 * u, letterSpacing: 8 * u, color: "#222" }}>LICENSE AGREEMENT</div>
+          <div style={{ textAlign: "center", fontFamily: MONO, fontSize: 18 * u, color: "#8b8373", margin: `${8 * u}px 0 ${26 * u}px`, letterSpacing: 4 * u }}>AS REPORTED · AUGUST 2024</div>
+          {row("LICENSEE", <span>Google</span>)}
+          {row("LICENSOR", <span>Character.AI</span>)}
+          {row("TYPE", <span>Non-exclusive licence</span>)}
+          {row(
+            "AMOUNT",
+            <span style={{ position: "relative", fontFamily: DISPLAY, fontWeight: 800, fontSize: 64 * u }}>
+              <span style={{ position: "absolute", inset: `${8 * u}px ${-12 * u}px`, background: C.yellow, transformOrigin: "left", scale: `${hl} 1`, mixBlendMode: "multiply" }} />
+              <span style={{ position: "relative" }}>~$2.7 billion</span>
+            </span>,
+          )}
+          {row("ALSO", <span>Founders rejoin Google</span>)}
+          <div style={{ fontFamily: MONO, fontSize: 14 * u, color: "#b0a894", marginTop: 18 * u }}>illustration · terms as reported by the Wall Street Journal</div>
+        </div>
+      </AbsoluteFill>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 40% 40%, rgba(0,0,0,0) 30%, rgba(0,0,0,0.55) 100%)" }} />
+    </AbsoluteFill>
+  );
+};
+
+/* DOJ question over the Justice Department photo, with source and date. */
+export const GDoj: React.FC<GProps> = ({ dur }) => {
+  const f = useCurrentFrame();
+  const { u, w } = useU();
+  const inn = prog(f, 4, 14);
+  return (
+    <AbsoluteFill style={{ background: "#000" }}>
+      <Img src={M("doj.jpg")} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(10px) grayscale(0.4) brightness(0.45)", scale: String(interpolate(f, [0, dur], [1.15, 1.25], clamp)) }} />
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
+        <div style={{ width: Math.min(1250 * u, w * 0.86), opacity: inn, translate: `0px ${interpolate(inn, [0, 1], [30, 0]) * u}px`, background: C.paper, padding: `${48 * u}px ${58 * u}px`, rotate: "-1.2deg", boxShadow: `0 ${40 * u}px ${100 * u}px rgba(0,0,0,0.7)` }}>
+          <div style={{ fontFamily: MONO, fontSize: 26 * u, letterSpacing: 6 * u, color: C.red, marginBottom: 20 * u }}>BLOOMBERG LAW · MAY 2025 · AS REPORTED</div>
+          <div style={{ fontFamily: DISPLAY, fontWeight: 700, fontSize: 66 * u, lineHeight: 1.15, color: C.ink }}>
+            US Justice Department examines whether the Character.AI deal was built to avoid merger review
+          </div>
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+/* Walking-away corridor, reused from the first reel. */
+export const GWalk: React.FC<GProps> = ({ dur }) => <SStay dur={dur} />;
 
 export const GRAPHICS: Record<string, React.FC<GProps>> = {
   strike: GStrikeLogo,
@@ -521,6 +607,10 @@ export const GRAPHICS: Record<string, React.FC<GProps>> = {
   quote: GQuote,
   snap: GSnap,
   outro: GOutro,
+  chatT: GChatT,
+  license: GLicense,
+  doj: GDoj,
+  walk: GWalk,
   cream: GCream,
   black: GBlack,
 };

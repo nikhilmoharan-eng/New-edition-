@@ -4,6 +4,7 @@ import { Reel } from "./reel/Reel";
 import { FPS, TOTAL_FRAMES } from "./reel/timeline";
 import { MetaReel, TOTAL_FRAMES as META_FRAMES } from "./meta/MetaReel";
 import { META_HI } from "./meta/MetaReelHi";
+import { GOOGLE_EN, GOOGLE_HI } from "./meta/GoogleReel";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -20,6 +21,10 @@ export const RemotionRoot: React.FC = () => (
     <Folder name="Meta-Scale-14B-Hindi">
       <Composition id="MetaScaleHi16x9" component={META_HI.Reel} width={1920} height={1080} fps={30} durationInFrames={META_HI.totalFrames} />
       <Composition id="MetaScaleHi9x16" component={META_HI.Reel} width={1080} height={1920} fps={30} durationInFrames={META_HI.totalFrames} />
+    </Folder>
+    <Folder name="Google-Shazeer-27B">
+      <Composition id="Google16x9" component={GOOGLE_EN.Reel} width={1920} height={1080} fps={30} durationInFrames={GOOGLE_EN.totalFrames} />
+      <Composition id="GoogleHi16x9" component={GOOGLE_HI.Reel} width={1920} height={1080} fps={30} durationInFrames={GOOGLE_HI.totalFrames} />
     </Folder>
   </>
 );

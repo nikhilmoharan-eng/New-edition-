@@ -1,0 +1,109 @@
+{
+ "title": "Google Rehires Its Quitter (Hindi)",
+ "lang": "hi",
+ "note": "say = spoken; showAlign = Devanagari caption for timing; show = Hinglish on screen",
+ "lines": [
+  {
+   "id": "hook1",
+   "say": "गूगल ने अभी-अभी दो पॉइंट सात बिलियन डॉलर दिए... यानी क़रीब बाईस हज़ार करोड़ रुपये!",
+   "showAlign": "गूगल ने अभी-अभी $2.7 बिलियन दिए... यानी क़रीब ₹22,000 करोड़!",
+   "show": "Google ne abhi-abhi $2.7 billion diye... yaani kareeb ₹22,000 crore!"
+  },
+  {
+   "id": "hook2",
+   "say": "एक ऐसे आदमी को वापस लाने के लिए... जिसने नौकरी छोड़ दी थी।",
+   "showAlign": "एक ऐसे आदमी को वापस लाने के लिए... जिसने नौकरी छोड़ दी थी।",
+   "show": "Ek aise aadmi ko wapas laane ke liye... jisne naukri chhod di thi."
+  },
+  {
+   "id": "name",
+   "say": "उसका नाम है... नोम शज़ीर।",
+   "showAlign": "उसका नाम है... नोम शज़ीर।",
+   "show": "Uska naam hai... Noam Shazeer."
+  },
+  {
+   "id": "paper",
+   "say": "दो हज़ार सत्रह में, उसने वो रिसर्च पेपर लिखा जिसने ट्रांसफ़ॉर्मर बनाया... यानी चैट-जी-पी-टी का टी।",
+   "showAlign": "2017 में, उसने वो रिसर्च पेपर लिखा जिसने ट्रांसफ़ॉर्मर बनाया... यानी ChatGPT का T।",
+   "show": "2017 mein, usne woh research paper likha jisne Transformer banaya... yaani ChatGPT ka \"T\"."
+  },
+  {
+   "id": "chatbot",
+   "say": "गूगल में उसने एक ऐसा चैटबॉट बनाने में मदद की, जो इंसान की तरह बात करता था। चैट-जी-पी-टी से सालों पहले।",
+   "showAlign": "गूगल में उसने एक ऐसा चैटबॉट बनाने में मदद की, जो इंसान की तरह बात करता था। ChatGPT से सालों पहले।",
+   "show": "Google mein usne ek aisa chatbot banane mein madad ki, jo insaan ki tarah baat karta tha. ChatGPT se saalon pehle."
+  },
+  {
+   "id": "scared",
+   "say": "लेकिन गूगल उसे लॉन्च करने से डर गया।",
+   "showAlign": "लेकिन गूगल उसे लॉन्च करने से डर गया।",
+   "show": "Lekin Google use launch karne se dar gaya."
+  },
+  {
+   "id": "quit",
+   "say": "तो दो हज़ार इक्कीस में उसने गूगल छोड़ दिया... और शुरू की, कैरेक्टर ए-आई।",
+   "showAlign": "तो 2021 में उसने गूगल छोड़ दिया... और शुरू की, Character.AI।",
+   "show": "Toh 2021 mein usne Google chhod diya... aur shuru ki, Character.AI."
+  },
+  {
+   "id": "billion",
+   "say": "दो साल में उसकी वैल्यू हो गई... एक बिलियन डॉलर।",
+   "showAlign": "दो साल में उसकी वैल्यू हो गई... $1 बिलियन।",
+   "show": "Do saal mein uski value ho gayi... $1 billion."
+  },
+  {
+   "id": "chatgpt",
+   "say": "फिर चैट-जी-पी-टी ने धमाका किया... और गूगल अचानक पीछे रह गया।",
+   "showAlign": "फिर ChatGPT ने धमाका किया... और गूगल अचानक पीछे रह गया।",
+   "show": "Phir ChatGPT ne dhamaka kiya... aur Google achaanak peeche reh gaya."
+  },
+  {
+   "id": "deal",
+   "say": "तो दो हज़ार चौबीस में, गूगल ने क़रीब दो पॉइंट सात बिलियन डॉलर दिए... कैरेक्टर की टेक्नोलॉजी के लाइसेंस के लिए, और शज़ीर को वापस लाने के लिए।",
+   "showAlign": "तो 2024 में, गूगल ने क़रीब $2.7 बिलियन दिए... कैरेक्टर की टेक्नोलॉजी के लाइसेंस के लिए, और शज़ीर को वापस लाने के लिए।",
+   "show": "Toh 2024 mein, Google ne kareeb $2.7 billion diye... Character ki technology ke license ke liye, aur Shazeer ko wapas laane ke liye."
+  },
+  {
+   "id": "crazy",
+   "say": "और अब आती है... सबसे पागलपन वाली बात।",
+   "showAlign": "और अब आती है... सबसे पागलपन वाली बात।",
+   "show": "Aur ab aati hai... sabse paagalpan waali baat."
+  },
+  {
+   "id": "license",
+   "say": "गूगल ने कंपनी ख़रीदी ही नहीं। कैरेक्टर ए-आई चलती रही।",
+   "showAlign": "गूगल ने कंपनी ख़रीदी ही नहीं। Character.AI चलती रही।",
+   "show": "Google ne company khareedi hi nahi. Character.AI chalti rahi."
+  },
+  {
+   "id": "lead",
+   "say": "और गूगल ने शज़ीर को अपने सबसे बड़े ए-आई प्रोजेक्ट, जेमिनी का को-लीड बना दिया।",
+   "showAlign": "और गूगल ने शज़ीर को अपने सबसे बड़े AI प्रोजेक्ट, Gemini का को-लीड बना दिया।",
+   "show": "Aur Google ne Shazeer ko apne sabse bade AI project, Gemini ka co-lead bana diya."
+  },
+  {
+   "id": "doj",
+   "say": "फिर अमेरिका के जस्टिस डिपार्टमेंट ने सवाल उठाया... क्या ये डील मर्जर के नियमों से बचने के लिए बनाई गई थी?",
+   "showAlign": "फिर अमेरिका के जस्टिस डिपार्टमेंट ने सवाल उठाया... क्या ये डील मर्जर के नियमों से बचने के लिए बनाई गई थी?",
+   "show": "Phir America ke Justice Department ne sawaal uthaya... kya yeh deal merger ke niyamon se bachne ke liye banayi gayi thi?"
+  },
+  {
+   "id": "reframe",
+   "say": "गूगल ने कोई स्टार्टअप नहीं ख़रीदा। उसने उस इंसान को वापस ख़रीदा... जिसे उसने जाने दिया था।",
+   "showAlign": "गूगल ने कोई स्टार्टअप नहीं ख़रीदा। उसने उस इंसान को वापस ख़रीदा... जिसे उसने जाने दिया था।",
+   "show": "Google ne koi startup nahi khareeda. Usne us insaan ko wapas khareeda... jise usne jaane diya tha."
+  },
+  {
+   "id": "outro1",
+   "say": "तो क्या वो सच में दो पॉइंट सात बिलियन डॉलर के लायक था?",
+   "showAlign": "तो क्या वो सच में $2.7 बिलियन के लायक था?",
+   "show": "Toh kya woh sach mein $2.7 billion ke laayak tha?"
+  },
+  {
+   "id": "outro2",
+   "say": "या गूगल ने बस... अपनी ही ग़लती की क़ीमत चुकाई?",
+   "showAlign": "या गूगल ने बस... अपनी ही ग़लती की क़ीमत चुकाई?",
+   "show": "Ya Google ne bas... apni hi galti ki keemat chukaayi?"
+  }
+ ]
+}

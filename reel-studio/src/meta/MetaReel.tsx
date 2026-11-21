@@ -21,6 +21,10 @@ export type Lang = {
   /** for a translated voice: English word index -> this language's caption-word index, per line.
    *  Cuts on unmapped words land at the same relative point of the line. */
   map?: Record<string, Record<number, number>>;
+  /** this reel's shot list (default: The $14B Hire) */
+  shots?: (t: Timing) => Shot[];
+  /** the English timeline a translated voice maps from (default: The $14B Hire) */
+  base?: TLT;
   /** replace on-screen card text, e.g. { "billionaire.": "बिलियनेयर।" } */
   texts?: Record<string, string>;
   /** extra shots only this language needs; `hw(line, i)` = start of caption word i */
@@ -44,11 +48,14 @@ type MediaShot = Base & {
   zoom?: [number, number];
   /** "blur": in 16:9 use the pre-baked "<name>-wide.mp4" (whole frame over a blurred copy) */
   fit?: "blur";
+  /** small/low-res photo: show it as a framed print over a blurred copy instead of full-bleed */
+  card?: boolean;
   label?: { title: string; sub?: string };
   stamp?: { text: string; at: number };
 };
 type BigShot = Base & { k: "big"; text: string; bg: "cream" | "black"; color?: string; italic?: boolean };
-type GShot = Base & { k: "g"; g: string; mark?: number; logo?: string; label?: string };
+type GShot = Base & { k: "g"; g: string; mark?: number; logo?: string; logo2?: string; label?: string; img?: string; text?: string };
+export type { Shot, Timing };
 type Shot = MediaShot | BigShot | GShot;
 
 type Timing = { w: (id: string, i: number) => number; at: (id: string, i: number) => number; lineStart: (id: string) => number };
@@ -134,6 +141,22 @@ const MediaView: React.FC<{ s: MediaShot; dur: number; idx: number }> = ({ s, du
       >
         {s.k === "vid" ? (
           <Video src={M(wide ? s.src.replace(".mp4", "-wide.mp4") : s.src)} muted objectFit="cover" style={{ width: "100%", height: "100%" }} />
+        ) : s.card ? (
+          <>
+            <Img src={M(s.src)} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(30px) brightness(0.45)", scale: "1.2" }} />
+            <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
+              <Img
+                src={M(s.src)}
+                style={{
+                  maxWidth: "62%",
+                  maxHeight: "66%",
+                  border: `${12 * u}px solid #f4f1ea`,
+                  boxShadow: `0 ${30 * u}px ${80 * u}px rgba(0,0,0,0.7)`,
+                  rotate: idx % 2 ? "-2deg" : "2deg",
+                }}
+              />
+            </AbsoluteFill>
+          </>
         ) : (
           <Img src={M(s.src)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: s.pos ?? "50% 50%" }} />
         )}
@@ -182,7 +205,7 @@ const ShotView: React.FC<{ s: Shot; dur: number; idx: number }> = ({ s, dur, idx
   const mark = g.mark !== undefined ? Math.round((g.mark - g.at) * FPS) : undefined;
   return (
     <Camera dur={dur} from={1.0} to={1.04}>
-      <G dur={dur} mark={mark} logo={g.logo} label={g.label} />
+      <G dur={dur} mark={mark} logo={g.logo} logo2={g.logo2} label={g.label} img={g.img} text={g.text} />
     </Camera>
   );
 };
@@ -199,13 +222,13 @@ export const makeMetaReel = (L: Lang) => {
     if (!L.map) return hw(id, i);
     const m = L.map[id]?.[i];
     if (m !== undefined) return hw(id, m);
-    const e = lineOf(EN, id);
+    const e = lineOf(L.base ?? EN, id);
     const l = lineOf(L.tl, id);
     const frac = (e.words[i].start - e.start) / Math.max(0.01, e.end - e.start);
     return l.start + frac * (l.end - l.start);
   };
   const at = (id: string, i: number) => Math.max(0, w(id, i) - 0.04);
-  const SHOTS = [...buildShots({ w, at, lineStart }), ...(L.extra ? L.extra(hw) : [])]
+  const SHOTS = [...(L.shots ?? buildShots)({ w, at, lineStart }), ...(L.extra ? L.extra(hw) : [])]
     .map((s) => (s.k === "big" && L.texts?.[s.text] ? { ...s, text: L.texts[s.text] } : s))
     .sort((x, y) => x.at - y.at);
 
@@ -237,7 +260,8 @@ export const makeMetaReel = (L: Lang) => {
 
   const Reel: React.FC = () => {
     const crazyStart = lineStart("crazy");
-    const crazyEnd = lineStart("google");
+    const ids = L.tl.lines.map((l) => l.id);
+    const crazyEnd = lineStart(ids[ids.indexOf("crazy") + 1]);
     return (
       <AbsoluteFill style={{ background: "#000" }}>
         {SHOTS.map((s, i) => {

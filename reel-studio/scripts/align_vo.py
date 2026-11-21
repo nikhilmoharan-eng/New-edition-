@@ -39,8 +39,30 @@ from faster_whisper import WhisperModel
 
 y, _ = librosa.load(wav, sr=16000)
 wm = WhisperModel(a.whisper, device="cpu", compute_type="int8", cpu_threads=4)
-segs, _ = wm.transcribe(y, language=a.lang, word_timestamps=True, beam_size=5)
-ww = [w for s in segs for w in s.words]
+
+# Transcribe in short pieces cut at pauses: on long takes Whisper otherwise skips whole sections.
+_sd = subprocess.run(["ffmpeg", "-hide_banner", "-i", wav, "-af", "silencedetect=noise=-38dB:d=0.25", "-f", "null", "-"],
+                     capture_output=True, text=True).stderr
+_mids = [(float(x) + float(z)) / 2 for x, z in zip(re.findall(r"silence_start: ([0-9.]+)", _sd), re.findall(r"silence_end: ([0-9.]+)", _sd))]
+cuts, last = [0.0], 0.0
+for m_ in _mids:
+    if m_ - last >= 8.0:
+        cuts.append(m_)
+        last = m_
+cuts.append(len(y) / 16000)
+
+
+class _W:  # word with absolute times
+    def __init__(self, word, start, end):
+        self.word, self.start, self.end = word, start, end
+
+
+ww = []
+for c0, c1 in zip(cuts, cuts[1:]):
+    piece = y[int(c0 * 16000): int(c1 * 16000)]
+    segs, _ = wm.transcribe(piece, language=a.lang, word_timestamps=True, beam_size=5, condition_on_previous_text=False)
+    ww += [_W(w.word, w.start + c0, w.end + c0) for s in segs for w in s.words]
+print("transcribed", len(ww), "words in", len(cuts) - 1, "pieces")
 chars, ctimes = [], []
 for w in ww:
     n = norm(w.word)
