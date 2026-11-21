@@ -4,20 +4,34 @@ import { AbsoluteFill, Img, interpolate, Sequence, staticFile, useCurrentFrame }
 import { BigType, C, Camera, clamp, CreamBG, DarkBG, Grain, MONO, SANS, SmoothBlur, Stamp, useU, Vignette } from "../reel/kit";
 import { buildChunks, Captions, CapPos, Tone } from "../reel/captions";
 import type { Line } from "../reel/timeline";
-import raw from "../timelines/meta-scale.json";
+import enRaw from "../timelines/meta-scale.json";
 import { GRAPHICS, M } from "./graphics";
 
-/* ------------------------------------------------------------------ timeline */
-const TL = raw as { duration: number; lines: Line[] };
+/* ------------------------------------------------------------------ languages */
+type TLT = { duration: number; lines: Line[] };
+const EN = enRaw as TLT;
 export const FPS = 30;
-export const TOTAL_SEC = TL.duration + 1.2;
-export const TOTAL_FRAMES = Math.ceil(TOTAL_SEC * FPS);
-const w = (id: string, i: number) => {
-  const l = TL.lines.find((x) => x.id === id);
-  if (!l) throw new Error(id);
-  return l.words[i].start;
+
+export type Lang = {
+  tl: TLT;
+  vo: string;
+  music: string;
+  /** caption words a number card already shows (per line, caption-word indices) */
+  hide: Record<string, number[]>;
+  /** for a translated voice: English word index -> this language's caption-word index, per line.
+   *  Cuts on unmapped words land at the same relative point of the line. */
+  map?: Record<string, Record<number, number>>;
+  /** replace on-screen card text, e.g. { "billionaire.": "बिलियनेयर।" } */
+  texts?: Record<string, string>;
+  /** extra shots only this language needs; `hw(line, i)` = start of caption word i */
+  extra?: (hw: (id: string, i: number) => number) => Shot[];
 };
-const lineStart = (id: string) => TL.lines.find((x) => x.id === id)!.start;
+
+const lineOf = (tl: TLT, id: string) => {
+  const l = tl.lines.find((x) => x.id === id);
+  if (!l) throw new Error(`no line ${id}`);
+  return l;
+};
 
 /* --------------------------------------------------------------------- shots */
 type Base = { at: number; cap?: CapPos; tone?: Tone };
@@ -37,9 +51,9 @@ type BigShot = Base & { k: "big"; text: string; bg: "cream" | "black"; color?: s
 type GShot = Base & { k: "g"; g: string; mark?: number; logo?: string; label?: string };
 type Shot = MediaShot | BigShot | GShot;
 
-const at = (id: string, i: number) => Math.max(0, w(id, i) - 0.04);
+type Timing = { w: (id: string, i: number) => number; at: (id: string, i: number) => number; lineStart: (id: string) => number };
 
-const SHOTS: Shot[] = [
+const buildShots = ({ w, at, lineStart }: Timing): Shot[] => [
   // HOOK
   { k: "img", src: "meta-hq.jpg", at: 0, pos: "42% 50%", zoom: [1.0, 1.12] },
   { k: "img", src: "zuck-mwc.jpg", at: at("hook1", 3), pos: "50% 16%" },
@@ -96,22 +110,6 @@ const SHOTS: Shot[] = [
   { k: "g", g: "outro", at: lineStart("outro2"), cap: "low" },
 ];
 
-/** Caption words that a big-type card already shows. */
-const HIDE: Record<string, number[]> = {
-  hook1: [5, 6],
-  hook2: [6],
-  origin: [1],
-  billionaire: [7],
-  deal: [3],
-  google: [6, 7],
-  layoffs: [5],
-};
-
-const shotAt = (t: number) => {
-  let s = SHOTS[0];
-  for (const x of SHOTS) if (x.at <= t + 1e-6) s = x;
-  return s;
-};
 const lookOf = (s: Shot): { pos: CapPos; tone: Tone } => {
   if (s.k === "big") return { pos: s.cap ?? "top", tone: s.tone ?? (s.bg === "cream" ? "dark" : "light") };
   return { pos: s.cap ?? "low", tone: s.tone ?? "light" };
@@ -189,67 +187,104 @@ const ShotView: React.FC<{ s: Shot; dur: number; idx: number }> = ({ s, dur, idx
   );
 };
 
-/* -------------------------------------------------------------------- audio */
+/* ------------------------------------------------------------------ factory */
 type Cue = { at: number; src: string; vol: number };
-const CUES: Cue[] = (() => {
-  const c: Cue[] = [];
-  SHOTS.forEach((s, i) => {
-    // soft whoosh only on the bigger scene changes: into a number card, or every third cut
-    if (i && (s.k === "big" || i % 3 === 0)) c.push({ at: s.at - 0.1, src: "whoosh", vol: 0.06 });
-    if (s.k === "big") c.push({ at: s.at + 0.05, src: "impact", vol: 0.38 });
-    if (s.k === "g" && (s.g === "logoPop" || s.g === "logoCard")) c.push({ at: s.at + 0.05, src: "tick", vol: 0.22 });
-    if (s.k === "g" && (s.g === "strike" || s.g === "snap") && s.mark) c.push({ at: s.mark + 0.08, src: "stamp", vol: 0.42 });
-    if (s.k === "img" && s.stamp) c.push({ at: s.stamp.at, src: "stamp", vol: 0.45 });
-    if (s.k === "g" && s.g === "termSheet") c.push({ at: s.at + 0.2, src: "ding", vol: 0.2 });
-    if (s.k === "g" && s.g === "quote") for (let k = 0; k < 14; k++) c.push({ at: s.at + 0.1 + k * 0.06, src: "key", vol: 0.05 });
-  });
-  c.push({ at: lineStart("crazy") - 1.5, src: "riser", vol: 0.25 });
-  c.push({ at: w("crazy", 3), src: "impact", vol: 0.4 });
-  c.push({ at: TOTAL_SEC - 1.45, src: "impact", vol: 0.45 });
-  return c.filter((x) => x.at >= 0);
-})();
 
-const CHUNKS = buildChunks(TL.lines, HIDE);
+export const makeMetaReel = (L: Lang) => {
+  const TOTAL_SEC = L.tl.duration + 1.2;
+  const TOTAL_FRAMES = Math.ceil(TOTAL_SEC * FPS);
+  const lineStart = (id: string) => lineOf(L.tl, id).start;
+  const hw = (id: string, i: number) => lineOf(L.tl, id).words[i].start;
+  const w = (id: string, i: number) => {
+    if (!L.map) return hw(id, i);
+    const m = L.map[id]?.[i];
+    if (m !== undefined) return hw(id, m);
+    const e = lineOf(EN, id);
+    const l = lineOf(L.tl, id);
+    const frac = (e.words[i].start - e.start) / Math.max(0.01, e.end - e.start);
+    return l.start + frac * (l.end - l.start);
+  };
+  const at = (id: string, i: number) => Math.max(0, w(id, i) - 0.04);
+  const SHOTS = [...buildShots({ w, at, lineStart }), ...(L.extra ? L.extra(hw) : [])]
+    .map((s) => (s.k === "big" && L.texts?.[s.text] ? { ...s, text: L.texts[s.text] } : s))
+    .sort((x, y) => x.at - y.at);
 
-/* --------------------------------------------------------------------- reel */
-export const MetaReel: React.FC = () => {
-  const crazyStart = lineStart("crazy");
-  const crazyEnd = lineStart("google");
-  return (
-    <AbsoluteFill style={{ background: "#000" }}>
-      {SHOTS.map((s, i) => {
-        const from = Math.round(s.at * FPS);
-        const to = i + 1 < SHOTS.length ? Math.round(SHOTS[i + 1].at * FPS) : TOTAL_FRAMES;
-        return (
-          <Sequence key={i} name={`${i + 1} ${s.k === "g" ? s.g : s.k === "big" ? s.text : s.src}`} from={from} durationInFrames={to - from} layout="absolute-fill">
-            <ShotView s={s} dur={to - from} idx={i} />
+  const shotAt = (t: number) => {
+    let s = SHOTS[0];
+    for (const x of SHOTS) if (x.at <= t + 1e-6) s = x;
+    return s;
+  };
+
+  const CUES: Cue[] = (() => {
+    const c: Cue[] = [];
+    SHOTS.forEach((s, i) => {
+      // soft whoosh only on the bigger scene changes: into a number card, or every third cut
+      if (i && (s.k === "big" || i % 3 === 0)) c.push({ at: s.at - 0.1, src: "whoosh", vol: 0.06 });
+      if (s.k === "big") c.push({ at: s.at + 0.05, src: "impact", vol: 0.38 });
+      if (s.k === "g" && (s.g === "logoPop" || s.g === "logoCard")) c.push({ at: s.at + 0.05, src: "tick", vol: 0.22 });
+      if (s.k === "g" && (s.g === "strike" || s.g === "snap") && s.mark) c.push({ at: s.mark + 0.08, src: "stamp", vol: 0.42 });
+      if (s.k === "img" && s.stamp) c.push({ at: s.stamp.at, src: "stamp", vol: 0.45 });
+      if (s.k === "g" && s.g === "termSheet") c.push({ at: s.at + 0.2, src: "ding", vol: 0.2 });
+      if (s.k === "g" && s.g === "quote") for (let k = 0; k < 14; k++) c.push({ at: s.at + 0.1 + k * 0.06, src: "key", vol: 0.05 });
+    });
+    c.push({ at: lineStart("crazy") - 1.5, src: "riser", vol: 0.25 });
+    c.push({ at: w("crazy", 3), src: "impact", vol: 0.4 });
+    c.push({ at: TOTAL_SEC - 1.45, src: "impact", vol: 0.45 });
+    return c.filter((x) => x.at >= 0);
+  })();
+
+  const CHUNKS = buildChunks(L.tl.lines, L.hide);
+
+  const Reel: React.FC = () => {
+    const crazyStart = lineStart("crazy");
+    const crazyEnd = lineStart("google");
+    return (
+      <AbsoluteFill style={{ background: "#000" }}>
+        {SHOTS.map((s, i) => {
+          const from = Math.round(s.at * FPS);
+          const to = i + 1 < SHOTS.length ? Math.round(SHOTS[i + 1].at * FPS) : TOTAL_FRAMES;
+          return (
+            <Sequence key={i} name={`${i + 1} ${s.k === "g" ? s.g : s.k === "big" ? s.text : s.src}`} from={from} durationInFrames={to - from} layout="absolute-fill">
+              <ShotView s={s} dur={to - from} idx={i} />
+            </Sequence>
+          );
+        })}
+        {/* blur texture laid over the entire video (drifting soft light + grain); backgrounds are unchanged */}
+        <AbsoluteFill style={{ mixBlendMode: "overlay", opacity: 0.6, pointerEvents: "none" }}>
+          <SmoothBlur seed="global" brightness={1.4} />
+        </AbsoluteFill>
+        <AbsoluteFill style={{ mixBlendMode: "multiply", opacity: 0.22, pointerEvents: "none" }}>
+          <SmoothBlur seed="global" brightness={1.6} />
+        </AbsoluteFill>
+        <Vignette strength={0.5} />
+        <Grain opacity={0.08} />
+        <Captions chunks={CHUNKS} lookAt={(t) => lookOf(shotAt(t))} />
+        <Audio src={staticFile(L.vo)} />
+        <Audio
+          src={staticFile(L.music)}
+          volume={(f) => {
+            const t = f / FPS;
+            const duck = t > crazyStart - 0.2 && t < crazyEnd ? 0.35 : 1;
+            return 0.16 * duck * interpolate(t, [TOTAL_SEC - 2, TOTAL_SEC], [1, 0], clamp);
+          }}
+        />
+        {CUES.map((c, i) => (
+          <Sequence key={i} from={Math.round(c.at * FPS)} durationInFrames={2 * FPS} layout="none" name={`sfx ${c.src}`}>
+            <Audio src={staticFile(`sfx/${c.src}.wav`)} volume={c.vol} />
           </Sequence>
-        );
-      })}
-      {/* blur texture laid over the entire video (drifting soft light + grain); backgrounds are unchanged */}
-      <AbsoluteFill style={{ mixBlendMode: "overlay", opacity: 0.6, pointerEvents: "none" }}>
-        <SmoothBlur seed="global" brightness={1.4} />
+        ))}
       </AbsoluteFill>
-      <AbsoluteFill style={{ mixBlendMode: "multiply", opacity: 0.22, pointerEvents: "none" }}>
-        <SmoothBlur seed="global" brightness={1.6} />
-      </AbsoluteFill>
-      <Vignette strength={0.5} />
-      <Grain opacity={0.08} />
-      <Captions chunks={CHUNKS} lookAt={(t) => lookOf(shotAt(t))} />
-      <Audio src={staticFile("meta-scale/vo.wav")} />
-      <Audio
-        src={staticFile("meta-scale/music.wav")}
-        volume={(f) => {
-          const t = f / FPS;
-          const duck = t > crazyStart - 0.2 && t < crazyEnd ? 0.35 : 1;
-          return 0.16 * duck * interpolate(t, [TOTAL_SEC - 2, TOTAL_SEC], [1, 0], clamp);
-        }}
-      />
-      {CUES.map((c, i) => (
-        <Sequence key={i} from={Math.round(c.at * FPS)} durationInFrames={2 * FPS} layout="none" name={`sfx ${c.src}`}>
-          <Audio src={staticFile(`sfx/${c.src}.wav`)} volume={c.vol} />
-        </Sequence>
-      ))}
-    </AbsoluteFill>
-  );
+    );
+  };
+  return { Reel, totalFrames: TOTAL_FRAMES, shots: SHOTS };
 };
+
+/* -------------------------------------------------------------------- English */
+export const META_EN = makeMetaReel({
+  tl: EN,
+  vo: "meta-scale/vo.wav",
+  music: "meta-scale/music.wav",
+  hide: { hook1: [5, 6], hook2: [6], origin: [1], billionaire: [7], deal: [3], google: [6, 7], layoffs: [5] },
+});
+export const MetaReel = META_EN.Reel;
+export const TOTAL_FRAMES = META_EN.totalFrames;

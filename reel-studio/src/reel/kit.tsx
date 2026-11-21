@@ -23,9 +23,12 @@ for (const w of ["400", "500", "600", "700"]) F("Inter", `inter-latin-${w}-norma
 F("JetBrains Mono", "jetbrains-mono-latin-500-normal.woff2", "500");
 F("Caveat", "caveat-latin-700-normal.woff2", "700");
 F("Permanent Marker", "permanent-marker-latin-400-normal.woff2");
+// Devanagari (and ₹) fallback for Hindi reels; Latin text keeps Instrument Serif / Playfair
+F("Tiro Devanagari Hindi", "tiro-devanagari-hindi-devanagari-400-normal.woff2");
+F("Tiro Devanagari Hindi", "tiro-devanagari-hindi-devanagari-400-italic.woff2", "400", "italic");
 
-export const SERIF = "'Instrument Serif', serif";
-export const DISPLAY = "'Playfair Display', serif";
+export const SERIF = "'Instrument Serif', 'Tiro Devanagari Hindi', serif";
+export const DISPLAY = "'Playfair Display', 'Tiro Devanagari Hindi', serif";
 export const SANS = "Inter, sans-serif";
 export const MONO = "'JetBrains Mono', monospace";
 export const HAND = "Caveat, cursive";
