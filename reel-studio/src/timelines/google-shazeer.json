@@ -1,6 +1,6 @@
 {
  "title": "Google Rehires Its Quitter",
- "duration": 69.305,
+ "duration": 68.994,
  "lines": [
   {
    "id": "hook1",
@@ -110,7 +110,7 @@
    "id": "paper",
    "show": "In 2017, he co-wrote the paper that invented the Transformer... the \"T\" in ChatGPT.",
    "start": 7.501,
-   "end": 13.79,
+   "end": 13.789,
    "words": [
     {
      "text": "In",
@@ -119,832 +119,832 @@
     },
     {
      "text": "2017,",
-     "start": 7.594,
-     "end": 8.828
+     "start": 7.591,
+     "end": 8.777
     },
     {
      "text": "he",
-     "start": 8.766,
-     "end": 8.956
+     "start": 8.711,
+     "end": 8.951
     },
     {
      "text": "co-wrote",
-     "start": 8.891,
-     "end": 9.433
+     "start": 8.911,
+     "end": 9.471
     },
     {
      "text": "the",
-     "start": 9.341,
-     "end": 9.561
+     "start": 9.385,
+     "end": 9.618
     },
     {
      "text": "paper",
-     "start": 9.471,
-     "end": 9.851
+     "start": 9.533,
+     "end": 9.929
     },
     {
      "text": "that",
-     "start": 9.766,
-     "end": 10.056
+     "start": 9.846,
+     "end": 10.136
     },
     {
      "text": "invented",
-     "start": 9.968,
-     "end": 10.475
+     "start": 10.048,
+     "end": 10.555
     },
     {
      "text": "the",
-     "start": 10.395,
-     "end": 10.668
+     "start": 10.475,
+     "end": 10.748
     },
     {
      "text": "Transformer...",
-     "start": 10.6,
-     "end": 11.522
+     "start": 10.669,
+     "end": 11.373
     },
     {
      "text": "the",
-     "start": 11.898,
-     "end": 12.105
+     "start": 11.958,
+     "end": 12.165
     },
     {
      "text": "\"T\"",
-     "start": 12.121,
-     "end": 12.261
+     "start": 12.181,
+     "end": 12.321
     },
     {
      "text": "in",
-     "start": 12.231,
-     "end": 12.481
+     "start": 12.291,
+     "end": 12.541
     },
     {
      "text": "ChatGPT.",
-     "start": 12.461,
-     "end": 13.615
+     "start": 12.521,
+     "end": 13.608
     }
    ]
   },
   {
    "id": "chatbot",
    "show": "At Google, he helped build a chatbot that could talk like a human. Years before ChatGPT.",
-   "start": 14.09,
-   "end": 19.924,
+   "start": 14.089,
+   "end": 19.847,
    "words": [
     {
      "text": "At",
-     "start": 14.09,
-     "end": 14.26
+     "start": 14.089,
+     "end": 14.259
     },
     {
      "text": "Google,",
-     "start": 14.179,
-     "end": 14.602
+     "start": 14.174,
+     "end": 14.564
     },
     {
      "text": "he",
-     "start": 14.83,
-     "end": 15.01
+     "start": 14.794,
+     "end": 14.984
     },
     {
      "text": "helped",
-     "start": 14.91,
-     "end": 15.25
+     "start": 14.889,
+     "end": 15.229
     },
     {
      "text": "build",
-     "start": 15.154,
-     "end": 15.486
+     "start": 15.133,
+     "end": 15.465
     },
     {
      "text": "a",
-     "start": 15.44,
-     "end": 15.58
+     "start": 15.429,
+     "end": 15.569
     },
     {
      "text": "chatbot",
-     "start": 15.545,
-     "end": 16.096
+     "start": 15.536,
+     "end": 16.085
     },
     {
      "text": "that",
-     "start": 16.015,
-     "end": 16.305
+     "start": 16.014,
+     "end": 16.304
     },
     {
      "text": "could",
-     "start": 16.206,
-     "end": 16.474
+     "start": 16.205,
+     "end": 16.473
     },
     {
      "text": "talk",
-     "start": 16.388,
-     "end": 16.753
+     "start": 16.386,
+     "end": 16.751
     },
     {
      "text": "like",
-     "start": 16.675,
-     "end": 16.965
+     "start": 16.676,
+     "end": 16.981
     },
     {
      "text": "a",
-     "start": 16.9,
-     "end": 17.04
+     "start": 16.909,
+     "end": 17.049
     },
     {
      "text": "human.",
-     "start": 16.982,
-     "end": 17.378
+     "start": 16.981,
+     "end": 17.377
     },
     {
      "text": "Years",
-     "start": 17.844,
-     "end": 18.256
+     "start": 17.843,
+     "end": 18.255
     },
     {
      "text": "before",
-     "start": 18.179,
-     "end": 18.602
+     "start": 18.177,
+     "end": 18.6
     },
     {
      "text": "ChatGPT.",
-     "start": 18.579,
-     "end": 19.782
+     "start": 18.536,
+     "end": 19.659
     }
    ]
   },
   {
    "id": "scared",
    "show": "But Google was afraid to launch it.",
-   "start": 20.224,
-   "end": 21.958,
+   "start": 20.147,
+   "end": 21.881,
    "words": [
     {
      "text": "But",
-     "start": 20.224,
-     "end": 20.371
+     "start": 20.147,
+     "end": 20.294
     },
     {
      "text": "Google",
-     "start": 20.273,
-     "end": 20.696
+     "start": 20.196,
+     "end": 20.619
     },
     {
      "text": "was",
-     "start": 20.628,
-     "end": 20.941
+     "start": 20.551,
+     "end": 20.864
     },
     {
      "text": "afraid",
-     "start": 20.873,
-     "end": 21.296
+     "start": 20.796,
+     "end": 21.219
     },
     {
      "text": "to",
-     "start": 21.229,
-     "end": 21.459
+     "start": 21.152,
+     "end": 21.382
     },
     {
      "text": "launch",
-     "start": 21.389,
-     "end": 21.779
+     "start": 21.312,
+     "end": 21.702
     },
     {
      "text": "it.",
-     "start": 21.714,
-     "end": 21.954
+     "start": 21.637,
+     "end": 21.877
     }
    ]
   },
   {
    "id": "quit",
    "show": "So in 2021, he quit... and started Character.AI.",
-   "start": 22.358,
-   "end": 26.169,
+   "start": 22.281,
+   "end": 26.006,
    "words": [
     {
      "text": "So",
-     "start": 22.358,
-     "end": 22.543
+     "start": 22.281,
+     "end": 22.466
     },
     {
      "text": "in",
-     "start": 22.473,
-     "end": 22.683
+     "start": 22.391,
+     "end": 22.591
     },
     {
      "text": "2021,",
-     "start": 22.585,
-     "end": 23.302
+     "start": 22.507,
+     "end": 23.43
     },
     {
      "text": "he",
-     "start": 23.203,
-     "end": 23.553
+     "start": 23.346,
+     "end": 23.536
     },
     {
      "text": "quit...",
-     "start": 23.556,
-     "end": 23.921
+     "start": 23.459,
+     "end": 23.824
     },
     {
      "text": "and",
-     "start": 23.915,
-     "end": 24.442
+     "start": 23.818,
+     "end": 24.345
     },
     {
      "text": "started",
-     "start": 24.424,
-     "end": 24.873
+     "start": 24.326,
+     "end": 24.757
     },
     {
      "text": "Character.AI.",
-     "start": 24.781,
-     "end": 25.583
+     "start": 24.665,
+     "end": 25.721
     }
    ]
   },
   {
    "id": "billion",
    "show": "Two years later, it was worth $1 billion.",
-   "start": 26.419,
-   "end": 29.129,
+   "start": 26.256,
+   "end": 28.966,
    "words": [
     {
      "text": "Two",
-     "start": 26.419,
-     "end": 26.599
+     "start": 26.256,
+     "end": 26.436
     },
     {
      "text": "years",
-     "start": 26.505,
-     "end": 26.853
+     "start": 26.342,
+     "end": 26.69
     },
     {
      "text": "later,",
-     "start": 26.775,
-     "end": 27.203
+     "start": 26.612,
+     "end": 27.04
     },
     {
      "text": "it",
-     "start": 27.384,
-     "end": 27.574
+     "start": 27.221,
+     "end": 27.411
     },
     {
      "text": "was",
-     "start": 27.479,
-     "end": 27.699
+     "start": 27.316,
+     "end": 27.536
     },
     {
      "text": "worth",
-     "start": 27.603,
-     "end": 27.935
+     "start": 27.44,
+     "end": 27.772
     },
     {
      "text": "$1",
-     "start": 27.909,
-     "end": 28.049
+     "start": 27.746,
+     "end": 27.886
     },
     {
      "text": "billion.",
-     "start": 28.023,
-     "end": 28.454
+     "start": 27.86,
+     "end": 28.291
     }
    ]
   },
   {
    "id": "chatgpt",
    "show": "Then ChatGPT exploded... and Google was suddenly behind.",
-   "start": 29.479,
-   "end": 33.538,
+   "start": 29.316,
+   "end": 33.227,
    "words": [
     {
      "text": "Then",
-     "start": 29.479,
-     "end": 29.682
+     "start": 29.316,
+     "end": 29.501
     },
     {
      "text": "ChatGPT",
-     "start": 29.638,
-     "end": 30.721
+     "start": 29.414,
+     "end": 30.316
     },
     {
      "text": "exploded...",
-     "start": 30.695,
-     "end": 31.343
+     "start": 30.315,
+     "end": 30.997
     },
     {
      "text": "and",
-     "start": 31.343,
-     "end": 31.896
+     "start": 30.996,
+     "end": 31.536
     },
     {
      "text": "Google",
-     "start": 31.883,
-     "end": 32.256
+     "start": 31.521,
+     "end": 31.911
     },
     {
      "text": "was",
-     "start": 32.183,
-     "end": 32.496
+     "start": 31.84,
+     "end": 32.153
     },
     {
      "text": "suddenly",
-     "start": 32.42,
-     "end": 32.858
+     "start": 32.079,
+     "end": 32.534
     },
     {
      "text": "behind.",
-     "start": 32.771,
-     "end": 33.228
+     "start": 32.45,
+     "end": 32.923
     }
    ]
   },
   {
    "id": "deal",
    "show": "So in 2024, Google paid about $2.7 billion... to license Character's tech, and bring Shazeer back.",
-   "start": 33.888,
-   "end": 41.899,
+   "start": 33.577,
+   "end": 41.588,
    "words": [
     {
      "text": "So",
-     "start": 33.888,
-     "end": 34.073
+     "start": 33.577,
+     "end": 33.762
     },
     {
      "text": "in",
-     "start": 34.003,
-     "end": 34.213
+     "start": 33.692,
+     "end": 33.902
     },
     {
      "text": "2024,",
-     "start": 34.144,
-     "end": 35.344
+     "start": 33.833,
+     "end": 35.033
     },
     {
      "text": "Google",
-     "start": 35.274,
-     "end": 35.681
+     "start": 34.964,
+     "end": 35.37
     },
     {
      "text": "paid",
-     "start": 35.615,
-     "end": 36.04
+     "start": 35.305,
+     "end": 35.73
     },
     {
      "text": "about",
-     "start": 35.974,
-     "end": 36.322
+     "start": 35.663,
+     "end": 36.011
     },
     {
      "text": "$2.7",
-     "start": 36.259,
-     "end": 37.321
+     "start": 35.948,
+     "end": 37.01
     },
     {
      "text": "billion...",
-     "start": 37.258,
-     "end": 37.758
+     "start": 36.947,
+     "end": 37.447
     },
     {
      "text": "to",
-     "start": 37.958,
-     "end": 38.718
+     "start": 37.647,
+     "end": 38.407
     },
     {
      "text": "license",
-     "start": 38.914,
-     "end": 39.362
+     "start": 38.603,
+     "end": 39.051
     },
     {
      "text": "Character's",
-     "start": 39.28,
-     "end": 39.996
+     "start": 38.969,
+     "end": 39.685
     },
     {
      "text": "tech,",
-     "start": 39.928,
-     "end": 40.308
+     "start": 39.617,
+     "end": 39.997
     },
     {
      "text": "and",
-     "start": 40.278,
-     "end": 40.698
+     "start": 39.967,
+     "end": 40.387
     },
     {
      "text": "bring",
-     "start": 40.652,
-     "end": 40.984
+     "start": 40.341,
+     "end": 40.673
     },
     {
      "text": "Shazeer",
-     "start": 40.91,
-     "end": 41.466
+     "start": 40.599,
+     "end": 41.155
     },
     {
      "text": "back.",
-     "start": 41.403,
-     "end": 41.753
+     "start": 41.092,
+     "end": 41.442
     }
    ]
   },
   {
    "id": "crazy",
    "show": "And here's the crazy part.",
-   "start": 42.349,
-   "end": 43.782,
+   "start": 42.038,
+   "end": 43.471,
    "words": [
     {
      "text": "And",
-     "start": 42.349,
-     "end": 42.529
+     "start": 42.038,
+     "end": 42.218
     },
     {
      "text": "here's",
-     "start": 42.437,
-     "end": 42.801
+     "start": 42.126,
+     "end": 42.49
     },
     {
      "text": "the",
-     "start": 42.709,
-     "end": 42.929
+     "start": 42.398,
+     "end": 42.618
     },
     {
      "text": "crazy",
-     "start": 42.845,
-     "end": 43.273
+     "start": 42.534,
+     "end": 42.962
     },
     {
      "text": "part.",
-     "start": 43.209,
-     "end": 43.589
+     "start": 42.898,
+     "end": 43.278
     }
    ]
   },
   {
    "id": "license",
    "show": "Google didn't buy the company. Character.AI kept running.",
-   "start": 44.132,
-   "end": 47.657,
+   "start": 43.821,
+   "end": 47.346,
    "words": [
     {
      "text": "Google",
-     "start": 44.132,
-     "end": 44.396
+     "start": 43.821,
+     "end": 44.085
     },
     {
      "text": "didn't",
-     "start": 44.316,
-     "end": 44.808
+     "start": 44.005,
+     "end": 44.497
     },
     {
      "text": "buy",
-     "start": 44.739,
-     "end": 44.986
+     "start": 44.428,
+     "end": 44.675
     },
     {
      "text": "the",
-     "start": 44.892,
-     "end": 45.112
+     "start": 44.581,
+     "end": 44.801
     },
     {
      "text": "company.",
-     "start": 45.021,
-     "end": 45.504
+     "start": 44.71,
+     "end": 45.193
     },
     {
      "text": "Character.AI",
-     "start": 45.767,
-     "end": 46.912
+     "start": 45.456,
+     "end": 46.601
     },
     {
      "text": "kept",
-     "start": 46.885,
-     "end": 47.22
+     "start": 46.574,
+     "end": 46.909
     },
     {
      "text": "running.",
-     "start": 47.135,
-     "end": 47.549
+     "start": 46.824,
+     "end": 47.239
     }
    ]
   },
   {
    "id": "lead",
    "show": "And Google made Shazeer a co-lead of Gemini, its biggest AI bet.",
-   "start": 47.907,
-   "end": 52.257,
+   "start": 47.596,
+   "end": 51.947,
    "words": [
     {
      "text": "And",
-     "start": 47.907,
-     "end": 48.07
+     "start": 47.596,
+     "end": 47.76
     },
     {
      "text": "Google",
-     "start": 47.964,
-     "end": 48.27
+     "start": 47.653,
+     "end": 47.96
     },
     {
      "text": "made",
-     "start": 48.187,
-     "end": 48.567
+     "start": 47.876,
+     "end": 48.256
     },
     {
      "text": "Shazeer",
-     "start": 48.506,
-     "end": 49.031
+     "start": 48.195,
+     "end": 48.721
     },
     {
      "text": "a",
-     "start": 48.969,
-     "end": 49.109
+     "start": 48.658,
+     "end": 48.798
     },
     {
      "text": "co-lead",
-     "start": 49.072,
-     "end": 49.67
+     "start": 48.761,
+     "end": 49.359
     },
     {
      "text": "of",
-     "start": 49.587,
-     "end": 49.767
+     "start": 49.276,
+     "end": 49.456
     },
     {
      "text": "Gemini,",
-     "start": 49.689,
-     "end": 50.245
+     "start": 49.378,
+     "end": 49.935
     },
     {
      "text": "its",
-     "start": 50.2,
-     "end": 50.554
+     "start": 49.89,
+     "end": 50.243
     },
     {
      "text": "biggest",
-     "start": 50.487,
-     "end": 50.867
+     "start": 50.176,
+     "end": 50.556
     },
     {
      "text": "AI",
-     "start": 50.937,
-     "end": 51.687
+     "start": 50.626,
+     "end": 51.376
     },
     {
      "text": "bet.",
-     "start": 51.75,
-     "end": 52.144
+     "start": 51.44,
+     "end": 51.833
     }
    ]
   },
   {
    "id": "doj",
    "show": "Then the US Justice Department started asking... was this deal built to dodge merger rules?",
-   "start": 52.607,
-   "end": 58.32,
+   "start": 52.297,
+   "end": 58.009,
    "words": [
     {
      "text": "Then",
-     "start": 52.607,
-     "end": 52.827
+     "start": 52.297,
+     "end": 52.517
     },
     {
      "text": "the",
-     "start": 52.734,
-     "end": 52.981
+     "start": 52.423,
+     "end": 52.67
     },
     {
      "text": "US",
-     "start": 52.967,
-     "end": 53.357
+     "start": 52.657,
+     "end": 53.047
     },
     {
      "text": "Justice",
-     "start": 53.427,
-     "end": 53.807
+     "start": 53.117,
+     "end": 53.497
     },
     {
      "text": "Department",
-     "start": 53.711,
-     "end": 54.283
+     "start": 53.401,
+     "end": 53.973
     },
     {
      "text": "started",
-     "start": 54.2,
-     "end": 54.734
+     "start": 53.889,
+     "end": 54.424
     },
     {
      "text": "asking...",
-     "start": 54.672,
-     "end": 55.262
+     "start": 54.362,
+     "end": 54.952
     },
     {
      "text": "was",
-     "start": 55.724,
-     "end": 56.011
+     "start": 55.413,
+     "end": 55.7
     },
     {
      "text": "this",
-     "start": 55.94,
-     "end": 56.275
+     "start": 55.629,
+     "end": 55.964
     },
     {
      "text": "deal",
-     "start": 56.202,
-     "end": 56.552
+     "start": 55.892,
+     "end": 56.242
     },
     {
      "text": "built",
-     "start": 56.473,
-     "end": 56.821
+     "start": 56.163,
+     "end": 56.511
     },
     {
      "text": "to",
-     "start": 56.757,
-     "end": 56.997
+     "start": 56.447,
+     "end": 56.687
     },
     {
      "text": "dodge",
-     "start": 56.943,
-     "end": 57.371
+     "start": 56.633,
+     "end": 57.061
     },
     {
      "text": "merger",
-     "start": 57.294,
-     "end": 57.701
+     "start": 56.983,
+     "end": 57.39
     },
     {
      "text": "rules?",
-     "start": 57.627,
-     "end": 58.087
+     "start": 57.317,
+     "end": 57.777
     }
    ]
   },
   {
    "id": "reframe",
    "show": "Google didn't buy a startup. It bought back the man it let walk out.",
-   "start": 58.77,
-   "end": 62.622,
+   "start": 58.459,
+   "end": 62.312,
    "words": [
     {
      "text": "Google",
-     "start": 58.77,
-     "end": 59.033
+     "start": 58.459,
+     "end": 58.722
     },
     {
      "text": "didn't",
-     "start": 58.958,
-     "end": 59.482
+     "start": 58.647,
+     "end": 59.171
     },
     {
      "text": "buy",
-     "start": 59.416,
-     "end": 59.663
+     "start": 59.105,
+     "end": 59.352
     },
     {
      "text": "a",
-     "start": 59.61,
-     "end": 59.75
+     "start": 59.299,
+     "end": 59.439
     },
     {
      "text": "startup.",
-     "start": 59.701,
-     "end": 60.218
+     "start": 59.39,
+     "end": 59.907
     },
     {
      "text": "It",
-     "start": 60.635,
-     "end": 60.825
+     "start": 60.324,
+     "end": 60.514
     },
     {
      "text": "bought",
-     "start": 60.728,
-     "end": 61.051
+     "start": 60.417,
+     "end": 60.74
     },
     {
      "text": "back",
-     "start": 60.967,
-     "end": 61.332
+     "start": 60.656,
+     "end": 61.021
     },
     {
      "text": "the",
-     "start": 61.263,
-     "end": 61.536
+     "start": 60.952,
+     "end": 61.225
     },
     {
      "text": "man",
-     "start": 61.47,
-     "end": 61.77
+     "start": 61.159,
+     "end": 61.459
     },
     {
      "text": "it",
-     "start": 61.692,
-     "end": 61.894
+     "start": 61.381,
+     "end": 61.583
     },
     {
      "text": "let",
-     "start": 61.816,
-     "end": 62.063
+     "start": 61.505,
+     "end": 61.752
     },
     {
      "text": "walk",
-     "start": 61.982,
-     "end": 62.317
+     "start": 61.671,
+     "end": 62.006
     },
     {
      "text": "out.",
-     "start": 62.253,
-     "end": 62.566
+     "start": 61.942,
+     "end": 62.255
     }
    ]
   },
   {
    "id": "outro1",
    "show": "So was he worth $2.7 billion?",
-   "start": 63.122,
-   "end": 65.743,
+   "start": 62.812,
+   "end": 65.432,
    "words": [
     {
      "text": "So",
-     "start": 63.122,
-     "end": 63.292
+     "start": 62.812,
+     "end": 62.982
     },
     {
      "text": "was",
-     "start": 63.209,
-     "end": 63.456
+     "start": 62.898,
+     "end": 63.145
     },
     {
      "text": "he",
-     "start": 63.367,
-     "end": 63.557
+     "start": 63.057,
+     "end": 63.247
     },
     {
      "text": "worth",
-     "start": 63.464,
-     "end": 63.78
+     "start": 63.154,
+     "end": 63.47
     },
     {
      "text": "$2.7",
-     "start": 63.711,
-     "end": 64.696
+     "start": 63.4,
+     "end": 64.385
     },
     {
      "text": "billion?",
-     "start": 64.627,
-     "end": 65.058
+     "start": 64.316,
+     "end": 64.747
     }
    ]
   },
   {
    "id": "outro2",
    "show": "Or did Google just pay for its own mistake?",
-   "start": 65.943,
-   "end": 68.405,
+   "start": 65.632,
+   "end": 68.094,
    "words": [
     {
      "text": "Or",
-     "start": 65.943,
-     "end": 66.113
+     "start": 65.632,
+     "end": 65.802
     },
     {
      "text": "did",
-     "start": 66.033,
-     "end": 66.293
+     "start": 65.722,
+     "end": 65.982
     },
     {
      "text": "Google",
-     "start": 66.215,
-     "end": 66.672
+     "start": 65.904,
+     "end": 66.361
     },
     {
      "text": "just",
-     "start": 66.613,
-     "end": 67.053
+     "start": 66.302,
+     "end": 66.742
     },
     {
      "text": "pay",
-     "start": 67.013,
-     "end": 67.353
+     "start": 66.702,
+     "end": 67.042
     },
     {
      "text": "for",
-     "start": 67.3,
-     "end": 67.587
+     "start": 66.989,
+     "end": 67.276
     },
     {
      "text": "its",
-     "start": 67.503,
-     "end": 67.723
+     "start": 67.192,
+     "end": 67.412
     },
     {
      "text": "own",
-     "start": 67.623,
-     "end": 67.843
+     "start": 67.312,
+     "end": 67.532
     },
     {
      "text": "mistake?",
-     "start": 67.746,
-     "end": 68.16
+     "start": 67.435,
+     "end": 67.85
     }
    ]
   }
