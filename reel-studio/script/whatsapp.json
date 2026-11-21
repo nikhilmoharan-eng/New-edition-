@@ -1,0 +1,26 @@
+{
+  "title": "The $19B Rejection",
+  "voice": "am_michael",
+  "speed": 1.08,
+  "lines": [
+    { "id": "hook1", "pauseAfter": 0.25, "say": "In two thousand nine, Facebook rejected this guy for a job.", "show": "In 2009, Facebook rejected this guy for a job." },
+    { "id": "hook2", "pauseAfter": 0.45, "say": "Five years later, they paid nineteen billion dollars for his company.", "show": "Five years later, they paid $19 billion for his company." },
+    { "id": "name", "pauseAfter": 0.2, "say": "His name is Brian Acton.", "show": "His name is Brian Acton." },
+    { "id": "twitter", "pauseAfter": 0.35, "say": "Twitter turned him down too.", "show": "Twitter turned him down too." },
+    { "id": "koum", "pauseAfter": 0.2, "say": "So he teamed up with his friend Jan Koum, and built an app with one rule.", "show": "So he teamed up with his friend Jan Koum, and built an app with one rule." },
+    { "id": "rule", "pauseAfter": 0.35, "say": "No ads. No games. No gimmicks.", "show": "No ads. No games. No gimmicks." },
+    { "id": "named", "pauseAfter": 0.3, "say": "They called it WhatsApp.", "show": "They called it WhatsApp." },
+    { "id": "users", "pauseAfter": 0.2, "say": "By twenty fourteen, four hundred and fifty million people used it every month.", "show": "By 2014, 450 million people used it every month." },
+    { "id": "staff", "pauseAfter": 0.4, "say": "And the whole company ran on just fifty five employees.", "show": "And the whole company ran on just 55 employees." },
+    { "id": "back", "pauseAfter": 0.2, "say": "Then Facebook came back.", "show": "Then Facebook came back." },
+    { "id": "offer", "pauseAfter": 0.3, "say": "Nineteen billion dollars.", "show": "$19 billion." },
+    { "id": "perhead", "pauseAfter": 0.5, "say": "That's about three hundred and forty five million dollars per employee.", "show": "That's about $345 million per employee." },
+    { "id": "crazy", "pauseAfter": 0.35, "say": "And here's the crazy part.", "show": "And here's the crazy part." },
+    { "id": "stay", "pauseAfter": 0.2, "say": "Acton didn't stay.", "show": "Acton didn't stay." },
+    { "id": "walk", "pauseAfter": 0.4, "say": "In twenty seventeen, he walked away, leaving eight hundred and fifty million dollars on the table.", "show": "In 2017, he walked away, leaving $850 million on the table." },
+    { "id": "tweet", "pauseAfter": 0.35, "say": "Then in twenty eighteen, he posted three words.", "show": "Then in 2018, he posted three words." },
+    { "id": "delete", "pauseAfter": 0.55, "say": "It is time. Delete Facebook.", "show": "It is time. #deletefacebook" },
+    { "id": "outro1", "pauseAfter": 0.2, "say": "So who really won?", "show": "So who really won?" },
+    { "id": "outro2", "pauseAfter": 0.9, "say": "The company that paid nineteen billion dollars, or the guy they once said no to?", "show": "The company that paid $19 billion, or the guy they once said no to?" }
+  ]
+}

@@ -1,0 +1,823 @@
+{
+ "title": "The $19B Rejection",
+ "duration": 59.029,
+ "lines": [
+  {
+   "id": "hook1",
+   "show": "In 2009, Facebook rejected this guy for a job.",
+   "start": 0.35,
+   "end": 4.217,
+   "words": [
+    {
+     "text": "In",
+     "start": 0.35,
+     "end": 0.505
+    },
+    {
+     "text": "2009,",
+     "start": 0.448,
+     "end": 1.754
+    },
+    {
+     "text": "Facebook",
+     "start": 1.697,
+     "end": 2.222
+    },
+    {
+     "text": "rejected",
+     "start": 2.149,
+     "end": 2.831
+    },
+    {
+     "text": "this",
+     "start": 2.762,
+     "end": 3.098
+    },
+    {
+     "text": "guy",
+     "start": 3.04,
+     "end": 3.38
+    },
+    {
+     "text": "for",
+     "start": 3.33,
+     "end": 3.63
+    },
+    {
+     "text": "a",
+     "start": 3.58,
+     "end": 3.72
+    },
+    {
+     "text": "job.",
+     "start": 3.68,
+     "end": 4.02
+    }
+   ]
+  },
+  {
+   "id": "hook2",
+   "show": "Five years later, they paid $19 billion for his company.",
+   "start": 4.467,
+   "end": 8.492,
+   "words": [
+    {
+     "text": "Five",
+     "start": 4.467,
+     "end": 4.774
+    },
+    {
+     "text": "years",
+     "start": 4.693,
+     "end": 5.041
+    },
+    {
+     "text": "later,",
+     "start": 4.963,
+     "end": 5.391
+    },
+    {
+     "text": "they",
+     "start": 5.632,
+     "end": 5.922
+    },
+    {
+     "text": "paid",
+     "start": 5.839,
+     "end": 6.174
+    },
+    {
+     "text": "$19",
+     "start": 6.106,
+     "end": 6.747
+    },
+    {
+     "text": "billion",
+     "start": 6.678,
+     "end": 7.196
+    },
+    {
+     "text": "for",
+     "start": 7.2,
+     "end": 7.794
+    },
+    {
+     "text": "his",
+     "start": 7.79,
+     "end": 8.024
+    },
+    {
+     "text": "company.",
+     "start": 7.933,
+     "end": 8.381
+    }
+   ]
+  },
+  {
+   "id": "name",
+   "show": "His name is Brian Acton.",
+   "start": 8.942,
+   "end": 10.504,
+   "words": [
+    {
+     "text": "His",
+     "start": 8.942,
+     "end": 9.106
+    },
+    {
+     "text": "name",
+     "start": 9.022,
+     "end": 9.402
+    },
+    {
+     "text": "is",
+     "start": 9.347,
+     "end": 9.577
+    },
+    {
+     "text": "Brian",
+     "start": 9.518,
+     "end": 9.946
+    },
+    {
+     "text": "Acton.",
+     "start": 9.898,
+     "end": 10.486
+    }
+   ]
+  },
+  {
+   "id": "twitter",
+   "show": "Twitter turned him down too.",
+   "start": 10.704,
+   "end": 12.143,
+   "words": [
+    {
+     "text": "Twitter",
+     "start": 10.704,
+     "end": 10.969
+    },
+    {
+     "text": "turned",
+     "start": 10.87,
+     "end": 11.277
+    },
+    {
+     "text": "him",
+     "start": 11.19,
+     "end": 11.437
+    },
+    {
+     "text": "down",
+     "start": 11.351,
+     "end": 11.656
+    },
+    {
+     "text": "too.",
+     "start": 11.594,
+     "end": 11.934
+    }
+   ]
+  },
+  {
+   "id": "koum",
+   "show": "So he teamed up with his friend Jan Koum, and built an app with one rule.",
+   "start": 12.493,
+   "end": 16.629,
+   "words": [
+    {
+     "text": "So",
+     "start": 12.493,
+     "end": 12.663
+    },
+    {
+     "text": "he",
+     "start": 12.588,
+     "end": 12.798
+    },
+    {
+     "text": "teamed",
+     "start": 12.711,
+     "end": 13.035
+    },
+    {
+     "text": "up",
+     "start": 12.968,
+     "end": 13.218
+    },
+    {
+     "text": "with",
+     "start": 13.155,
+     "end": 13.43
+    },
+    {
+     "text": "his",
+     "start": 13.336,
+     "end": 13.57
+    },
+    {
+     "text": "friend",
+     "start": 13.476,
+     "end": 13.85
+    },
+    {
+     "text": "Jan",
+     "start": 13.794,
+     "end": 14.18
+    },
+    {
+     "text": "Koum,",
+     "start": 14.163,
+     "end": 14.671
+    },
+    {
+     "text": "and",
+     "start": 14.663,
+     "end": 15.083
+    },
+    {
+     "text": "built",
+     "start": 15.035,
+     "end": 15.351
+    },
+    {
+     "text": "an",
+     "start": 15.268,
+     "end": 15.478
+    },
+    {
+     "text": "app",
+     "start": 15.42,
+     "end": 15.746
+    },
+    {
+     "text": "with",
+     "start": 15.673,
+     "end": 15.933
+    },
+    {
+     "text": "one",
+     "start": 15.853,
+     "end": 16.153
+    },
+    {
+     "text": "rule.",
+     "start": 16.093,
+     "end": 16.473
+    }
+   ]
+  },
+  {
+   "id": "rule",
+   "show": "No ads. No games. No gimmicks.",
+   "start": 16.829,
+   "end": 19.018,
+   "words": [
+    {
+     "text": "No",
+     "start": 16.829,
+     "end": 17.029
+    },
+    {
+     "text": "ads.",
+     "start": 16.989,
+     "end": 17.369
+    },
+    {
+     "text": "No",
+     "start": 17.514,
+     "end": 17.704
+    },
+    {
+     "text": "games.",
+     "start": 17.625,
+     "end": 18.053
+    },
+    {
+     "text": "No",
+     "start": 18.239,
+     "end": 18.439
+    },
+    {
+     "text": "gimmicks.",
+     "start": 18.359,
+     "end": 18.919
+    }
+   ]
+  },
+  {
+   "id": "named",
+   "show": "They called it WhatsApp.",
+   "start": 19.368,
+   "end": 20.577,
+   "words": [
+    {
+     "text": "They",
+     "start": 19.368,
+     "end": 19.553
+    },
+    {
+     "text": "called",
+     "start": 19.453,
+     "end": 19.843
+    },
+    {
+     "text": "it",
+     "start": 19.768,
+     "end": 19.988
+    },
+    {
+     "text": "WhatsApp.",
+     "start": 19.901,
+     "end": 20.216
+    }
+   ]
+  },
+  {
+   "id": "users",
+   "show": "By 2014, 450 million people used it every month.",
+   "start": 20.877,
+   "end": 25.564,
+   "words": [
+    {
+     "text": "By",
+     "start": 20.877,
+     "end": 21.017
+    },
+    {
+     "text": "2014,",
+     "start": 20.938,
+     "end": 22.11
+    },
+    {
+     "text": "450",
+     "start": 22.03,
+     "end": 23.02
+    },
+    {
+     "text": "million",
+     "start": 22.94,
+     "end": 23.835
+    },
+    {
+     "text": "people",
+     "start": 23.791,
+     "end": 24.264
+    },
+    {
+     "text": "used",
+     "start": 24.205,
+     "end": 24.63
+    },
+    {
+     "text": "it",
+     "start": 24.582,
+     "end": 24.812
+    },
+    {
+     "text": "every",
+     "start": 24.747,
+     "end": 25.127
+    },
+    {
+     "text": "month.",
+     "start": 25.045,
+     "end": 25.409
+    }
+   ]
+  },
+  {
+   "id": "staff",
+   "show": "And the whole company ran on just 55 employees.",
+   "start": 25.764,
+   "end": 29.067,
+   "words": [
+    {
+     "text": "And",
+     "start": 25.764,
+     "end": 25.928
+    },
+    {
+     "text": "the",
+     "start": 25.818,
+     "end": 26.011
+    },
+    {
+     "text": "whole",
+     "start": 25.904,
+     "end": 26.204
+    },
+    {
+     "text": "company",
+     "start": 26.119,
+     "end": 26.67
+    },
+    {
+     "text": "ran",
+     "start": 26.638,
+     "end": 27.071
+    },
+    {
+     "text": "on",
+     "start": 27.069,
+     "end": 27.339
+    },
+    {
+     "text": "just",
+     "start": 27.292,
+     "end": 27.597
+    },
+    {
+     "text": "55",
+     "start": 27.516,
+     "end": 28.129
+    },
+    {
+     "text": "employees.",
+     "start": 28.048,
+     "end": 28.561
+    }
+   ]
+  },
+  {
+   "id": "back",
+   "show": "Then Facebook came back.",
+   "start": 29.467,
+   "end": 30.857,
+   "words": [
+    {
+     "text": "Then",
+     "start": 29.467,
+     "end": 29.705
+    },
+    {
+     "text": "Facebook",
+     "start": 29.615,
+     "end": 30.14
+    },
+    {
+     "text": "came",
+     "start": 30.067,
+     "end": 30.447
+    },
+    {
+     "text": "back.",
+     "start": 30.377,
+     "end": 30.697
+    }
+   ]
+  },
+  {
+   "id": "offer",
+   "show": "$19 billion.",
+   "start": 31.057,
+   "end": 32.661,
+   "words": [
+    {
+     "text": "$19",
+     "start": 31.057,
+     "end": 31.52
+    },
+    {
+     "text": "billion.",
+     "start": 31.431,
+     "end": 31.983
+    }
+   ]
+  },
+  {
+   "id": "perhead",
+   "show": "That's about $345 million per employee.",
+   "start": 32.961,
+   "end": 36.787,
+   "words": [
+    {
+     "text": "That's",
+     "start": 32.961,
+     "end": 33.221
+    },
+    {
+     "text": "about",
+     "start": 33.117,
+     "end": 33.385
+    },
+    {
+     "text": "$345",
+     "start": 33.295,
+     "end": 35.041
+    },
+    {
+     "text": "million",
+     "start": 34.967,
+     "end": 35.415
+    },
+    {
+     "text": "per",
+     "start": 35.811,
+     "end": 36.151
+    },
+    {
+     "text": "employee.",
+     "start": 36.085,
+     "end": 36.557
+    }
+   ]
+  },
+  {
+   "id": "crazy",
+   "show": "And here's the crazy part.",
+   "start": 37.287,
+   "end": 38.745,
+   "words": [
+    {
+     "text": "And",
+     "start": 37.287,
+     "end": 37.467
+    },
+    {
+     "text": "here's",
+     "start": 37.375,
+     "end": 37.739
+    },
+    {
+     "text": "the",
+     "start": 37.647,
+     "end": 37.867
+    },
+    {
+     "text": "crazy",
+     "start": 37.785,
+     "end": 38.229
+    },
+    {
+     "text": "part.",
+     "start": 38.167,
+     "end": 38.547
+    }
+   ]
+  },
+  {
+   "id": "stay",
+   "show": "Acton didn't stay.",
+   "start": 39.095,
+   "end": 40.187,
+   "words": [
+    {
+     "text": "Acton",
+     "start": 39.095,
+     "end": 39.517
+    },
+    {
+     "text": "didn't",
+     "start": 39.449,
+     "end": 39.861
+    },
+    {
+     "text": "stay.",
+     "start": 39.77,
+     "end": 40.0
+    }
+   ]
+  },
+  {
+   "id": "walk",
+   "show": "In 2017, he walked away, leaving $850 million on the table.",
+   "start": 40.387,
+   "end": 46.204,
+   "words": [
+    {
+     "text": "In",
+     "start": 40.387,
+     "end": 40.542
+    },
+    {
+     "text": "2017,",
+     "start": 40.482,
+     "end": 41.742
+    },
+    {
+     "text": "he",
+     "start": 41.682,
+     "end": 41.932
+    },
+    {
+     "text": "walked",
+     "start": 41.869,
+     "end": 42.225
+    },
+    {
+     "text": "away,",
+     "start": 42.147,
+     "end": 42.527
+    },
+    {
+     "text": "leaving",
+     "start": 43.044,
+     "end": 43.39
+    },
+    {
+     "text": "$850",
+     "start": 43.308,
+     "end": 44.557
+    },
+    {
+     "text": "million",
+     "start": 44.476,
+     "end": 44.958
+    },
+    {
+     "text": "on",
+     "start": 45.022,
+     "end": 45.512
+    },
+    {
+     "text": "the",
+     "start": 45.57,
+     "end": 45.804
+    },
+    {
+     "text": "table.",
+     "start": 45.713,
+     "end": 46.061
+    }
+   ]
+  },
+  {
+   "id": "tweet",
+   "show": "Then in 2018, he posted three words.",
+   "start": 46.604,
+   "end": 49.412,
+   "words": [
+    {
+     "text": "Then",
+     "start": 46.604,
+     "end": 46.807
+    },
+    {
+     "text": "in",
+     "start": 46.724,
+     "end": 46.944
+    },
+    {
+     "text": "2018,",
+     "start": 46.878,
+     "end": 47.98
+    },
+    {
+     "text": "he",
+     "start": 47.914,
+     "end": 48.114
+    },
+    {
+     "text": "posted",
+     "start": 48.032,
+     "end": 48.456
+    },
+    {
+     "text": "three",
+     "start": 48.376,
+     "end": 48.772
+    },
+    {
+     "text": "words.",
+     "start": 48.698,
+     "end": 49.11
+    }
+   ]
+  },
+  {
+   "id": "delete",
+   "show": "It is time. #deletefacebook",
+   "start": 49.762,
+   "end": 51.483,
+   "words": [
+    {
+     "text": "It",
+     "start": 49.762,
+     "end": 49.932
+    },
+    {
+     "text": "is",
+     "start": 49.847,
+     "end": 50.037
+    },
+    {
+     "text": "time.",
+     "start": 49.969,
+     "end": 50.394
+    },
+    {
+     "text": "#deletefacebook",
+     "start": 50.637,
+     "end": 51.242
+    }
+   ]
+  },
+  {
+   "id": "outro1",
+   "show": "So who really won?",
+   "start": 52.033,
+   "end": 53.172,
+   "words": [
+    {
+     "text": "So",
+     "start": 52.033,
+     "end": 52.248
+    },
+    {
+     "text": "who",
+     "start": 52.183,
+     "end": 52.443
+    },
+    {
+     "text": "really",
+     "start": 52.36,
+     "end": 52.766
+    },
+    {
+     "text": "won?",
+     "start": 52.703,
+     "end": 53.043
+    }
+   ]
+  },
+  {
+   "id": "outro2",
+   "show": "The company that paid $19 billion, or the guy they once said no to?",
+   "start": 53.372,
+   "end": 58.129,
+   "words": [
+    {
+     "text": "The",
+     "start": 53.372,
+     "end": 53.518
+    },
+    {
+     "text": "company",
+     "start": 53.413,
+     "end": 53.81
+    },
+    {
+     "text": "that",
+     "start": 53.722,
+     "end": 54.042
+    },
+    {
+     "text": "paid",
+     "start": 53.964,
+     "end": 54.299
+    },
+    {
+     "text": "$19",
+     "start": 54.23,
+     "end": 54.868
+    },
+    {
+     "text": "billion,",
+     "start": 54.799,
+     "end": 55.264
+    },
+    {
+     "text": "or",
+     "start": 56.022,
+     "end": 56.342
+    },
+    {
+     "text": "the",
+     "start": 56.338,
+     "end": 56.665
+    },
+    {
+     "text": "guy",
+     "start": 56.622,
+     "end": 56.962
+    },
+    {
+     "text": "they",
+     "start": 56.897,
+     "end": 57.187
+    },
+    {
+     "text": "once",
+     "start": 57.097,
+     "end": 57.387
+    },
+    {
+     "text": "said",
+     "start": 57.304,
+     "end": 57.639
+    },
+    {
+     "text": "no",
+     "start": 57.582,
+     "end": 57.822
+    },
+    {
+     "text": "to?",
+     "start": 57.782,
+     "end": 58.022
+    }
+   ]
+  }
+ ]
+}
