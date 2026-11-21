@@ -42,7 +42,9 @@ export const buildChunks = (lines: Line[], hide: Record<string, number[]> = {}):
 export const Captions: React.FC<{
   chunks: Chunk[];
   lookAt: (t: number) => { pos: CapPos; tone: Tone };
-}> = ({ chunks, lookAt }) => {
+  /** outer-glow colour for light captions (default soft white) */
+  glow?: string;
+}> = ({ chunks, lookAt, glow = "rgba(255,255,255,0.6)" }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
@@ -74,7 +76,7 @@ export const Captions: React.FC<{
           // Text Glow / Outer Glow: soft light around the letters
           textShadow: dark
             ? `0 0 ${16 * u}px rgba(255,255,255,0.95), 0 0 ${34 * u}px rgba(255,255,255,0.6)`
-            : `0 0 ${20 * u}px rgba(255,255,255,0.6), 0 0 ${44 * u}px rgba(255,255,255,0.25), 0 ${2 * u}px ${8 * u}px rgba(0,0,0,0.8)`,
+            : `0 0 ${20 * u}px ${glow}, 0 0 ${44 * u}px rgba(255,255,255,0.25), 0 ${2 * u}px ${8 * u}px rgba(0,0,0,0.8)`,
         }}
       >
         {chunk.words

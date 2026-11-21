@@ -64,6 +64,7 @@ export const GOOGLE_EN = makeMetaReel({
   tl: EN,
   base: EN,
   vo: "google-shazeer/vo.wav",
+  theme: "chat",
   music: "google-shazeer/music.wav",
   shots,
   hide: { hook1: [3, 4], paper: [1], quit: [2], billion: [6, 7], deal: [2] },
@@ -73,6 +74,7 @@ export const GOOGLE_HI = makeMetaReel({
   tl: hiRaw as TLT,
   base: EN,
   vo: "google-shazeer-hi/vo.wav",
+  theme: "chat",
   music: "google-shazeer-hi/music.wav",
   shots,
   // Hinglish captions; indices refer to script/google-shazeer-hi.json `show`

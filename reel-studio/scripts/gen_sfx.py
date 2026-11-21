@@ -1,6 +1,6 @@
 """Synthesize the music bed and SFX used by the reel (no samples, no licensing issues).
 
-python3 scripts/gen_sfx.py [duration_seconds] [music_out]
+python3 scripts/gen_sfx.py [duration_seconds] [music_out] [style: dark|pulse]
 Writes public/sfx/*.wav and the music bed (default public/music.wav)
 """
 import sys, os, wave
@@ -90,10 +90,13 @@ save("public/sfx/ding.wav", ding * env(len(tt), 0.002, 0.3))
 dur = float(sys.argv[1]) if len(sys.argv) > 1 else 60
 N = int(dur * SR)
 tt = np.arange(N) / SR
-bpm = 96; beat = 60 / bpm
+STYLE = sys.argv[3] if len(sys.argv) > 3 else "dark"
+bpm = 112 if STYLE == "pulse" else 96
+beat = 60 / bpm
 mus = np.zeros(N)
 # drone (D minor-ish), slow filter movement
-for f, g in [(73.42, 1.0), (110.0, 0.45), (146.83, 0.3), (174.61, 0.18)]:
+DRONE = [(55.0, 1.0), (82.41, 0.45), (110.0, 0.3), (130.81, 0.2)] if STYLE == "pulse" else [(73.42, 1.0), (110.0, 0.45), (146.83, 0.3), (174.61, 0.18)]
+for f, g in DRONE:
     mus += g * np.sin(2 * np.pi * f * tt + 0.3 * np.sin(2 * np.pi * 0.07 * tt))
 mus *= 0.18
 # kick on every beat + soft hat on off-beats
@@ -103,7 +106,8 @@ ht = t(0.06)
 hat = lp(rng.standard_normal(len(ht)), 0.9) * np.exp(-ht * 90)
 hat = hat - lp(hat, 0.2)
 # pluck arpeggio
-notes = [293.66, 349.23, 440.0, 349.23, 261.63, 329.63, 392.0, 329.63]
+notes = ([440.0, 523.25, 659.25, 783.99, 659.25, 523.25, 587.33, 659.25] if STYLE == "pulse"
+         else [293.66, 349.23, 440.0, 349.23, 261.63, 329.63, 392.0, 329.63])
 pt = t(beat * 0.9)
 k = 0
 for i in range(int(dur / beat)):
@@ -113,7 +117,7 @@ for i in range(int(dur / beat)):
     h = s + int(beat / 2 * SR)
     if h + len(hat) < N:
         mus[h:h + len(hat)] += hat * 0.12
-    if i % 2 == 0 and s + len(pt) < N:
+    if (STYLE == "pulse" or i % 2 == 0) and s + len(pt) < N:
         f = notes[k % len(notes)]; k += 1
         pl = (np.sin(2 * np.pi * f * pt) + 0.3 * np.sin(4 * np.pi * f * pt)) * np.exp(-pt * 5)
         mus[s:s + len(pt)] += pl * 0.12
