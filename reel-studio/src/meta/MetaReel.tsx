@@ -1,7 +1,7 @@
 import React from "react";
 import { Audio, Video } from "@remotion/media";
 import { AbsoluteFill, Img, interpolate, Sequence, staticFile, useCurrentFrame } from "remotion";
-import { BigType, C, Camera, clamp, CreamBG, DarkBG, Grain, MONO, SANS, Stamp, useU, Vignette } from "../reel/kit";
+import { BigType, C, Camera, clamp, CreamBG, Grain, SmoothBlur, MONO, SANS, Stamp, useU, Vignette } from "../reel/kit";
 import { buildChunks, Captions, CapPos, Tone } from "../reel/captions";
 import type { Line } from "../reel/timeline";
 import raw from "../timelines/meta-scale.json";
@@ -174,7 +174,7 @@ const ShotView: React.FC<{ s: Shot; dur: number; idx: number }> = ({ s, dur, idx
   if (s.k === "big") {
     return (
       <AbsoluteFill>
-        {s.bg === "cream" ? <CreamBG /> : <DarkBG />}
+        {s.bg === "cream" ? <CreamBG /> : <SmoothBlur seed={s.text} />}
         <BigType text={s.text} at={6} color={s.color ?? (s.bg === "cream" ? C.ink : "#fff")} italic={s.italic} glow={s.bg === "black"} />
       </AbsoluteFill>
     );

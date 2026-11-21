@@ -111,6 +111,60 @@ export const DarkBG: React.FC<{ tint?: string }> = ({ tint = "#151515" }) => (
   <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 45%, ${tint} 0%, ${C.black} 75%)` }} />
 );
 
+/**
+ * Smooth blur background: charcoal base with soft grey light patches that drift slowly,
+ * heavily blurred, with fine monochrome film grain on top.
+ * `seed` changes the layout so consecutive scenes don't look identical.
+ */
+export const SmoothBlur: React.FC<{ seed?: string; brightness?: number }> = ({ seed = "a", brightness = 1 }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const { w, h } = useU();
+  const t = f / fps;
+  const blobs = Array.from({ length: 6 }).map((_, i) => {
+    const r = (k: string) => random(`${seed}-${i}-${k}`);
+    const size = Math.max(w, h) * (0.35 + r("s") * 0.4);
+    const x = w * (0.1 + r("x") * 0.8) + Math.sin(t * (0.25 + r("vx") * 0.3) + r("px") * 6.28) * w * 0.08;
+    const y = h * (0.1 + r("y") * 0.8) + Math.cos(t * (0.2 + r("vy") * 0.3) + r("py") * 6.28) * h * 0.1;
+    const light = (0.18 + r("l") * 0.34) * brightness;
+    return { size, x, y, light };
+  });
+  const gs = Math.floor(f / 2) % 8;
+  return (
+    <AbsoluteFill style={{ background: "#1c1c1c", overflow: "hidden" }}>
+      <AbsoluteFill style={{ filter: "blur(70px)", transform: "scale(1.15)" }}>
+        {blobs.map((b, i) => (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: b.x - b.size / 2,
+              top: b.y - b.size / 2,
+              width: b.size,
+              height: b.size,
+              borderRadius: "50%",
+              background: `radial-gradient(circle, rgba(210,210,210,${b.light}) 0%, rgba(160,160,160,${b.light * 0.45}) 40%, rgba(0,0,0,0) 70%)`,
+            }}
+          />
+        ))}
+        {/* a couple of darker pools for depth */}
+        <div style={{ position: "absolute", left: w * 0.05, top: h * 0.45, width: w * 0.6, height: h * 0.5, borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.55), rgba(0,0,0,0) 70%)" }} />
+        <div style={{ position: "absolute", left: w * 0.55, top: h * 0.1, width: w * 0.45, height: h * 0.45, borderRadius: "50%", background: "radial-gradient(circle, rgba(0,0,0,0.45), rgba(0,0,0,0) 70%)" }} />
+      </AbsoluteFill>
+      {/* fine film grain, like the reference image */}
+      <AbsoluteFill style={{ opacity: 0.22, mixBlendMode: "overlay" }}>
+        <svg width="100%" height="100%">
+          <filter id={`sbg${gs}`}>
+            <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed={gs} stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+          <rect width="100%" height="100%" filter={`url(#sbg${gs})`} />
+        </svg>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
 /** Slow camera push + entrance punch shared by every scene. */
 export const Camera: React.FC<{
   children: React.ReactNode;

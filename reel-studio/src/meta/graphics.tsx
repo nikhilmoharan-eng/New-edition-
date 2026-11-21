@@ -5,7 +5,7 @@ import {
   C,
   clamp,
   CreamBG,
-  DarkBG,
+  SmoothBlur,
   DISPLAY,
   INOUT,
   MONO,
@@ -85,7 +85,7 @@ export const GLogoPop: React.FC<GProps> = ({ logo = "logo-google.png" }) => {
   const ring = prog(f, 2, 22);
   return (
     <AbsoluteFill>
-      <DarkBG tint="#1a1d24" />
+      <SmoothBlur seed="pop" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-50 * u}px` }}>
         <div
           style={{
@@ -203,7 +203,8 @@ export const GLabeling: React.FC<GProps> = () => {
   const tw = (portrait ? 440 : 400) * u;
   const th = (portrait ? 560 : 520) * u;
   return (
-    <AbsoluteFill style={{ background: "#0b0c10" }}>
+    <AbsoluteFill>
+      <SmoothBlur seed="label" brightness={0.8} />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${(portrait ? -120 : -50) * u}px` }}>
         <div style={{ display: "grid", gridTemplateColumns: `repeat(${cols}, ${tw}px)`, gap: 22 * u }}>
           {tiles.map((t, i) => {
@@ -261,7 +262,7 @@ export const GLlama: React.FC<GProps> = ({ mark = 40 }) => {
   const R = 220 * u;
   return (
     <AbsoluteFill>
-      <DarkBG tint="#141a2a" />
+      <SmoothBlur seed="llama" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-40 * u}px` }}>
         <div
           style={{
@@ -302,9 +303,10 @@ export const GRace: React.FC<GProps> = ({ dur }) => {
   const lanes = [0, 1, 2, 3];
   const trackW = w * 0.8;
   return (
-    <AbsoluteFill style={{ background: "linear-gradient(#0b0b0f,#15151c)" }}>
-      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
-        <div style={{ width: trackW, display: "flex", flexDirection: "column", gap: 70 * u }}>
+    <AbsoluteFill>
+      <SmoothBlur seed="race" brightness={0.85} />
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-110 * u}px` }}>
+        <div style={{ width: trackW, display: "flex", flexDirection: "column", gap: 48 * u }}>
           <div style={{ fontFamily: MONO, fontSize: 30 * u, letterSpacing: 12 * u, color: "#9a9a9a", textAlign: "center" }}>THE AI RACE</div>
           {lanes.map((l) => {
             const meta = l === 2;
@@ -350,7 +352,7 @@ export const GHandshake: React.FC<GProps> = () => {
   const sep = interpolate(p, [0, 1], [760, portrait ? 250 : 300]) * u;
   return (
     <AbsoluteFill>
-      <DarkBG tint="#1b2233" />
+      <SmoothBlur seed="hand" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${60 * u}px` }}>
         <div style={{ position: "absolute", translate: `${-sep}px 0px`, filter: `drop-shadow(0 0 ${26 * u}px rgba(80,140,255,0.45))` }}>
           <Bust label="" logo={M("logo-meta.png")} size={portrait ? 380 : 430} />
@@ -376,7 +378,8 @@ export const GTermSheet: React.FC<GProps> = ({ dur }) => {
   );
   const s = interpolate(f, [0, dur], portrait ? [1.0, 1.08] : [1.12, 1.28], clamp);
   return (
-    <AbsoluteFill style={{ background: "linear-gradient(135deg,#2b2b2b,#0d0d0d)" }}>
+    <AbsoluteFill>
+      <SmoothBlur seed="terms" />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", perspective: 1800 * u, scale: String(s) }}>
         <div style={{ width: Math.min(980 * u, w * 0.9), background: C.paper, padding: `${54 * u}px ${64 * u}px`, transform: "rotateX(20deg) rotateZ(-4deg)", boxShadow: `0 ${50 * u}px ${120 * u}px rgba(0,0,0,0.7)` }}>
           <div style={{ textAlign: "center", fontFamily: DISPLAY, fontWeight: 700, fontSize: 38 * u, letterSpacing: 8 * u, color: "#222" }}>INVESTMENT TERMS</div>
@@ -455,7 +458,7 @@ export const GSnap: React.FC<GProps> = ({ mark = 20 }) => {
   const half = gap - 150 * u;
   return (
     <AbsoluteFill>
-      <DarkBG tint="#1a1a1a" />
+      <SmoothBlur seed="snap" />
       <AbsoluteFill style={{ background: `rgba(215,38,43,${0.35 * (1 - Math.abs(sn - 0.15) / 0.85) * (f >= mark ? 1 : 0)})` }} />
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-60 * u}px` }}>
         {/* link: two halves that recoil after the snap */}
@@ -506,7 +509,7 @@ export const GOutro: React.FC<GProps> = ({ dur }) => {
 };
 
 export const GCream: React.FC<GProps> = () => <CreamBG />;
-export const GBlack: React.FC<GProps> = () => <DarkBG tint="#0e0e0e" />;
+export const GBlack: React.FC<GProps> = () => <SmoothBlur seed="black" />;
 
 export const GRAPHICS: Record<string, React.FC<GProps>> = {
   strike: GStrikeLogo,
