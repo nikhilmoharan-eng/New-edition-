@@ -53,7 +53,7 @@ const shots = ({ w, at, lineStart }: Timing): Shot[] => [
   { k: "g", g: "doj", at: at("doj", 7), cap: "off" },
   // "Google didn't buy a startup. It bought back the man it let walk out."
   { k: "img", src: "google-nyt.jpg", at: lineStart("reframe"), bw: true, zoom: [1.0, 1.15] },
-  { k: "g", g: "walk", at: at("reframe", 5) },
+  { k: "img", src: "shazeer.jpg", card: true, at: at("reframe", 5), stamp: { text: "REHIRED", at: w("reframe", 6) + 0.15 } },
   // "So was he worth $2.7 billion? Or did Google just pay for its own mistake?"
   { k: "img", src: "shazeer.jpg", card: true, at: lineStart("outro1") },
   { k: "vid", src: "servers3.mp4", at: at("outro1", 4), bw: true },

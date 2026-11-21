@@ -148,8 +148,8 @@ const MediaView: React.FC<{ s: MediaShot; dur: number; idx: number }> = ({ s, du
               <Img
                 src={M(s.src)}
                 style={{
-                  maxWidth: "62%",
-                  maxHeight: "66%",
+                  maxWidth: "50%",
+                  maxHeight: "47%",
                   border: `${12 * u}px solid #f4f1ea`,
                   boxShadow: `0 ${30 * u}px ${80 * u}px rgba(0,0,0,0.7)`,
                   rotate: idx % 2 ? "-2deg" : "2deg",
