@@ -2,11 +2,44 @@
   "srcDir": "media-src/google-shazeer",
   "outDir": "public/meta-scale/media",
   "images": [
-    { "name": "shazeer", "src": "shazeer.jpg" },
-    { "name": "pichai", "src": "pichai.jpg" },
-    { "name": "doj", "src": "doj.jpg" },
-    { "name": "attention", "src": "attention.png", "crop": [0.12, 0.18, 0.92, 0.82] },
-    { "name": "logo-gemini", "src": "logo-gemini.jpg", "logo": true },
-    { "name": "logo-cai", "src": "logo-cai-dark.jpg", "logo": true, "invert": true }
+    {
+      "name": "shazeer",
+      "src": "shazeer.jpg"
+    },
+    {
+      "name": "pichai",
+      "src": "pichai.jpg"
+    },
+    {
+      "name": "doj",
+      "src": "doj.jpg"
+    },
+    {
+      "name": "attention",
+      "src": "attention.png",
+      "crop": [
+        0.12,
+        0.18,
+        0.92,
+        0.82
+      ]
+    },
+    {
+      "name": "logo-gemini",
+      "src": "logo-gemini.jpg",
+      "logo": true,
+      "crop": [
+        0.03,
+        0.3,
+        0.95,
+        0.7
+      ]
+    },
+    {
+      "name": "logo-cai",
+      "src": "logo-cai-dark.jpg",
+      "logo": true,
+      "invert": true
+    }
   ]
 }
