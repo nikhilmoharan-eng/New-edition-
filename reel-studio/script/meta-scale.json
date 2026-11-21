@@ -1,0 +1,31 @@
+{
+  "title": "The $14B Hire",
+  "voice": "am_michael",
+  "speed": 1.1,
+  "sources": [
+    "Reuters / Fortune / NYT, Jun 12-13 2025: Meta invests $14.3B for 49% of Scale AI (valued $29B+), Wang joins Meta to lead superintelligence lab",
+    "Reuters, Jun 14 2025: Google, Scale's largest customer (~$200M planned spend in 2025), plans to cut ties",
+    "Bloomberg, Jul 16 2025: Scale AI cuts 14% of staff (~200 full-time)",
+    "Forbes 2022: Wang, MIT dropout at 19, co-founded Scale in 2016; youngest self-made billionaire",
+    "Reuters, Jun 2025: Meta's Llama 4 got a lackluster reception"
+  ],
+  "lines": [
+    { "id": "hook1", "pauseAfter": 0.25, "say": "In June twenty twenty five, Meta paid fourteen billion dollars.", "show": "In June 2025, Meta paid $14 billion." },
+    { "id": "hook2", "pauseAfter": 0.4, "say": "Not for a company. For one twenty eight year old.", "show": "Not for a company. For one 28-year-old." },
+    { "id": "name", "pauseAfter": 0.2, "say": "His name is Alexander Wang.", "show": "His name is Alexandr Wang." },
+    { "id": "origin", "pauseAfter": 0.25, "say": "At nineteen, he dropped out of MIT and started Scale AI.", "show": "At 19, he dropped out of MIT and started Scale AI." },
+    { "id": "feeds", "pauseAfter": 0.3, "say": "Scale doesn't build AI. It feeds it.", "show": "Scale doesn't build AI. It feeds it." },
+    { "id": "labels", "pauseAfter": 0.25, "say": "Its workers label the data that trains AI for Google, OpenAI, and even the US military.", "show": "Its workers label the data that trains AI for Google, OpenAI, and even the US military." },
+    { "id": "billionaire", "pauseAfter": 0.4, "say": "It made him the world's youngest self made billionaire.", "show": "It made him the world's youngest self-made billionaire." },
+    { "id": "why", "pauseAfter": 0.25, "say": "So why did Meta pay so much?", "show": "So why did Meta pay so much?" },
+    { "id": "llama", "pauseAfter": 0.3, "say": "Because its newest model, Llama four, landed with a shrug, and Zuckerberg was falling behind in the AI race.", "show": "Because its newest model, Llama 4, landed with a shrug, and Zuckerberg was falling behind in the AI race." },
+    { "id": "deal", "pauseAfter": 0.45, "say": "So Meta bought forty nine percent of Scale, and hired Wang to run its new superintelligence lab.", "show": "So Meta bought 49% of Scale, and hired Wang to run its new superintelligence lab." },
+    { "id": "crazy", "pauseAfter": 0.35, "say": "And here's the crazy part.", "show": "And here's the crazy part." },
+    { "id": "google", "pauseAfter": 0.25, "say": "Scale's biggest customer was Google. About two hundred million dollars that year.", "show": "Scale's biggest customer was Google. About $200 million that year." },
+    { "id": "split", "pauseAfter": 0.3, "say": "The day after the deal, reports said Google planned to walk away.", "show": "The day after the deal, reports said Google planned to walk away." },
+    { "id": "layoffs", "pauseAfter": 0.45, "say": "A month later, Scale cut fourteen percent of its staff.", "show": "A month later, Scale cut 14% of its staff." },
+    { "id": "reframe", "pauseAfter": 0.5, "say": "Meta didn't buy a company. It bought a person. And the company paid the price.", "show": "Meta didn't buy a company. It bought a person. And the company paid the price." },
+    { "id": "outro1", "pauseAfter": 0.2, "say": "So was it the smartest hire in AI history?", "show": "So was it the smartest hire in AI history?" },
+    { "id": "outro2", "pauseAfter": 0.9, "say": "Or the most expensive one ever?", "show": "Or the most expensive one ever?" }
+  ]
+}

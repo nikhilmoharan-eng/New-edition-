@@ -1,14 +1,14 @@
 """Generate the voiceover + word-level timeline for a reel script.
 
 Usage:
-  python3 scripts/gen_vo.py script/whatsapp.json \
+  python3 scripts/gen_vo.py script/whatsapp.json --name whatsapp \
       --kokoro path/to/kokoro.onnx --voices path/to/voices.npz \
       --whisper path/to/faster-whisper-model-dir
 
-Writes public/vo.wav and src/timeline.json.
+Writes public/<name>/vo.wav and src/timelines/<name>.json.
 
 To use an ElevenLabs voice instead, render each line with ElevenLabs, save them as
-public/lines/<id>.wav, and pass --from-wavs: the same alignment + timeline step runs.
+public/<name>/lines/<id>.wav, and pass --from-wavs: the same alignment + timeline step runs.
 """
 import argparse, json, os, re, difflib, wave
 import numpy as np
@@ -20,12 +20,14 @@ ap.add_argument("--kokoro")
 ap.add_argument("--voices")
 ap.add_argument("--whisper", required=True)
 ap.add_argument("--from-wavs", action="store_true")
+ap.add_argument("--name", required=True, help="reel name: writes public/<name>/ and src/timelines/<name>.json")
 ap.add_argument("--out", default=".")
 a = ap.parse_args()
 
 spec = json.load(open(a.script))
 root = a.out
-os.makedirs(f"{root}/public/lines", exist_ok=True)
+os.makedirs(f"{root}/public/{a.name}/lines", exist_ok=True)
+os.makedirs(f"{root}/src/timelines", exist_ok=True)
 
 
 def read_wav(p):
@@ -42,7 +44,7 @@ def read_wav(p):
 clips = []
 if a.from_wavs:
     for ln in spec["lines"]:
-        clips.append(read_wav(f"{root}/public/lines/{ln['id']}.wav"))
+        clips.append(read_wav(f"{root}/public/{a.name}/lines/{ln['id']}.wav"))
 else:
     from kokoro_onnx import Kokoro
     import soundfile as sf
@@ -53,7 +55,7 @@ else:
         # trim leading/trailing silence so pauses are controlled by the script
         nz = np.where(np.abs(y) > 0.01)[0]
         y = y[max(0, nz[0] - 600): nz[-1] + 1200]
-        sf.write(f"{root}/public/lines/{ln['id']}.wav", y, SR)
+        sf.write(f"{root}/public/{a.name}/lines/{ln['id']}.wav", y, SR)
         clips.append(y.astype(np.float32))
 
 from faster_whisper import WhisperModel
@@ -137,10 +139,10 @@ for ln, y in zip(spec["lines"], clips):
 full = np.concatenate(audio)
 peak = np.abs(full).max()
 full = full / peak * 0.89
-with wave.open(f"{root}/public/vo.wav", "wb") as w:
+with wave.open(f"{root}/public/{a.name}/vo.wav", "wb") as w:
     w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
     w.writeframes((full * 32767).astype(np.int16).tobytes())
-json.dump({"title": spec["title"], "duration": round(t, 3), "lines": timeline}, open(f"{root}/src/timeline.json", "w"), indent=1)
+json.dump({"title": spec["title"], "duration": round(t, 3), "lines": timeline}, open(f"{root}/src/timelines/{a.name}.json", "w"), indent=1)
 print("duration", round(t, 2), "s")
 for l in timeline:
     print(f"{l['start']:6.2f} {l['id']:8s} " + " ".join(f"{w['text']}@{w['start']:.2f}" for w in l["words"]))

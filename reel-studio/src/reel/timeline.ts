@@ -1,4 +1,4 @@
-import tl from "../timeline.json";
+import tl from "../timelines/whatsapp.json";
 
 export type Word = { text: string; start: number; end: number };
 export type Line = { id: string; show: string; start: number; end: number; words: Word[] };

@@ -6,8 +6,8 @@ See `../PLAYBOOK.md` for the script formula, voice choice and the asset checklis
 
 | Path | What it is |
 |---|---|
-| `script/whatsapp.json` | The script. Each line has `say` (spoken text), `show` (caption text) and `pauseAfter` |
-| `scripts/gen_vo.py` | Voices each line (local Kokoro, or ElevenLabs lines via `--from-wavs`), joins the lines and aligns every caption word with Whisper → `public/vo.wav` + `src/timeline.json` |
+| `script/<name>.json` | One script per reel (`whatsapp`, `meta-scale`). Each line has `say` (spoken text), `show` (caption text) and `pauseAfter` |
+| `scripts/gen_vo.py` | Voices each line (local Kokoro, or ElevenLabs lines via `--from-wavs`), joins the lines and aligns every caption word with Whisper → `public/<name>/vo.wav` + `src/timelines/<name>.json` |
 | `scripts/eleven_lines.py` | Voices each line with ElevenLabs (needs `ELEVENLABS_API_KEY`) |
 | `scripts/gen_sfx.py` | Synthesizes the music bed and SFX into `public/` |
 | `scripts/stills.mjs` | Renders check frames |

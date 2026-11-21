@@ -1,8 +1,8 @@
 """Voice every script line with ElevenLabs, then re-run gen_vo.py --from-wavs.
 
   export ELEVENLABS_API_KEY=...            # never commit this
-  python3 scripts/eleven_lines.py script/whatsapp.json --voice nPczCjzI2devNBz1zQrb
-  python3 scripts/gen_vo.py script/whatsapp.json --from-wavs --whisper <model dir>
+  python3 scripts/eleven_lines.py script/whatsapp.json --name whatsapp --voice nPczCjzI2devNBz1zQrb
+  python3 scripts/gen_vo.py script/whatsapp.json --name whatsapp --from-wavs --whisper <model dir>
 
 Each line is sent with the previous/next line as context so the delivery flows like one take.
 """
@@ -11,6 +11,7 @@ import argparse, json, os, wave, urllib.request
 ap = argparse.ArgumentParser()
 ap.add_argument("script")
 ap.add_argument("--voice", required=True, help="ElevenLabs voice_id")
+ap.add_argument("--name", required=True, help="reel name (same as gen_vo.py --name)")
 ap.add_argument("--model", default="eleven_multilingual_v2")
 ap.add_argument("--stability", type=float, default=0.40)
 ap.add_argument("--similarity", type=float, default=0.80)
@@ -20,7 +21,7 @@ a = ap.parse_args()
 
 key = os.environ["ELEVENLABS_API_KEY"]
 lines = json.load(open(a.script))["lines"]
-os.makedirs("public/lines", exist_ok=True)
+os.makedirs(f"public/{a.name}/lines", exist_ok=True)
 for i, ln in enumerate(lines):
     body = {
         "text": ln["say"],
@@ -41,6 +42,6 @@ for i, ln in enumerate(lines):
         headers={"xi-api-key": key, "Content-Type": "application/json"},
     )
     pcm = urllib.request.urlopen(req).read()
-    with wave.open(f"public/lines/{ln['id']}.wav", "wb") as w:
+    with wave.open(f"public/{a.name}/lines/{ln['id']}.wav", "wb") as w:
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
     print("ok", ln["id"])

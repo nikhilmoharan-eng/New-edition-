@@ -144,7 +144,7 @@ export const Reel: React.FC = () => {
       <Vignette />
       <Grain />
       <Captions />
-      <Audio src={staticFile("vo.wav")} />
+      <Audio src={staticFile("whatsapp/vo.wav")} />
       <Audio
         src={staticFile("music.wav")}
         volume={(f) => {
