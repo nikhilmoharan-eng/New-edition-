@@ -470,7 +470,9 @@ export const GSnap: React.FC<GProps> = ({ mark = 20, logo = "logo-google.png", l
 };
 
 /* Split-screen ending: the person vs the price, then a giant "?". */
-export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = "$14,300,000,000" }) => {
+export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = "$14,300,000,000", label }) => {
+  // label "card": the photo is small, so show it as a framed print over a blurred copy instead of filling the half
+  const card = label === "card";
   const f = useCurrentFrame();
   const { u, portrait } = useU();
   const l = prog(f, 0, 12);
@@ -489,10 +491,20 @@ export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = 
   return (
     <AbsoluteFill style={{ background: "#000" }}>
       <div style={{ ...half, ...(portrait ? { top: 0 } : { left: 0 }), opacity: l }}>
-        <Img
-          src={M(img)}
-          style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", objectPosition: "45% 35%", filter: `grayscale(${1 - prog(f, 20, 60)}) contrast(1.1)`, scale: String(interpolate(f, [0, dur], [1.05, 1.15], clamp)) }}
-        />
+        {card ? (
+          <>
+            <Img src={M(img)} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(28px) brightness(0.45)", scale: "1.2" }} />
+            <Img
+              src={M(img)}
+              style={{ position: "relative", maxWidth: "72%", maxHeight: "56%", border: `${10 * u}px solid #f4f1ea`, boxShadow: `0 ${30 * u}px ${80 * u}px rgba(0,0,0,0.7)`, rotate: "-2deg", translate: `0px ${-40 * u}px`, filter: `grayscale(${1 - prog(f, 20, 60)})`, scale: String(interpolate(f, [0, dur], [1.0, 1.06], clamp)) }}
+            />
+          </>
+        ) : (
+          <Img
+            src={M(img)}
+            style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", objectPosition: "45% 35%", filter: `grayscale(${1 - prog(f, 20, 60)}) contrast(1.1)`, scale: String(interpolate(f, [0, dur], [1.05, 1.15], clamp)) }}
+          />
+        )}
         <div style={{ position: "absolute", bottom: 40 * u, fontFamily: MONO, fontSize: 26 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>THE PERSON</div>
       </div>
       <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), background: C.cream, opacity: r }}>

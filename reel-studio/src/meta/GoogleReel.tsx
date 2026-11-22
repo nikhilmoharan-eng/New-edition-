@@ -17,7 +17,7 @@ const shots = ({ w, at, lineStart }: Timing): Shot[] => [
   { k: "img", src: "shazeer.jpg", card: true, at: lineStart("name"), label: { title: "NOAM SHAZEER", sub: "Co-author, “Attention Is All You Need”" }, cap: "top" },
   // "In 2017, he co-wrote the paper that invented the Transformer... the T in ChatGPT."
   { k: "big", text: "2017.", bg: "cream", at: lineStart("paper"), cap: "top", tone: "dark" },
-  { k: "img", src: "attention.jpg", at: at("paper", 3), zoom: [1.05, 1.2] },
+  { k: "img", src: "attention.jpg", at: at("paper", 3), zoom: [1.0, 1.1] },
   { k: "g", g: "chatT", at: at("paper", 10), mark: w("paper", 11), cap: "top", tone: "dark" },
   // "At Google, he helped build a chatbot that could talk like a human. Years before ChatGPT."
   { k: "img", src: "google-nyt.jpg", at: lineStart("chatbot"), pos: "50% 50%" },
@@ -34,7 +34,7 @@ const shots = ({ w, at, lineStart }: Timing): Shot[] => [
   { k: "big", text: "$1,000,000,000", bg: "cream", at: at("billion", 6), cap: "top", tone: "dark" },
   // "Then ChatGPT exploded... and Google was suddenly behind."
   { k: "g", g: "logoPop", logo: "logo-openai.png", at: lineStart("chatgpt") },
-  { k: "img", src: "pichai.jpg", at: at("chatgpt", 3), bw: true, pos: "50% 30%" },
+  { k: "img", src: "pichai.jpg", at: at("chatgpt", 3), bw: true, pos: "50% 8%" },
   // "So in 2024, Google paid about $2.7 billion... to license Character's tech, and bring Shazeer back."
   { k: "big", text: "2024.", bg: "cream", at: lineStart("deal"), cap: "top", tone: "dark" },
   { k: "g", g: "handshake", logo: "logo-google.png", logo2: "logo-cai.png", at: at("deal", 3), cap: "top" },
@@ -57,7 +57,7 @@ const shots = ({ w, at, lineStart }: Timing): Shot[] => [
   // "So was he worth $2.7 billion? Or did Google just pay for its own mistake?"
   { k: "img", src: "shazeer.jpg", card: true, at: lineStart("outro1") },
   { k: "vid", src: "servers3.mp4", at: at("outro1", 4), bw: true },
-  { k: "g", g: "outro", img: "shazeer.jpg", text: "$2,700,000,000", at: lineStart("outro2"), cap: "low" },
+  { k: "g", g: "outro", img: "shazeer.jpg", label: "card", text: "$2,700,000,000", at: lineStart("outro2"), cap: "low" },
 ];
 
 export const GOOGLE_EN = makeMetaReel({
@@ -99,6 +99,6 @@ export const GOOGLE_HI = makeMetaReel({
     { k: "big", text: "₹22,000 crore", bg: "cream", at: hw("hook1", 6) - 0.04, cap: "top", tone: "dark" }, // yaani
     { k: "g", g: "logoPop", logo: "logo-cai.png", at: hw("deal", 9) - 0.04 }, // Character
     { k: "vid", src: "servers2.mp4", at: hw("chatbot", 10) - 0.04, bw: true }, // jo insaan...
-    { k: "img", src: "pichai.jpg", at: hw("doj", 13) - 0.04, bw: true, pos: "50% 30%", zoom: [1.2, 1.35] }, // niyamon
+    { k: "img", src: "pichai.jpg", at: hw("doj", 13) - 0.04, bw: true, pos: "50% 8%", zoom: [1.05, 1.15] }, // niyamon
   ],
 });
