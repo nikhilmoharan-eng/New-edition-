@@ -1,0 +1,937 @@
+{
+ "title": "Microsoft's $13B Bet",
+ "duration": 79.83,
+ "lines": [
+  {
+   "id": "hook1",
+   "show": "In 2019, Microsoft gave $1 billion... to a non-profit.",
+   "start": 0.35,
+   "end": 5.159,
+   "words": [
+    {
+     "text": "In",
+     "start": 0.35,
+     "end": 0.49
+    },
+    {
+     "text": "2019,",
+     "start": 0.423,
+     "end": 1.506
+    },
+    {
+     "text": "Microsoft",
+     "start": 1.439,
+     "end": 2.041
+    },
+    {
+     "text": "gave",
+     "start": 1.978,
+     "end": 2.403
+    },
+    {
+     "text": "$1",
+     "start": 2.372,
+     "end": 2.731
+    },
+    {
+     "text": "billion...",
+     "start": 2.7,
+     "end": 3.2
+    },
+    {
+     "text": "to",
+     "start": 3.35,
+     "end": 4.01
+    },
+    {
+     "text": "a",
+     "start": 4.21,
+     "end": 4.35
+    },
+    {
+     "text": "non-profit.",
+     "start": 4.309,
+     "end": 4.751
+    }
+   ]
+  },
+  {
+   "id": "hook2",
+   "show": "Six years later, its stake was worth about $135 billion.",
+   "start": 5.359,
+   "end": 10.259,
+   "words": [
+    {
+     "text": "Six",
+     "start": 5.359,
+     "end": 5.589
+    },
+    {
+     "text": "years",
+     "start": 5.507,
+     "end": 5.871
+    },
+    {
+     "text": "later,",
+     "start": 5.795,
+     "end": 6.223
+    },
+    {
+     "text": "its",
+     "start": 6.543,
+     "end": 6.776
+    },
+    {
+     "text": "stake",
+     "start": 6.687,
+     "end": 7.051
+    },
+    {
+     "text": "was",
+     "start": 6.979,
+     "end": 7.279
+    },
+    {
+     "text": "worth",
+     "start": 7.203,
+     "end": 7.535
+    },
+    {
+     "text": "about",
+     "start": 7.451,
+     "end": 7.847
+    },
+    {
+     "text": "$135",
+     "start": 7.77,
+     "end": 9.104
+    },
+    {
+     "text": "billion.",
+     "start": 9.027,
+     "end": 9.492
+    }
+   ]
+  },
+  {
+   "id": "name",
+   "show": "That non-profit was OpenAI.",
+   "start": 10.709,
+   "end": 12.831,
+   "words": [
+    {
+     "text": "That",
+     "start": 10.709,
+     "end": 10.877
+    },
+    {
+     "text": "non-profit",
+     "start": 10.786,
+     "end": 11.458
+    },
+    {
+     "text": "was",
+     "start": 11.383,
+     "end": 11.656
+    },
+    {
+     "text": "OpenAI.",
+     "start": 11.587,
+     "end": 12.199
+    }
+   ]
+  },
+  {
+   "id": "founded",
+   "show": "Started in 2015, to build AI that benefits all of humanity.",
+   "start": 13.081,
+   "end": 17.812,
+   "words": [
+    {
+     "text": "Started",
+     "start": 13.081,
+     "end": 13.421
+    },
+    {
+     "text": "in",
+     "start": 13.341,
+     "end": 13.561
+    },
+    {
+     "text": "2015,",
+     "start": 13.47,
+     "end": 14.206
+    },
+    {
+     "text": "to",
+     "start": 14.116,
+     "end": 14.446
+    },
+    {
+     "text": "build",
+     "start": 14.425,
+     "end": 14.757
+    },
+    {
+     "text": "AI",
+     "start": 14.801,
+     "end": 15.561
+    },
+    {
+     "text": "that",
+     "start": 16.036,
+     "end": 16.266
+    },
+    {
+     "text": "benefits",
+     "start": 16.167,
+     "end": 16.675
+    },
+    {
+     "text": "all",
+     "start": 16.628,
+     "end": 17.034
+    },
+    {
+     "text": "of",
+     "start": 16.996,
+     "end": 17.206
+    },
+    {
+     "text": "humanity.",
+     "start": 17.123,
+     "end": 17.578
+    }
+   ]
+  },
+  {
+   "id": "compute",
+   "show": "But AI needs giant computers... and giant computers need money.",
+   "start": 18.112,
+   "end": 22.517,
+   "words": [
+    {
+     "text": "But",
+     "start": 18.112,
+     "end": 18.276
+    },
+    {
+     "text": "AI",
+     "start": 18.227,
+     "end": 18.517
+    },
+    {
+     "text": "needs",
+     "start": 18.544,
+     "end": 19.42
+    },
+    {
+     "text": "giant",
+     "start": 19.416,
+     "end": 19.908
+    },
+    {
+     "text": "computers...",
+     "start": 19.846,
+     "end": 20.519
+    },
+    {
+     "text": "and",
+     "start": 20.492,
+     "end": 20.952
+    },
+    {
+     "text": "giant",
+     "start": 20.924,
+     "end": 21.32
+    },
+    {
+     "text": "computers",
+     "start": 21.241,
+     "end": 21.843
+    },
+    {
+     "text": "need",
+     "start": 21.767,
+     "end": 22.117
+    },
+    {
+     "text": "money.",
+     "start": 22.038,
+     "end": 22.386
+    }
+   ]
+  },
+  {
+   "id": "cash",
+   "show": "So Microsoft paid in cash, and in Azure cloud credits.",
+   "start": 22.817,
+   "end": 26.464,
+   "words": [
+    {
+     "text": "So",
+     "start": 22.817,
+     "end": 23.002
+    },
+    {
+     "text": "Microsoft",
+     "start": 22.924,
+     "end": 23.491
+    },
+    {
+     "text": "paid",
+     "start": 23.43,
+     "end": 23.885
+    },
+    {
+     "text": "in",
+     "start": 23.842,
+     "end": 24.072
+    },
+    {
+     "text": "cash,",
+     "start": 24.025,
+     "end": 24.45
+    },
+    {
+     "text": "and",
+     "start": 24.444,
+     "end": 24.931
+    },
+    {
+     "text": "in",
+     "start": 24.864,
+     "end": 25.077
+    },
+    {
+     "text": "Azure",
+     "start": 24.991,
+     "end": 25.403
+    },
+    {
+     "text": "cloud",
+     "start": 25.341,
+     "end": 25.833
+    },
+    {
+     "text": "credits.",
+     "start": 25.76,
+     "end": 26.175
+    }
+   ]
+  },
+  {
+   "id": "chatgpt",
+   "show": "Then in 2022, OpenAI launched ChatGPT... and the world changed overnight.",
+   "start": 26.864,
+   "end": 32.716,
+   "words": [
+    {
+     "text": "Then",
+     "start": 26.864,
+     "end": 27.067
+    },
+    {
+     "text": "in",
+     "start": 26.974,
+     "end": 27.174
+    },
+    {
+     "text": "2022,",
+     "start": 27.097,
+     "end": 28.112
+    },
+    {
+     "text": "OpenAI",
+     "start": 28.034,
+     "end": 28.674
+    },
+    {
+     "text": "launched",
+     "start": 28.64,
+     "end": 29.568
+    },
+    {
+     "text": "ChatGPT...",
+     "start": 29.529,
+     "end": 30.717
+    },
+    {
+     "text": "and",
+     "start": 30.807,
+     "end": 31.281
+    },
+    {
+     "text": "the",
+     "start": 31.241,
+     "end": 31.447
+    },
+    {
+     "text": "world",
+     "start": 31.348,
+     "end": 31.68
+    },
+    {
+     "text": "changed",
+     "start": 31.591,
+     "end": 32.057
+    },
+    {
+     "text": "overnight.",
+     "start": 31.965,
+     "end": 32.443
+    }
+   ]
+  },
+  {
+   "id": "allin",
+   "show": "Microsoft went all in. $10 billion more, in 2023.",
+   "start": 33.066,
+   "end": 37.546,
+   "words": [
+    {
+     "text": "Microsoft",
+     "start": 33.066,
+     "end": 33.638
+    },
+    {
+     "text": "went",
+     "start": 33.572,
+     "end": 33.982
+    },
+    {
+     "text": "all",
+     "start": 33.926,
+     "end": 34.226
+    },
+    {
+     "text": "in.",
+     "start": 34.192,
+     "end": 34.461
+    },
+    {
+     "text": "$10",
+     "start": 34.51,
+     "end": 35.027
+    },
+    {
+     "text": "billion",
+     "start": 35.075,
+     "end": 35.558
+    },
+    {
+     "text": "more,",
+     "start": 35.544,
+     "end": 36.269
+    },
+    {
+     "text": "in",
+     "start": 36.302,
+     "end": 36.592
+    },
+    {
+     "text": "2023.",
+     "start": 36.475,
+     "end": 36.986
+    }
+   ]
+  },
+  {
+   "id": "total",
+   "show": "In total, about $13 billion.",
+   "start": 37.846,
+   "end": 40.314,
+   "words": [
+    {
+     "text": "In",
+     "start": 37.846,
+     "end": 38.001
+    },
+    {
+     "text": "total,",
+     "start": 37.922,
+     "end": 38.35
+    },
+    {
+     "text": "about",
+     "start": 38.286,
+     "end": 38.746
+    },
+    {
+     "text": "$13",
+     "start": 38.673,
+     "end": 39.282
+    },
+    {
+     "text": "billion.",
+     "start": 39.209,
+     "end": 39.624
+    }
+   ]
+  },
+  {
+   "id": "crazy",
+   "show": "And here's the crazy part.",
+   "start": 40.764,
+   "end": 42.197,
+   "words": [
+    {
+     "text": "And",
+     "start": 40.764,
+     "end": 40.944
+    },
+    {
+     "text": "here's",
+     "start": 40.852,
+     "end": 41.216
+    },
+    {
+     "text": "the",
+     "start": 41.124,
+     "end": 41.344
+    },
+    {
+     "text": "crazy",
+     "start": 41.26,
+     "end": 41.688
+    },
+    {
+     "text": "part.",
+     "start": 41.624,
+     "end": 42.004
+    }
+   ]
+  },
+  {
+   "id": "fired",
+   "show": "In November 2023, the OpenAI board fired its own CEO, Sam Altman.",
+   "start": 42.547,
+   "end": 48.43,
+   "words": [
+    {
+     "text": "In",
+     "start": 42.547,
+     "end": 42.702
+    },
+    {
+     "text": "November",
+     "start": 42.602,
+     "end": 42.952
+    },
+    {
+     "text": "2023,",
+     "start": 42.872,
+     "end": 43.98
+    },
+    {
+     "text": "the",
+     "start": 43.9,
+     "end": 44.094
+    },
+    {
+     "text": "OpenAI",
+     "start": 44.007,
+     "end": 44.727
+    },
+    {
+     "text": "board",
+     "start": 45.363,
+     "end": 45.791
+    },
+    {
+     "text": "fired",
+     "start": 45.729,
+     "end": 46.205
+    },
+    {
+     "text": "its",
+     "start": 46.14,
+     "end": 46.414
+    },
+    {
+     "text": "own",
+     "start": 46.34,
+     "end": 46.614
+    },
+    {
+     "text": "CEO,",
+     "start": 46.597,
+     "end": 47.097
+    },
+    {
+     "text": "Sam",
+     "start": 47.604,
+     "end": 47.89
+    },
+    {
+     "text": "Altman.",
+     "start": 47.829,
+     "end": 48.385
+    }
+   ]
+  },
+  {
+   "id": "offer",
+   "show": "Within days, Microsoft said it would hire him... and hundreds of OpenAI employees threatened to follow.",
+   "start": 48.73,
+   "end": 55.123,
+   "words": [
+    {
+     "text": "Within",
+     "start": 48.73,
+     "end": 48.938
+    },
+    {
+     "text": "days,",
+     "start": 48.862,
+     "end": 49.317
+    },
+    {
+     "text": "Microsoft",
+     "start": 49.371,
+     "end": 49.849
+    },
+    {
+     "text": "said",
+     "start": 49.782,
+     "end": 50.237
+    },
+    {
+     "text": "it",
+     "start": 50.175,
+     "end": 50.365
+    },
+    {
+     "text": "would",
+     "start": 50.26,
+     "end": 50.48
+    },
+    {
+     "text": "hire",
+     "start": 50.385,
+     "end": 50.735
+    },
+    {
+     "text": "him...",
+     "start": 50.683,
+     "end": 51.037
+    },
+    {
+     "text": "and",
+     "start": 51.363,
+     "end": 51.557
+    },
+    {
+     "text": "hundreds",
+     "start": 51.452,
+     "end": 51.907
+    },
+    {
+     "text": "of",
+     "start": 51.845,
+     "end": 52.095
+    },
+    {
+     "text": "OpenAI",
+     "start": 52.05,
+     "end": 52.77
+    },
+    {
+     "text": "employees",
+     "start": 52.788,
+     "end": 53.852
+    },
+    {
+     "text": "threatened",
+     "start": 53.804,
+     "end": 54.479
+    },
+    {
+     "text": "to",
+     "start": 54.37,
+     "end": 54.63
+    },
+    {
+     "text": "follow.",
+     "start": 54.577,
+     "end": 54.983
+    }
+   ]
+  },
+  {
+   "id": "back",
+   "show": "Five days later, Altman was back.",
+   "start": 55.423,
+   "end": 57.519,
+   "words": [
+    {
+     "text": "Five",
+     "start": 55.423,
+     "end": 55.696
+    },
+    {
+     "text": "days",
+     "start": 55.618,
+     "end": 55.968
+    },
+    {
+     "text": "later,",
+     "start": 55.901,
+     "end": 56.345
+    },
+    {
+     "text": "Altman",
+     "start": 56.51,
+     "end": 56.917
+    },
+    {
+     "text": "was",
+     "start": 56.833,
+     "end": 57.093
+    },
+    {
+     "text": "back.",
+     "start": 57.016,
+     "end": 57.351
+    }
+   ]
+  },
+  {
+   "id": "rival",
+   "show": "In 2024, Microsoft officially listed OpenAI... as a competitor.",
+   "start": 57.969,
+   "end": 63.084,
+   "words": [
+    {
+     "text": "In",
+     "start": 57.969,
+     "end": 58.124
+    },
+    {
+     "text": "2024,",
+     "start": 58.051,
+     "end": 59.197
+    },
+    {
+     "text": "Microsoft",
+     "start": 59.124,
+     "end": 59.833
+    },
+    {
+     "text": "officially",
+     "start": 59.753,
+     "end": 60.325
+    },
+    {
+     "text": "listed",
+     "start": 60.244,
+     "end": 60.734
+    },
+    {
+     "text": "OpenAI...",
+     "start": 60.674,
+     "end": 61.414
+    },
+    {
+     "text": "as",
+     "start": 61.589,
+     "end": 62.169
+    },
+    {
+     "text": "a",
+     "start": 62.299,
+     "end": 62.439
+    },
+    {
+     "text": "competitor.",
+     "start": 62.362,
+     "end": 62.736
+    }
+   ]
+  },
+  {
+   "id": "restructure",
+   "show": "And in 2025, OpenAI became a for-profit public benefit company... and Microsoft kept 27%.",
+   "start": 63.434,
+   "end": 71.471,
+   "words": [
+    {
+     "text": "And",
+     "start": 63.434,
+     "end": 63.598
+    },
+    {
+     "text": "in",
+     "start": 63.494,
+     "end": 63.674
+    },
+    {
+     "text": "2025,",
+     "start": 63.607,
+     "end": 64.843
+    },
+    {
+     "text": "OpenAI",
+     "start": 64.776,
+     "end": 65.533
+    },
+    {
+     "text": "became",
+     "start": 65.533,
+     "end": 66.456
+    },
+    {
+     "text": "a",
+     "start": 66.514,
+     "end": 66.654
+    },
+    {
+     "text": "for-profit",
+     "start": 66.658,
+     "end": 67.336
+    },
+    {
+     "text": "public",
+     "start": 67.264,
+     "end": 67.704
+    },
+    {
+     "text": "benefit",
+     "start": 67.624,
+     "end": 68.124
+    },
+    {
+     "text": "company...",
+     "start": 68.056,
+     "end": 68.693
+    },
+    {
+     "text": "and",
+     "start": 69.084,
+     "end": 69.344
+    },
+    {
+     "text": "Microsoft",
+     "start": 69.264,
+     "end": 69.884
+    },
+    {
+     "text": "kept",
+     "start": 69.824,
+     "end": 70.264
+    },
+    {
+     "text": "27%.",
+     "start": 70.184,
+     "end": 71.334
+    }
+   ]
+  },
+  {
+   "id": "outro1",
+   "show": "So did Microsoft win the AI race?",
+   "start": 71.971,
+   "end": 74.706,
+   "words": [
+    {
+     "text": "So",
+     "start": 71.971,
+     "end": 72.141
+    },
+    {
+     "text": "did",
+     "start": 72.058,
+     "end": 72.305
+    },
+    {
+     "text": "Microsoft",
+     "start": 72.224,
+     "end": 72.879
+    },
+    {
+     "text": "win",
+     "start": 72.818,
+     "end": 73.145
+    },
+    {
+     "text": "the",
+     "start": 73.078,
+     "end": 73.325
+    },
+    {
+     "text": "AI",
+     "start": 73.316,
+     "end": 73.666
+    },
+    {
+     "text": "race?",
+     "start": 73.701,
+     "end": 74.261
+    }
+   ]
+  },
+  {
+   "id": "outro2",
+   "show": "Or did it pay $13 billion... to build its biggest rival?",
+   "start": 74.906,
+   "end": 78.93,
+   "words": [
+    {
+     "text": "Or",
+     "start": 74.906,
+     "end": 75.061
+    },
+    {
+     "text": "did",
+     "start": 74.966,
+     "end": 75.186
+    },
+    {
+     "text": "it",
+     "start": 75.091,
+     "end": 75.281
+    },
+    {
+     "text": "pay",
+     "start": 75.2,
+     "end": 75.473
+    },
+    {
+     "text": "$13",
+     "start": 75.404,
+     "end": 76.038
+    },
+    {
+     "text": "billion...",
+     "start": 75.969,
+     "end": 76.383
+    },
+    {
+     "text": "to",
+     "start": 76.551,
+     "end": 77.261
+    },
+    {
+     "text": "build",
+     "start": 77.432,
+     "end": 77.78
+    },
+    {
+     "text": "its",
+     "start": 77.696,
+     "end": 77.956
+    },
+    {
+     "text": "biggest",
+     "start": 77.871,
+     "end": 78.302
+    },
+    {
+     "text": "rival?",
+     "start": 78.23,
+     "end": 78.722
+    }
+   ]
+  }
+ ]
+}

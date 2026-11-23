@@ -1,0 +1,109 @@
+{
+ "title": "Microsoft's $13B Bet",
+ "voice": "am_michael",
+ "speed": 1.1,
+ "lines": [
+  {
+   "id": "hook1",
+   "pauseAfter": 0.2,
+   "say": "In twenty nineteen, Microsoft gave one billion dollars... to a non-profit.",
+   "show": "In 2019, Microsoft gave $1 billion... to a non-profit."
+  },
+  {
+   "id": "hook2",
+   "pauseAfter": 0.45,
+   "say": "Six years later, its stake was worth about one hundred thirty-five billion dollars.",
+   "show": "Six years later, its stake was worth about $135 billion."
+  },
+  {
+   "id": "name",
+   "pauseAfter": 0.25,
+   "say": "That non-profit was Open A.I.",
+   "show": "That non-profit was OpenAI."
+  },
+  {
+   "id": "founded",
+   "pauseAfter": 0.3,
+   "say": "Started in twenty fifteen, to build A.I. that benefits all of humanity.",
+   "show": "Started in 2015, to build AI that benefits all of humanity."
+  },
+  {
+   "id": "compute",
+   "pauseAfter": 0.3,
+   "say": "But A.I. needs giant computers... and giant computers need money.",
+   "show": "But AI needs giant computers... and giant computers need money."
+  },
+  {
+   "id": "cash",
+   "pauseAfter": 0.4,
+   "say": "So Microsoft paid in cash, and in Azure cloud credits.",
+   "show": "So Microsoft paid in cash, and in Azure cloud credits."
+  },
+  {
+   "id": "chatgpt",
+   "pauseAfter": 0.35,
+   "say": "Then in twenty twenty-two, Open A.I. launched Chat GPT... and the world changed overnight.",
+   "show": "Then in 2022, OpenAI launched ChatGPT... and the world changed overnight."
+  },
+  {
+   "id": "allin",
+   "pauseAfter": 0.3,
+   "say": "Microsoft went all in. Ten billion dollars more, in twenty twenty-three.",
+   "show": "Microsoft went all in. $10 billion more, in 2023."
+  },
+  {
+   "id": "total",
+   "pauseAfter": 0.45,
+   "say": "In total, about thirteen billion dollars.",
+   "show": "In total, about $13 billion."
+  },
+  {
+   "id": "crazy",
+   "pauseAfter": 0.35,
+   "say": "And here's the crazy part.",
+   "show": "And here's the crazy part."
+  },
+  {
+   "id": "fired",
+   "pauseAfter": 0.3,
+   "say": "In November twenty twenty-three, the Open A.I. board fired its own C E O, Sam Altman.",
+   "show": "In November 2023, the OpenAI board fired its own CEO, Sam Altman."
+  },
+  {
+   "id": "offer",
+   "pauseAfter": 0.3,
+   "say": "Within days, Microsoft said it would hire him... and hundreds of Open A.I. employees threatened to follow.",
+   "show": "Within days, Microsoft said it would hire him... and hundreds of OpenAI employees threatened to follow."
+  },
+  {
+   "id": "back",
+   "pauseAfter": 0.45,
+   "say": "Five days later, Altman was back.",
+   "show": "Five days later, Altman was back."
+  },
+  {
+   "id": "rival",
+   "pauseAfter": 0.35,
+   "say": "In twenty twenty-four, Microsoft officially listed Open A.I.... as a competitor.",
+   "show": "In 2024, Microsoft officially listed OpenAI... as a competitor."
+  },
+  {
+   "id": "restructure",
+   "pauseAfter": 0.5,
+   "say": "And in twenty twenty-five, Open A.I. became a for-profit public benefit company... and Microsoft kept twenty-seven percent.",
+   "show": "And in 2025, OpenAI became a for-profit public benefit company... and Microsoft kept 27%."
+  },
+  {
+   "id": "outro1",
+   "pauseAfter": 0.2,
+   "say": "So did Microsoft win the A.I. race?",
+   "show": "So did Microsoft win the AI race?"
+  },
+  {
+   "id": "outro2",
+   "pauseAfter": 0.9,
+   "say": "Or did it pay thirteen billion dollars... to build its biggest rival?",
+   "show": "Or did it pay $13 billion... to build its biggest rival?"
+  }
+ ]
+}
