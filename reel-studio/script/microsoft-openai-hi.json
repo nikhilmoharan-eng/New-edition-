@@ -1,0 +1,108 @@
+{
+ "title": "Microsoft's $13B Bet (Hindi)",
+ "lang": "hi",
+ "lines": [
+  {
+   "id": "hook1",
+   "say": "दो हज़ार उन्नीस में, माइक्रोसॉफ्ट ने एक बिलियन डॉलर दिए... एक नॉन-प्रॉफिट को।",
+   "showAlign": "2019 में, माइक्रोसॉफ्ट ने $1 बिलियन दिए... एक नॉन-प्रॉफिट को।",
+   "show": "2019 mein, Microsoft ne $1 billion diye... ek non-profit ko."
+  },
+  {
+   "id": "hook2",
+   "say": "छह साल बाद, उसके हिस्से की क़ीमत थी... क़रीब एक सौ पैंतीस बिलियन डॉलर! यानी क़रीब बारह लाख करोड़ रुपये।",
+   "showAlign": "छह साल बाद, उसके हिस्से की क़ीमत थी... क़रीब $135 बिलियन! यानी क़रीब ₹12 लाख करोड़।",
+   "show": "Chhe saal baad, uske hisse ki keemat thi... kareeb $135 billion! Yaani kareeb ₹12 lakh crore."
+  },
+  {
+   "id": "name",
+   "say": "वो नॉन-प्रॉफिट था... ओपन-ए-आई।",
+   "showAlign": "वो नॉन-प्रॉफिट था... OpenAI।",
+   "show": "Woh non-profit tha... OpenAI."
+  },
+  {
+   "id": "founded",
+   "say": "दो हज़ार पंद्रह में शुरू हुआ... ऐसा ए-आई बनाने के लिए, जो पूरी इंसानियत के काम आए।",
+   "showAlign": "2015 में शुरू हुआ... ऐसा AI बनाने के लिए, जो पूरी इंसानियत के काम आए।",
+   "show": "2015 mein shuru hua... aisa AI banane ke liye, jo poori insaaniyat ke kaam aaye."
+  },
+  {
+   "id": "compute",
+   "say": "लेकिन ए-आई को चाहिए बहुत बड़े कंप्यूटर... और बड़े कंप्यूटरों को चाहिए पैसा।",
+   "showAlign": "लेकिन AI को चाहिए बहुत बड़े कंप्यूटर... और बड़े कंप्यूटरों को चाहिए पैसा।",
+   "show": "Lekin AI ko chahiye bahut bade computer... aur bade computeron ko chahiye paisa."
+  },
+  {
+   "id": "cash",
+   "say": "तो माइक्रोसॉफ्ट ने पैसा दिया... कैश में भी, और अज़्योर क्लाउड क्रेडिट्स में भी।",
+   "showAlign": "तो माइक्रोसॉफ्ट ने पैसा दिया... कैश में भी, और Azure क्लाउड क्रेडिट्स में भी।",
+   "show": "Toh Microsoft ne paisa diya... cash mein bhi, aur Azure cloud credits mein bhi."
+  },
+  {
+   "id": "chatgpt",
+   "say": "फिर दो हज़ार बाईस में, ओपन-ए-आई ने चैट-जी-पी-टी लॉन्च किया... और दुनिया रातों-रात बदल गई।",
+   "showAlign": "फिर 2022 में, OpenAI ने ChatGPT लॉन्च किया... और दुनिया रातों-रात बदल गई।",
+   "show": "Phir 2022 mein, OpenAI ne ChatGPT launch kiya... aur duniya raaton-raat badal gayi."
+  },
+  {
+   "id": "allin",
+   "say": "माइक्रोसॉफ्ट ने पूरा दांव लगा दिया। दो हज़ार तेईस में, दस बिलियन डॉलर और।",
+   "showAlign": "माइक्रोसॉफ्ट ने पूरा दांव लगा दिया। 2023 में, $10 बिलियन और।",
+   "show": "Microsoft ne poora daanv laga diya. 2023 mein, $10 billion aur."
+  },
+  {
+   "id": "total",
+   "say": "कुल मिलाकर... क़रीब तेरह बिलियन डॉलर।",
+   "showAlign": "कुल मिलाकर... क़रीब $13 बिलियन।",
+   "show": "Kul milakar... kareeb $13 billion."
+  },
+  {
+   "id": "crazy",
+   "say": "और अब आती है... सबसे पागलपन वाली बात।",
+   "showAlign": "और अब आती है... सबसे पागलपन वाली बात।",
+   "show": "Aur ab aati hai... sabse paagalpan waali baat."
+  },
+  {
+   "id": "fired",
+   "say": "नवंबर दो हज़ार तेईस में, ओपन-ए-आई के बोर्ड ने अपने ही सी-ई-ओ, सैम ऑल्टमैन को निकाल दिया।",
+   "showAlign": "नवंबर 2023 में, OpenAI के बोर्ड ने अपने ही CEO, सैम ऑल्टमैन को निकाल दिया।",
+   "show": "November 2023 mein, OpenAI ke board ne apne hi CEO, Sam Altman ko nikaal diya."
+  },
+  {
+   "id": "offer",
+   "say": "कुछ ही दिनों में माइक्रोसॉफ्ट ने कहा, हम उसे रख लेंगे... और ओपन-ए-आई के सैकड़ों कर्मचारी उसके पीछे जाने को तैयार हो गए।",
+   "showAlign": "कुछ ही दिनों में माइक्रोसॉफ्ट ने कहा, हम उसे रख लेंगे... और OpenAI के सैकड़ों कर्मचारी उसके पीछे जाने को तैयार हो गए।",
+   "show": "Kuch hi dinon mein Microsoft ne kaha, hum use rakh lenge... aur OpenAI ke saikdon karmchaari uske peeche jaane ko taiyaar ho gaye."
+  },
+  {
+   "id": "back",
+   "say": "पाँच दिन बाद... ऑल्टमैन वापस आ गया।",
+   "showAlign": "पाँच दिन बाद... ऑल्टमैन वापस आ गया।",
+   "show": "Paanch din baad... Altman wapas aa gaya."
+  },
+  {
+   "id": "rival",
+   "say": "दो हज़ार चौबीस में, माइक्रोसॉफ्ट ने ओपन-ए-आई को आधिकारिक तौर पर... अपना कॉम्पिटिटर बता दिया।",
+   "showAlign": "2024 में, माइक्रोसॉफ्ट ने OpenAI को आधिकारिक तौर पर... अपना कॉम्पिटिटर बता दिया।",
+   "show": "2024 mein, Microsoft ne OpenAI ko aadhikaarik taur par... apna competitor bata diya."
+  },
+  {
+   "id": "restructure",
+   "say": "और दो हज़ार पच्चीस में, ओपन-ए-आई बन गई एक फ़ॉर-प्रॉफिट पब्लिक बेनिफ़िट कंपनी... और माइक्रोसॉफ्ट के पास रहा सत्ताईस प्रतिशत हिस्सा।",
+   "showAlign": "और 2025 में, OpenAI बन गई एक फ़ॉर-प्रॉफिट पब्लिक बेनिफ़िट कंपनी... और माइक्रोसॉफ्ट के पास रहा 27% हिस्सा।",
+   "show": "Aur 2025 mein, OpenAI ban gayi ek for-profit public benefit company... aur Microsoft ke paas raha 27% hissa."
+  },
+  {
+   "id": "outro1",
+   "say": "तो क्या माइक्रोसॉफ्ट ने ए-आई की रेस जीत ली?",
+   "showAlign": "तो क्या माइक्रोसॉफ्ट ने AI की रेस जीत ली?",
+   "show": "Toh kya Microsoft ne AI ki race jeet li?"
+  },
+  {
+   "id": "outro2",
+   "say": "या उसने तेरह बिलियन डॉलर देकर... अपना ही सबसे बड़ा राइवल बना दिया?",
+   "showAlign": "या उसने $13 बिलियन देकर... अपना ही सबसे बड़ा राइवल बना दिया?",
+   "show": "Ya usne $13 billion dekar... apna hi sabse bada rival bana diya?"
+  }
+ ]
+}

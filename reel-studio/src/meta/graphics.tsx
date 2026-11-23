@@ -18,7 +18,7 @@ import {
 } from "../reel/kit";
 
 export const M = (f: string) => staticFile(`meta-scale/media/${f}`);
-export type GProps = { dur: number; mark?: number; logo?: string; logo2?: string; label?: string; img?: string; text?: string };
+export type GProps = { dur: number; mark?: number; logo?: string; logo2?: string; label?: string; img?: string; text?: string; text2?: string };
 
 /* Logo on cream; a red line strikes through it at `mark`. */
 export const GStrikeLogo: React.FC<GProps> = ({ mark = 8, logo = "logo-scale.png", label }) => {
@@ -470,7 +470,7 @@ export const GSnap: React.FC<GProps> = ({ mark = 20, logo = "logo-google.png", l
 };
 
 /* Split-screen ending: the person vs the price, then a giant "?". */
-export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = "$14,300,000,000", label }) => {
+export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = "$14,300,000,000", label, text2 = "THE PERSON" }) => {
   // label "card": the photo is small, so show it as a framed print over a blurred copy instead of filling the half
   const card = label === "card";
   const f = useCurrentFrame();
@@ -505,7 +505,7 @@ export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = 
             style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", objectPosition: "45% 35%", filter: `grayscale(${1 - prog(f, 20, 60)}) contrast(1.1)`, scale: String(interpolate(f, [0, dur], [1.05, 1.15], clamp)) }}
           />
         )}
-        <div style={{ position: "absolute", bottom: 40 * u, fontFamily: MONO, fontSize: 26 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>THE PERSON</div>
+        <div style={{ position: "absolute", bottom: 40 * u, fontFamily: MONO, fontSize: 26 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>{text2}</div>
       </div>
       <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), background: C.cream, opacity: r }}>
         <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 96 : 100) * u, color: C.ink, scale: String(interpolate(r, [0, 1], [1.2, 1])) }}>{text}</div>
@@ -606,6 +606,92 @@ export const GDoj: React.FC<GProps> = ({ dur }) => {
 /* Walking-away corridor, reused from the first reel. */
 export const GWalk: React.FC<GProps> = ({ dur }) => <SStay dur={dur} />;
 
+
+const termBg = (u: number) => (
+  <>
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #0c1a14 0%, #030806 75%)" }} />
+    <AbsoluteFill style={{ backgroundImage: `linear-gradient(rgba(60,220,140,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(60,220,140,0.07) 1px, transparent 1px)`, backgroundSize: `${80 * u}px ${80 * u}px` }} />
+  </>
+);
+
+/* "5 DAYS": fired Nov 17 -> back Nov 22. */
+export const GFiveDays: React.FC<GProps> = () => {
+  const f = useCurrentFrame();
+  const { u, w } = useU();
+  const W = Math.min(1300 * u, w * 0.84);
+  const p = prog(f, 6, 36, INOUT);
+  const days = ["NOV 17", "18", "19", "20", "21", "NOV 22"];
+  return (
+    <AbsoluteFill>
+      {termBg(u)}
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-60 * u}px` }}>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 170 * u, color: "#eafff3", textShadow: "0 0 30px rgba(61,220,132,0.5)", opacity: prog(f, 0, 8) }}>5 DAYS</div>
+        <div style={{ position: "relative", width: W, height: 120 * u, marginTop: 30 * u }}>
+          <div style={{ position: "absolute", top: 30 * u, left: 0, right: 0, height: 4 * u, background: "rgba(255,255,255,0.15)" }} />
+          <div style={{ position: "absolute", top: 30 * u, left: 0, width: W * p, height: 4 * u, background: "#3ddc84", boxShadow: "0 0 14px #3ddc84" }} />
+          {days.map((d, i) => {
+            const x = (i / 5) * W;
+            const on = p >= i / 5 - 0.001;
+            return (
+              <div key={i} style={{ position: "absolute", left: x - 60 * u, width: 120 * u, textAlign: "center" }}>
+                <div style={{ width: 22 * u, height: 22 * u, borderRadius: "50%", margin: `${21 * u}px auto 0`, background: on ? (i === 0 ? C.red : "#3ddc84") : "#333" }} />
+                <div style={{ fontFamily: MONO, fontSize: 22 * u, color: "#cfe", marginTop: 12 * u }}>{d}</div>
+                {i === 0 ? <div style={{ fontFamily: MONO, fontSize: 24 * u, color: C.red, letterSpacing: 3 * u }}>FIRED</div> : null}
+                {i === 5 ? <div style={{ fontFamily: MONO, fontSize: 24 * u, color: "#3ddc84", letterSpacing: 3 * u, opacity: on ? 1 : 0 }}>BACK</div> : null}
+              </div>
+            );
+          })}
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+/* "PARTNER" struck through -> "COMPETITOR" (Microsoft FY2024 annual report). */
+export const GRival: React.FC<GProps> = ({ mark = 14 }) => {
+  const f = useCurrentFrame();
+  const { u } = useU();
+  const s = prog(f, mark, mark + 8, INOUT);
+  const c = prog(f, mark + 6, mark + 16);
+  return (
+    <AbsoluteFill>
+      {termBg(u)}
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-50 * u}px` }}>
+        <div style={{ fontFamily: MONO, fontSize: 26 * u, letterSpacing: 6 * u, color: "#8fbfa5", marginBottom: 24 * u }}>MICROSOFT ANNUAL REPORT · FY2024 · ON OPENAI</div>
+        <div style={{ position: "relative", fontFamily: DISPLAY, fontWeight: 800, fontSize: 140 * u, color: "#eafff3", opacity: interpolate(s, [0, 1], [1, 0.4]) }}>
+          PARTNER
+          <div style={{ position: "absolute", left: -20 * u, top: "52%", height: 14 * u, width: `calc(${s * 100}% + ${40 * u * s}px)`, background: C.red, rotate: "-3deg", borderRadius: 7 * u }} />
+        </div>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 140 * u, color: C.red, opacity: c, scale: String(interpolate(c, [0, 1], [1.3, 1])), textShadow: "0 0 30px rgba(215,38,43,0.5)" }}>COMPETITOR</div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+/* NON-PROFIT -> FOR-PROFIT PBC, Microsoft 27%. */
+export const GStructure: React.FC<GProps> = () => {
+  const f = useCurrentFrame();
+  const { u } = useU();
+  const a = prog(f, 0, 10);
+  const b = prog(f, 12, 24);
+  const box = (t: string, sub: string, col: string, o: number) => (
+    <div style={{ opacity: o, padding: `${30 * u}px ${40 * u}px`, border: `${3 * u}px solid ${col}`, borderRadius: 18 * u, background: "rgba(0,0,0,0.4)", textAlign: "center", minWidth: 460 * u }}>
+      <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 72 * u, color: "#eafff3" }}>{t}</div>
+      <div style={{ fontFamily: MONO, fontSize: 22 * u, color: col, letterSpacing: 4 * u, marginTop: 8 * u }}>{sub}</div>
+    </div>
+  );
+  return (
+    <AbsoluteFill>
+      {termBg(u)}
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", flexDirection: "row", gap: 50 * u, translate: `0px ${-50 * u}px` }}>
+        {box("NON-PROFIT", "OPENAI · 2015", "#8fbfa5", a)}
+        <div style={{ fontFamily: DISPLAY, fontSize: 110 * u, color: "#3ddc84", opacity: b }}>→</div>
+        {box("FOR-PROFIT", "PUBLIC BENEFIT CORP · 2025", "#3ddc84", b)}
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
 export const GRAPHICS: Record<string, React.FC<GProps>> = {
   strike: GStrikeLogo,
   logoCard: GLogoCard,
@@ -623,6 +709,9 @@ export const GRAPHICS: Record<string, React.FC<GProps>> = {
   license: GLicense,
   doj: GDoj,
   walk: GWalk,
+  fiveDays: GFiveDays,
+  rival: GRival,
+  structure: GStructure,
   cream: GCream,
   black: GBlack,
 };

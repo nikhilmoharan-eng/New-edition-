@@ -12,8 +12,9 @@ type TLT = { duration: number; lines: Line[] };
 const EN = enRaw as TLT;
 export const FPS = 30;
 
-export type Theme = "classic" | "chat";
+export type Theme = "classic" | "chat" | "ticker";
 const ThemeCtx = React.createContext<Theme>("classic");
+const TapeCtx = React.createContext<string>("");
 
 /** AI/chat look: the number gets typed into a dark chat window with a blinking cursor. */
 const ChatCard: React.FC<{ text: string; color?: string }> = ({ text, color = "#fff" }) => {
@@ -66,6 +67,62 @@ const ChatCard: React.FC<{ text: string; color?: string }> = ({ text, color = "#
   );
 };
 
+/** Market-terminal number card: money counts up over a rising chart, with a headline ticker. */
+const TickerCard: React.FC<{ text: string; color?: string; tape: string }> = ({ text, color, tape }) => {
+  const f = useCurrentFrame();
+  const { u, w, h } = useU();
+  const m = text.match(/^([^\d]*)([\d,.]+)(.*)$/);
+  const money = !!m && /[$₹%]/.test(text);
+  let shown = text;
+  if (m && money) {
+    const target = parseFloat(m[2].replace(/,/g, ""));
+    const dec = (m[2].split(".")[1] || "").length;
+    const v = target * interpolate(f, [2, 22], [0, 1], { ...clamp, easing: (x: number) => 1 - Math.pow(1 - x, 3) });
+    const num = v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    shown = m[1] + num + m[3];
+  }
+  const inn = interpolate(f, [0, 8], [0, 1], clamp);
+  const size = Math.min(230 * u, (w * 0.84) / (text.length * 0.62));
+  const pts = Array.from({ length: 24 }).map((_, i) => {
+    const x = (i / 23) * w;
+    const y = h * (0.82 - 0.5 * (i / 23)) + Math.sin(i * 1.7) * h * 0.05;
+    return `${x},${y}`;
+  });
+  const draw = interpolate(f, [0, 30], [0, 1], clamp);
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #0c1a14 0%, #030806 75%)" }}>
+      <AbsoluteFill style={{ backgroundImage: `linear-gradient(rgba(60,220,140,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(60,220,140,0.07) 1px, transparent 1px)`, backgroundSize: `${80 * u}px ${80 * u}px` }} />
+      <svg width={w} height={h} style={{ position: "absolute" }}>
+        <polyline points={pts.join(" ")} fill="none" stroke="rgba(61,220,132,0.55)" strokeWidth={5 * u} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - draw} style={{ filter: "drop-shadow(0 0 8px rgba(61,220,132,0.8))" }} />
+      </svg>
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-30 * u}px` }}>
+        <div style={{ fontFamily: DISPLAY_FONT, fontWeight: 800, fontSize: size, color: color ?? "#eafff3", letterSpacing: -0.02 * size, opacity: inn, translate: `0px ${interpolate(inn, [0, 1], [40, 0]) * u}px`, textShadow: "0 0 36px rgba(61,220,132,0.55)", whiteSpace: "nowrap", fontVariantNumeric: "tabular-nums" }}>
+          {shown}
+          <span style={{ fontSize: size * 0.32, color: "#3ddc84", marginLeft: 18 * u, verticalAlign: "super" }}>▲</span>
+        </div>
+      </AbsoluteFill>
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 64 * u, background: "rgba(0,0,0,0.75)", borderTop: `${2 * u}px solid rgba(61,220,132,0.5)`, overflow: "hidden", display: "flex", alignItems: "center" }}>
+        <div style={{ whiteSpace: "nowrap", fontFamily: MONO, fontSize: 26 * u, letterSpacing: 4 * u, color: "#3ddc84", translate: `${-f * 6 * u}px 0px` }}>
+          {(tape + "   ▲   ").repeat(6)}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/** Light-bar wipe on a cut. */
+const WipeCut: React.FC = () => {
+  const f = useCurrentFrame();
+  const { w } = useU();
+  if (f > 6) return null;
+  const x = interpolate(f, [0, 6], [-0.2, 1.1], clamp) * w;
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none", mixBlendMode: "screen" }}>
+      <div style={{ position: "absolute", top: 0, bottom: 0, left: x, width: w * 0.12, background: "linear-gradient(90deg, rgba(61,220,132,0), rgba(190,255,220,0.55), rgba(61,220,132,0))", filter: "blur(6px)" }} />
+    </AbsoluteFill>
+  );
+};
+
 /** Digital glitch flash on a cut: thin Google-coloured light bars for a few frames. */
 const GlitchCut: React.FC = () => {
   const f = useCurrentFrame();
@@ -101,8 +158,10 @@ export type Lang = {
   texts?: Record<string, string>;
   /** extra shots only this language needs; `hw(line, i)` = start of caption word i */
   extra?: (hw: (id: string, i: number) => number) => Shot[];
-  /** visual identity: "classic" (reels 1–2) or "chat" (AI look: typed number cards, blue grade, glitch cuts) */
+  /** visual identity: "classic" (reels 1–2), "chat" (reel 3) or "ticker" (reel 4: market terminal) */
   theme?: Theme;
+  /** ticker-theme headline tape (facts only) */
+  tape?: string;
 };
 
 const lineOf = (tl: TLT, id: string) => {
@@ -128,7 +187,7 @@ type MediaShot = Base & {
   stamp?: { text: string; at: number };
 };
 type BigShot = Base & { k: "big"; text: string; bg: "cream" | "black"; color?: string; italic?: boolean };
-type GShot = Base & { k: "g"; g: string; mark?: number; logo?: string; logo2?: string; label?: string; img?: string; text?: string };
+type GShot = Base & { k: "g"; g: string; mark?: number; logo?: string; logo2?: string; label?: string; img?: string; text?: string; text2?: string };
 export type { Shot, Timing };
 type Shot = MediaShot | BigShot | GShot;
 
@@ -260,7 +319,9 @@ const MediaView: React.FC<{ s: MediaShot; dur: number; idx: number }> = ({ s, du
 
 const ShotView: React.FC<{ s: Shot; dur: number; idx: number }> = ({ s, dur, idx }) => {
   const theme = React.useContext(ThemeCtx);
+  const tape = React.useContext(TapeCtx);
   if (s.k === "big" && theme === "chat") return <ChatCard text={s.text} color={s.color} />;
+  if (s.k === "big" && theme === "ticker") return <TickerCard text={s.text} color={s.color} tape={tape} />;
   if (s.k === "img" || s.k === "vid") {
     return (
       <Camera dur={dur} from={1} to={1}>
@@ -281,7 +342,7 @@ const ShotView: React.FC<{ s: Shot; dur: number; idx: number }> = ({ s, dur, idx
   const mark = g.mark !== undefined ? Math.round((g.mark - g.at) * FPS) : undefined;
   return (
     <Camera dur={dur} from={1.0} to={1.04}>
-      <G dur={dur} mark={mark} logo={g.logo} logo2={g.logo2} label={g.label} img={g.img} text={g.text} />
+      <G dur={dur} mark={mark} logo={g.logo} logo2={g.logo2} label={g.label} img={g.img} text={g.text} text2={g.text2} />
     </Camera>
   );
 };
@@ -309,7 +370,7 @@ export const makeMetaReel = (L: Lang) => {
     .sort((x, y) => x.at - y.at);
 
   const theme: Theme = L.theme ?? "classic";
-  const look = (s: Shot) => (theme === "chat" && s.k === "big" ? { ...lookOf(s), tone: "light" as Tone } : lookOf(s));
+  const look = (s: Shot) => (theme !== "classic" && s.k === "big" ? { ...lookOf(s), tone: "light" as Tone } : lookOf(s));
   const shotAt = (t: number) => {
     let s = SHOTS[0];
     for (const x of SHOTS) if (x.at <= t + 1e-6) s = x;
@@ -321,7 +382,8 @@ export const makeMetaReel = (L: Lang) => {
     SHOTS.forEach((s, i) => {
       // soft whoosh only on the bigger scene changes: into a number card, or every third cut
       if (i && (s.k === "big" || i % 3 === 0)) c.push({ at: s.at - 0.1, src: "whoosh", vol: 0.06 });
-      if (s.k === "big" && theme === "chat") for (let k = 0; k < Math.min(14, s.text.length); k++) c.push({ at: s.at + 0.1 + k * 0.047, src: "key", vol: 0.09 });
+      if (s.k === "big" && theme === "ticker") { c.push({ at: s.at + 0.05, src: "impact", vol: 0.3 }); for (let k = 0; k < 8; k++) c.push({ at: s.at + 0.1 + k * 0.08, src: "tick", vol: 0.07 }); }
+      else if (s.k === "big" && theme === "chat") for (let k = 0; k < Math.min(14, s.text.length); k++) c.push({ at: s.at + 0.1 + k * 0.047, src: "key", vol: 0.09 });
       else if (s.k === "big") c.push({ at: s.at + 0.05, src: "impact", vol: 0.38 });
       if (s.k === "g" && (s.g === "logoPop" || s.g === "logoCard")) c.push({ at: s.at + 0.05, src: "tick", vol: 0.22 });
       if (s.k === "g" && (s.g === "strike" || s.g === "snap") && s.mark) c.push({ at: s.mark + 0.08, src: "stamp", vol: 0.42 });
@@ -343,6 +405,7 @@ export const makeMetaReel = (L: Lang) => {
     const crazyEnd = lineStart(ids[ids.indexOf("crazy") + 1]);
     return (
       <ThemeCtx.Provider value={theme}>
+      <TapeCtx.Provider value={L.tape ?? ""}>
       <AbsoluteFill style={{ background: "#000" }}>
         {SHOTS.map((s, i) => {
           const from = Math.round(s.at * FPS);
@@ -364,6 +427,17 @@ export const makeMetaReel = (L: Lang) => {
             ))}
           </>
         ) : null}
+        {theme === "ticker" ? (
+          <>
+            {/* teal-green market grade */}
+            <AbsoluteFill style={{ pointerEvents: "none", mixBlendMode: "soft-light", background: "linear-gradient(160deg, rgba(20,140,90,0.5), rgba(5,25,20,0.15) 55%, rgba(30,180,120,0.4))" }} />
+            {SHOTS.slice(1).map((s, i) => (
+              <Sequence key={`w${i}`} from={Math.round(s.at * FPS)} durationInFrames={7} layout="none">
+                <WipeCut />
+              </Sequence>
+            ))}
+          </>
+        ) : null}
         {/* blur texture laid over the entire video (drifting soft light + grain); backgrounds are unchanged */}
         <AbsoluteFill style={{ mixBlendMode: "overlay", opacity: 0.6, pointerEvents: "none" }}>
           <SmoothBlur seed="global" brightness={1.4} />
@@ -373,7 +447,7 @@ export const makeMetaReel = (L: Lang) => {
         </AbsoluteFill>
         <Vignette strength={0.5} />
         <Grain opacity={0.08} />
-        <Captions chunks={CHUNKS} lookAt={(t) => look(shotAt(t))} glow={theme === "chat" ? "rgba(120,175,255,0.7)" : undefined} />
+        <Captions chunks={CHUNKS} lookAt={(t) => look(shotAt(t))} glow={theme === "chat" ? "rgba(120,175,255,0.7)" : theme === "ticker" ? "rgba(90,230,150,0.65)" : undefined} />
         <Audio src={staticFile(L.vo)} />
         <Audio
           src={staticFile(L.music)}
@@ -389,6 +463,7 @@ export const makeMetaReel = (L: Lang) => {
           </Sequence>
         ))}
       </AbsoluteFill>
+      </TapeCtx.Provider>
       </ThemeCtx.Provider>
     );
   };

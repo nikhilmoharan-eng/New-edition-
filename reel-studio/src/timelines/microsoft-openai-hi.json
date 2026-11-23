@@ -1,0 +1,1172 @@
+{
+ "title": "Microsoft's $13B Bet (Hindi)",
+ "duration": 99.866,
+ "lines": [
+  {
+   "id": "hook1",
+   "show": "2019 mein, Microsoft ne $1 billion diye... ek non-profit ko.",
+   "start": 0.0,
+   "end": 5.83,
+   "words": [
+    {
+     "text": "2019",
+     "start": 0,
+     "end": 1.086
+    },
+    {
+     "text": "mein,",
+     "start": 1.09,
+     "end": 1.23
+    },
+    {
+     "text": "Microsoft",
+     "start": 1.467,
+     "end": 2.251
+    },
+    {
+     "text": "ne",
+     "start": 2.24,
+     "end": 2.38
+    },
+    {
+     "text": "$1",
+     "start": 2.46,
+     "end": 2.8
+    },
+    {
+     "text": "billion",
+     "start": 2.822,
+     "end": 3.338
+    },
+    {
+     "text": "diye...",
+     "start": 3.75,
+     "end": 4.125
+    },
+    {
+     "text": "ek",
+     "start": 4.22,
+     "end": 4.76
+    },
+    {
+     "text": "non-profit",
+     "start": 4.91,
+     "end": 5.652
+    },
+    {
+     "text": "ko.",
+     "start": 5.67,
+     "end": 5.81
+    }
+   ]
+  },
+  {
+   "id": "hook2",
+   "show": "Chhe saal baad, uske hisse ki keemat thi... kareeb $135 billion! Yaani kareeb ₹12 lakh crore.",
+   "start": 6.773,
+   "end": 15.574,
+   "words": [
+    {
+     "text": "Chhe",
+     "start": 6.833,
+     "end": 7.073
+    },
+    {
+     "text": "saal",
+     "start": 7.16,
+     "end": 7.46
+    },
+    {
+     "text": "baad,",
+     "start": 7.475,
+     "end": 7.765
+    },
+    {
+     "text": "uske",
+     "start": 7.763,
+     "end": 8.157
+    },
+    {
+     "text": "hisse",
+     "start": 8.133,
+     "end": 8.487
+    },
+    {
+     "text": "ki",
+     "start": 8.49,
+     "end": 8.63
+    },
+    {
+     "text": "keemat",
+     "start": 8.637,
+     "end": 9.003
+    },
+    {
+     "text": "thi...",
+     "start": 9.0,
+     "end": 9.14
+    },
+    {
+     "text": "kareeb",
+     "start": 9.639,
+     "end": 10.245
+    },
+    {
+     "text": "$135",
+     "start": 10.295,
+     "end": 11.257
+    },
+    {
+     "text": "billion!",
+     "start": 11.239,
+     "end": 11.742
+    },
+    {
+     "text": "Yaani",
+     "start": 12.987,
+     "end": 13.257
+    },
+    {
+     "text": "kareeb",
+     "start": 13.239,
+     "end": 13.605
+    },
+    {
+     "text": "₹12",
+     "start": 13.622,
+     "end": 14.057
+    },
+    {
+     "text": "lakh",
+     "start": 14.012,
+     "end": 14.315
+    },
+    {
+     "text": "crore.",
+     "start": 14.339,
+     "end": 14.705
+    }
+   ]
+  },
+  {
+   "id": "name",
+   "show": "Woh non-profit tha... OpenAI.",
+   "start": 15.974,
+   "end": 18.479,
+   "words": [
+    {
+     "text": "Woh",
+     "start": 16.034,
+     "end": 16.274
+    },
+    {
+     "text": "non-profit",
+     "start": 16.188,
+     "end": 17.0
+    },
+    {
+     "text": "tha...",
+     "start": 17.068,
+     "end": 17.208
+    },
+    {
+     "text": "OpenAI.",
+     "start": 17.277,
+     "end": 18.459
+    }
+   ]
+  },
+  {
+   "id": "founded",
+   "show": "2015 mein shuru hua... aisa AI banane ke liye, jo poori insaaniyat ke kaam aaye.",
+   "start": 19.436,
+   "end": 24.574,
+   "words": [
+    {
+     "text": "2015",
+     "start": 19.496,
+     "end": 20.126
+    },
+    {
+     "text": "mein",
+     "start": 20.194,
+     "end": 20.334
+    },
+    {
+     "text": "shuru",
+     "start": 20.564,
+     "end": 20.844
+    },
+    {
+     "text": "hua...",
+     "start": 20.914,
+     "end": 21.364
+    },
+    {
+     "text": "aisa",
+     "start": 21.394,
+     "end": 21.704
+    },
+    {
+     "text": "AI",
+     "start": 21.781,
+     "end": 22.118
+    },
+    {
+     "text": "banane",
+     "start": 22.077,
+     "end": 22.471
+    },
+    {
+     "text": "ke",
+     "start": 22.484,
+     "end": 22.624
+    },
+    {
+     "text": "liye,",
+     "start": 22.609,
+     "end": 22.819
+    },
+    {
+     "text": "jo",
+     "start": 22.804,
+     "end": 22.944
+    },
+    {
+     "text": "poori",
+     "start": 22.999,
+     "end": 23.349
+    },
+    {
+     "text": "insaaniyat",
+     "start": 23.391,
+     "end": 24.022
+    },
+    {
+     "text": "ke",
+     "start": 23.994,
+     "end": 24.134
+    },
+    {
+     "text": "kaam",
+     "start": 24.114,
+     "end": 24.374
+    },
+    {
+     "text": "aaye.",
+     "start": 24.334,
+     "end": 24.554
+    }
+   ]
+  },
+  {
+   "id": "compute",
+   "show": "Lekin AI ko chahiye bahut bade computer... aur bade computeron ko chahiye paisa.",
+   "start": 25.402,
+   "end": 30.711,
+   "words": [
+    {
+     "text": "Lekin",
+     "start": 25.462,
+     "end": 25.861
+    },
+    {
+     "text": "AI",
+     "start": 25.861,
+     "end": 26.21
+    },
+    {
+     "text": "ko",
+     "start": 26.174,
+     "end": 26.314
+    },
+    {
+     "text": "chahiye",
+     "start": 26.327,
+     "end": 26.761
+    },
+    {
+     "text": "bahut",
+     "start": 26.767,
+     "end": 27.201
+    },
+    {
+     "text": "bade",
+     "start": 27.199,
+     "end": 27.469
+    },
+    {
+     "text": "computer...",
+     "start": 27.446,
+     "end": 28.002
+    },
+    {
+     "text": "aur",
+     "start": 28.486,
+     "end": 28.916
+    },
+    {
+     "text": "bade",
+     "start": 28.996,
+     "end": 29.286
+    },
+    {
+     "text": "computeron",
+     "start": 29.289,
+     "end": 29.834
+    },
+    {
+     "text": "ko",
+     "start": 29.831,
+     "end": 29.971
+    },
+    {
+     "text": "chahiye",
+     "start": 29.955,
+     "end": 30.336
+    },
+    {
+     "text": "paisa.",
+     "start": 30.331,
+     "end": 30.691
+    }
+   ]
+  },
+  {
+   "id": "cash",
+   "show": "Toh Microsoft ne paisa diya... cash mein bhi, aur Azure cloud credits mein bhi.",
+   "start": 31.708,
+   "end": 36.341,
+   "words": [
+    {
+     "text": "Toh",
+     "start": 31.768,
+     "end": 32.008
+    },
+    {
+     "text": "Microsoft",
+     "start": 31.951,
+     "end": 32.569
+    },
+    {
+     "text": "ne",
+     "start": 32.491,
+     "end": 32.631
+    },
+    {
+     "text": "paisa",
+     "start": 32.651,
+     "end": 32.971
+    },
+    {
+     "text": "diya...",
+     "start": 33.016,
+     "end": 33.346
+    },
+    {
+     "text": "cash",
+     "start": 33.446,
+     "end": 33.876
+    },
+    {
+     "text": "mein",
+     "start": 33.971,
+     "end": 34.111
+    },
+    {
+     "text": "bhi,",
+     "start": 34.171,
+     "end": 34.311
+    },
+    {
+     "text": "aur",
+     "start": 34.406,
+     "end": 34.796
+    },
+    {
+     "text": "Azure",
+     "start": 34.796,
+     "end": 35.326
+    },
+    {
+     "text": "cloud",
+     "start": 35.295,
+     "end": 35.675
+    },
+    {
+     "text": "credits",
+     "start": 35.601,
+     "end": 36.061
+    },
+    {
+     "text": "mein",
+     "start": 36.031,
+     "end": 36.171
+    },
+    {
+     "text": "bhi.",
+     "start": 36.181,
+     "end": 36.321
+    }
+   ]
+  },
+  {
+   "id": "chatgpt",
+   "show": "Phir 2022 mein, OpenAI ne ChatGPT launch kiya... aur duniya raaton-raat badal gayi.",
+   "start": 37.461,
+   "end": 44.238,
+   "words": [
+    {
+     "text": "Phir",
+     "start": 37.521,
+     "end": 37.761
+    },
+    {
+     "text": "2022",
+     "start": 37.641,
+     "end": 38.514
+    },
+    {
+     "text": "mein,",
+     "start": 38.5,
+     "end": 38.64
+    },
+    {
+     "text": "OpenAI",
+     "start": 38.77,
+     "end": 39.57
+    },
+    {
+     "text": "ne",
+     "start": 39.6,
+     "end": 39.74
+    },
+    {
+     "text": "ChatGPT",
+     "start": 39.763,
+     "end": 40.57
+    },
+    {
+     "text": "launch",
+     "start": 40.55,
+     "end": 40.857
+    },
+    {
+     "text": "kiya...",
+     "start": 40.8,
+     "end": 41.08
+    },
+    {
+     "text": "aur",
+     "start": 41.235,
+     "end": 41.825
+    },
+    {
+     "text": "duniya",
+     "start": 41.977,
+     "end": 42.383
+    },
+    {
+     "text": "raaton-raat",
+     "start": 42.395,
+     "end": 43.032
+    },
+    {
+     "text": "badal",
+     "start": 43.013,
+     "end": 43.327
+    },
+    {
+     "text": "gayi.",
+     "start": 43.632,
+     "end": 44.218
+    }
+   ]
+  },
+  {
+   "id": "allin",
+   "show": "Microsoft ne poora daanv laga diya. 2023 mein, $10 billion aur.",
+   "start": 44.567,
+   "end": 49.998,
+   "words": [
+    {
+     "text": "Microsoft",
+     "start": 44.627,
+     "end": 45.347
+    },
+    {
+     "text": "ne",
+     "start": 45.31,
+     "end": 45.45
+    },
+    {
+     "text": "poora",
+     "start": 45.465,
+     "end": 45.795
+    },
+    {
+     "text": "daanv",
+     "start": 45.793,
+     "end": 46.07
+    },
+    {
+     "text": "laga",
+     "start": 46.06,
+     "end": 46.34
+    },
+    {
+     "text": "diya.",
+     "start": 46.325,
+     "end": 46.575
+    },
+    {
+     "text": "2023",
+     "start": 46.688,
+     "end": 48.345
+    },
+    {
+     "text": "mein,",
+     "start": 48.458,
+     "end": 48.598
+    },
+    {
+     "text": "$10",
+     "start": 48.574,
+     "end": 48.83
+    },
+    {
+     "text": "billion",
+     "start": 48.806,
+     "end": 49.294
+    },
+    {
+     "text": "aur.",
+     "start": 49.618,
+     "end": 49.978
+    }
+   ]
+  },
+  {
+   "id": "total",
+   "show": "Kul milakar... kareeb $13 billion.",
+   "start": 50.704,
+   "end": 53.785,
+   "words": [
+    {
+     "text": "Kul",
+     "start": 50.764,
+     "end": 51.008
+    },
+    {
+     "text": "milakar...",
+     "start": 51.008,
+     "end": 51.508
+    },
+    {
+     "text": "kareeb",
+     "start": 51.542,
+     "end": 52.135
+    },
+    {
+     "text": "$13",
+     "start": 52.158,
+     "end": 52.624
+    },
+    {
+     "text": "billion.",
+     "start": 52.647,
+     "end": 53.276
+    }
+   ]
+  },
+  {
+   "id": "crazy",
+   "show": "Aur ab aati hai... sabse paagalpan waali baat.",
+   "start": 54.33,
+   "end": 56.903,
+   "words": [
+    {
+     "text": "Aur",
+     "start": 54.39,
+     "end": 54.63
+    },
+    {
+     "text": "ab",
+     "start": 54.613,
+     "end": 54.843
+    },
+    {
+     "text": "aati",
+     "start": 54.818,
+     "end": 55.098
+    },
+    {
+     "text": "hai...",
+     "start": 55.108,
+     "end": 55.248
+    },
+    {
+     "text": "sabse",
+     "start": 55.278,
+     "end": 55.778
+    },
+    {
+     "text": "paagalpan",
+     "start": 55.784,
+     "end": 56.372
+    },
+    {
+     "text": "waali",
+     "start": 56.353,
+     "end": 56.623
+    },
+    {
+     "text": "baat.",
+     "start": 56.613,
+     "end": 56.883
+    }
+   ]
+  },
+  {
+   "id": "fired",
+   "show": "November 2023 mein, OpenAI ke board ne apne hi CEO, Sam Altman ko nikaal diya.",
+   "start": 57.929,
+   "end": 63.602,
+   "words": [
+    {
+     "text": "November",
+     "start": 57.989,
+     "end": 58.545
+    },
+    {
+     "text": "2023",
+     "start": 58.507,
+     "end": 59.264
+    },
+    {
+     "text": "mein,",
+     "start": 59.227,
+     "end": 59.367
+    },
+    {
+     "text": "OpenAI",
+     "start": 59.477,
+     "end": 60.303
+    },
+    {
+     "text": "ke",
+     "start": 60.207,
+     "end": 60.347
+    },
+    {
+     "text": "board",
+     "start": 60.347,
+     "end": 60.627
+    },
+    {
+     "text": "ne",
+     "start": 60.707,
+     "end": 60.847
+    },
+    {
+     "text": "apne",
+     "start": 60.913,
+     "end": 61.28
+    },
+    {
+     "text": "hi",
+     "start": 61.267,
+     "end": 61.407
+    },
+    {
+     "text": "CEO,",
+     "start": 61.437,
+     "end": 61.883
+    },
+    {
+     "text": "Sam",
+     "start": 61.897,
+     "end": 62.317
+    },
+    {
+     "text": "Altman",
+     "start": 62.322,
+     "end": 62.927
+    },
+    {
+     "text": "ko",
+     "start": 62.867,
+     "end": 63.007
+    },
+    {
+     "text": "nikaal",
+     "start": 62.993,
+     "end": 63.36
+    },
+    {
+     "text": "diya.",
+     "start": 63.332,
+     "end": 63.582
+    }
+   ]
+  },
+  {
+   "id": "offer",
+   "show": "Kuch hi dinon mein Microsoft ne kaha, hum use rakh lenge... aur OpenAI ke saikdon karmchaari uske peeche jaane ko taiyaar ho gaye.",
+   "start": 64.464,
+   "end": 72.396,
+   "words": [
+    {
+     "text": "Kuch",
+     "start": 64.524,
+     "end": 64.787
+    },
+    {
+     "text": "hi",
+     "start": 64.744,
+     "end": 64.884
+    },
+    {
+     "text": "dinon",
+     "start": 64.842,
+     "end": 65.112
+    },
+    {
+     "text": "mein",
+     "start": 65.127,
+     "end": 65.267
+    },
+    {
+     "text": "Microsoft",
+     "start": 65.254,
+     "end": 65.867
+    },
+    {
+     "text": "ne",
+     "start": 65.787,
+     "end": 65.927
+    },
+    {
+     "text": "kaha,",
+     "start": 65.907,
+     "end": 66.147
+    },
+    {
+     "text": "hum",
+     "start": 66.543,
+     "end": 66.913
+    },
+    {
+     "text": "use",
+     "start": 66.933,
+     "end": 67.163
+    },
+    {
+     "text": "rakh",
+     "start": 67.108,
+     "end": 67.328
+    },
+    {
+     "text": "lenge...",
+     "start": 67.398,
+     "end": 67.878
+    },
+    {
+     "text": "aur",
+     "start": 68.003,
+     "end": 68.333
+    },
+    {
+     "text": "OpenAI",
+     "start": 68.345,
+     "end": 69.068
+    },
+    {
+     "text": "ke",
+     "start": 69.048,
+     "end": 69.188
+    },
+    {
+     "text": "saikdon",
+     "start": 69.178,
+     "end": 69.591
+    },
+    {
+     "text": "karmchaari",
+     "start": 69.584,
+     "end": 70.172
+    },
+    {
+     "text": "uske",
+     "start": 70.148,
+     "end": 70.528
+    },
+    {
+     "text": "peeche",
+     "start": 70.528,
+     "end": 70.828
+    },
+    {
+     "text": "jaane",
+     "start": 70.838,
+     "end": 71.118
+    },
+    {
+     "text": "ko",
+     "start": 71.108,
+     "end": 71.248
+    },
+    {
+     "text": "taiyaar",
+     "start": 71.216,
+     "end": 71.641
+    },
+    {
+     "text": "ho",
+     "start": 71.608,
+     "end": 71.748
+    },
+    {
+     "text": "gaye.",
+     "start": 71.728,
+     "end": 72.376
+    }
+   ]
+  },
+  {
+   "id": "back",
+   "show": "Paanch din baad... Altman wapas aa gaya.",
+   "start": 72.96,
+   "end": 75.352,
+   "words": [
+    {
+     "text": "Paanch",
+     "start": 73.02,
+     "end": 73.26
+    },
+    {
+     "text": "din",
+     "start": 73.318,
+     "end": 73.558
+    },
+    {
+     "text": "baad...",
+     "start": 73.543,
+     "end": 73.833
+    },
+    {
+     "text": "Altman",
+     "start": 73.871,
+     "end": 74.65
+    },
+    {
+     "text": "wapas",
+     "start": 74.592,
+     "end": 74.985
+    },
+    {
+     "text": "aa",
+     "start": 74.965,
+     "end": 75.105
+    },
+    {
+     "text": "gaya.",
+     "start": 75.078,
+     "end": 75.332
+    }
+   ]
+  },
+  {
+   "id": "rival",
+   "show": "2024 mein, Microsoft ne OpenAI ko aadhikaarik taur par... apna competitor bata diya.",
+   "start": 76.413,
+   "end": 81.985,
+   "words": [
+    {
+     "text": "2024",
+     "start": 76.473,
+     "end": 77.19
+    },
+    {
+     "text": "mein,",
+     "start": 77.315,
+     "end": 77.455
+    },
+    {
+     "text": "Microsoft",
+     "start": 77.642,
+     "end": 78.315
+    },
+    {
+     "text": "ne",
+     "start": 78.285,
+     "end": 78.425
+    },
+    {
+     "text": "OpenAI",
+     "start": 78.43,
+     "end": 79.147
+    },
+    {
+     "text": "ko",
+     "start": 79.055,
+     "end": 79.195
+    },
+    {
+     "text": "aadhikaarik",
+     "start": 79.196,
+     "end": 79.895
+    },
+    {
+     "text": "taur",
+     "start": 79.845,
+     "end": 80.105
+    },
+    {
+     "text": "par...",
+     "start": 80.12,
+     "end": 80.45
+    },
+    {
+     "text": "apna",
+     "start": 80.475,
+     "end": 80.895
+    },
+    {
+     "text": "competitor",
+     "start": 80.883,
+     "end": 81.487
+    },
+    {
+     "text": "bata",
+     "start": 81.465,
+     "end": 81.725
+    },
+    {
+     "text": "diya.",
+     "start": 81.705,
+     "end": 81.965
+    }
+   ]
+  },
+  {
+   "id": "restructure",
+   "show": "Aur 2025 mein, OpenAI ban gayi ek for-profit public benefit company... aur Microsoft ke paas raha 27% hissa.",
+   "start": 82.723,
+   "end": 91.708,
+   "words": [
+    {
+     "text": "Aur",
+     "start": 82.783,
+     "end": 83.023
+    },
+    {
+     "text": "2025",
+     "start": 82.903,
+     "end": 83.765
+    },
+    {
+     "text": "mein,",
+     "start": 83.745,
+     "end": 83.885
+    },
+    {
+     "text": "OpenAI",
+     "start": 84.047,
+     "end": 84.923
+    },
+    {
+     "text": "ban",
+     "start": 84.863,
+     "end": 85.113
+    },
+    {
+     "text": "gayi",
+     "start": 85.093,
+     "end": 85.363
+    },
+    {
+     "text": "ek",
+     "start": 85.353,
+     "end": 85.623
+    },
+    {
+     "text": "for-profit",
+     "start": 85.643,
+     "end": 86.418
+    },
+    {
+     "text": "public",
+     "start": 86.383,
+     "end": 86.849
+    },
+    {
+     "text": "benefit",
+     "start": 86.816,
+     "end": 87.241
+    },
+    {
+     "text": "company...",
+     "start": 87.208,
+     "end": 87.708
+    },
+    {
+     "text": "aur",
+     "start": 87.833,
+     "end": 88.383
+    },
+    {
+     "text": "Microsoft",
+     "start": 88.505,
+     "end": 89.128
+    },
+    {
+     "text": "ke",
+     "start": 89.108,
+     "end": 89.248
+    },
+    {
+     "text": "paas",
+     "start": 89.253,
+     "end": 89.523
+    },
+    {
+     "text": "raha",
+     "start": 89.503,
+     "end": 89.753
+    },
+    {
+     "text": "27%",
+     "start": 89.732,
+     "end": 90.876
+    },
+    {
+     "text": "hissa.",
+     "start": 90.835,
+     "end": 91.688
+    }
+   ]
+  },
+  {
+   "id": "outro1",
+   "show": "Toh kya Microsoft ne AI ki race jeet li?",
+   "start": 92.252,
+   "end": 94.588,
+   "words": [
+    {
+     "text": "Toh",
+     "start": 92.312,
+     "end": 92.552
+    },
+    {
+     "text": "kya",
+     "start": 92.468,
+     "end": 92.688
+    },
+    {
+     "text": "Microsoft",
+     "start": 92.648,
+     "end": 93.338
+    },
+    {
+     "text": "ne",
+     "start": 93.308,
+     "end": 93.448
+    },
+    {
+     "text": "AI",
+     "start": 93.378,
+     "end": 93.748
+    },
+    {
+     "text": "ki",
+     "start": 93.768,
+     "end": 93.908
+    },
+    {
+     "text": "race",
+     "start": 93.898,
+     "end": 94.151
+    },
+    {
+     "text": "jeet",
+     "start": 94.123,
+     "end": 94.413
+    },
+    {
+     "text": "li?",
+     "start": 94.428,
+     "end": 94.568
+    }
+   ]
+  },
+  {
+   "id": "outro2",
+   "show": "Ya usne $13 billion dekar... apna hi sabse bada rival bana diya?",
+   "start": 95.511,
+   "end": 99.889,
+   "words": [
+    {
+     "text": "Ya",
+     "start": 95.572,
+     "end": 95.811
+    },
+    {
+     "text": "usne",
+     "start": 95.924,
+     "end": 96.264
+    },
+    {
+     "text": "$13",
+     "start": 96.219,
+     "end": 96.551
+    },
+    {
+     "text": "billion",
+     "start": 96.507,
+     "end": 96.934
+    },
+    {
+     "text": "dekar...",
+     "start": 97.177,
+     "end": 97.65
+    },
+    {
+     "text": "apna",
+     "start": 97.71,
+     "end": 98.317
+    },
+    {
+     "text": "hi",
+     "start": 98.384,
+     "end": 98.524
+    },
+    {
+     "text": "sabse",
+     "start": 98.524,
+     "end": 98.894
+    },
+    {
+     "text": "bada",
+     "start": 98.888,
+     "end": 99.139
+    },
+    {
+     "text": "rival",
+     "start": 99.091,
+     "end": 99.456
+    },
+    {
+     "text": "bana",
+     "start": 99.414,
+     "end": 99.674
+    },
+    {
+     "text": "diya?",
+     "start": 99.639,
+     "end": 99.869
+    }
+   ]
+  }
+ ]
+}

@@ -91,11 +91,12 @@ dur = float(sys.argv[1]) if len(sys.argv) > 1 else 60
 N = int(dur * SR)
 tt = np.arange(N) / SR
 STYLE = sys.argv[3] if len(sys.argv) > 3 else "dark"
-bpm = 112 if STYLE == "pulse" else 96
+bpm = {"pulse": 112, "deep": 84}.get(STYLE, 96)
 beat = 60 / bpm
 mus = np.zeros(N)
 # drone (D minor-ish), slow filter movement
-DRONE = [(55.0, 1.0), (82.41, 0.45), (110.0, 0.3), (130.81, 0.2)] if STYLE == "pulse" else [(73.42, 1.0), (110.0, 0.45), (146.83, 0.3), (174.61, 0.18)]
+DRONE = {"pulse": [(55.0, 1.0), (82.41, 0.45), (110.0, 0.3), (130.81, 0.2)],
+         "deep": [(41.2, 1.0), (61.74, 0.5), (82.41, 0.35), (98.0, 0.25)]}.get(STYLE, [(73.42, 1.0), (110.0, 0.45), (146.83, 0.3), (174.61, 0.18)])
 for f, g in DRONE:
     mus += g * np.sin(2 * np.pi * f * tt + 0.3 * np.sin(2 * np.pi * 0.07 * tt))
 mus *= 0.18
@@ -106,8 +107,8 @@ ht = t(0.06)
 hat = lp(rng.standard_normal(len(ht)), 0.9) * np.exp(-ht * 90)
 hat = hat - lp(hat, 0.2)
 # pluck arpeggio
-notes = ([440.0, 523.25, 659.25, 783.99, 659.25, 523.25, 587.33, 659.25] if STYLE == "pulse"
-         else [293.66, 349.23, 440.0, 349.23, 261.63, 329.63, 392.0, 329.63])
+notes = {"pulse": [440.0, 523.25, 659.25, 783.99, 659.25, 523.25, 587.33, 659.25],
+         "deep": [329.63, 392.0, 493.88, 392.0, 293.66, 369.99, 440.0, 369.99]}.get(STYLE, [293.66, 349.23, 440.0, 349.23, 261.63, 329.63, 392.0, 329.63])
 pt = t(beat * 0.9)
 k = 0
 for i in range(int(dur / beat)):

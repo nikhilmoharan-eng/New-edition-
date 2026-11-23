@@ -1,0 +1,27 @@
+{
+  "srcDir": "media-src/microsoft-openai",
+  "outDir": "public/meta-scale/media",
+  "clips": [
+    { "name": "nadella1", "src": "nadella-stanford.mp4", "ss": 2.0, "to": 8.0, "crop": [0.35, 0.16, 1, 0.58] },
+    { "name": "nadella2", "src": "nadella-stanford.mp4", "ss": 11.0, "to": 17.0, "crop": [0.35, 0.16, 1, 0.58] },
+    { "name": "nadella3", "src": "nadella-stanford.mp4", "ss": 26.0, "to": 32.0, "crop": [0.35, 0.16, 1, 0.58] },
+    { "name": "altman1", "src": "altman-cnbc.mp4", "ss": 5.0, "to": 11.0, "crop": [0, 0.14, 1, 0.52] },
+    { "name": "altman2", "src": "altman-cnbc.mp4", "ss": 12.0, "to": 18.0, "crop": [0, 0.14, 1, 0.52] },
+    { "name": "altman3", "src": "altman-cnbc.mp4", "ss": 18.5, "to": 24.0, "crop": [0, 0.14, 1, 0.52] }
+  ],
+  "images": [
+    { "name": "msft-stock", "src": "msft-stock.jpg", "crop": [0, 0.27, 1, 1] },
+    { "name": "msft-sign", "src": "msft-sign.jpg" },
+    { "name": "cnbc-returns", "src": "cnbc-returns.jpg" },
+    { "name": "cnbc-fired", "src": "cnbc-fired.jpg" },
+    { "name": "devday", "src": "devday.jpg" },
+    { "name": "ask-chatgpt", "src": "ask-chatgpt.jpg" },
+    { "name": "datacenter", "src": "datacenter.jpg" },
+    { "name": "msft-courtyard", "src": "msft-courtyard.jpg" },
+    { "name": "nadella-altman", "src": "nadella-altman.jpg" },
+    { "name": "altman", "src": "altman.jpg" },
+    { "name": "nadella", "src": "nadella.jpg" },
+    { "name": "logo-azure", "src": "logo-azure.jpg", "logo": true },
+    { "name": "logo-msft", "src": "logo-msft-dark.jpg", "logo": true, "invert": true }
+  ]
+}
