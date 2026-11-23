@@ -609,8 +609,7 @@ export const GWalk: React.FC<GProps> = ({ dur }) => <SStay dur={dur} />;
 
 const termBg = (u: number) => (
   <>
-    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #0c1a14 0%, #030806 75%)" }} />
-    <AbsoluteFill style={{ backgroundImage: `linear-gradient(rgba(60,220,140,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(60,220,140,0.07) 1px, transparent 1px)`, backgroundSize: `${80 * u}px ${80 * u}px` }} />
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 42%, #1c1c1c 0%, #050505 75%)", opacity: u > 0 ? 1 : 1 }} />
   </>
 );
 
@@ -625,19 +624,19 @@ export const GFiveDays: React.FC<GProps> = () => {
     <AbsoluteFill>
       {termBg(u)}
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-60 * u}px` }}>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 170 * u, color: "#eafff3", textShadow: "0 0 30px rgba(61,220,132,0.5)", opacity: prog(f, 0, 8) }}>5 DAYS</div>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 170 * u, color: "#ffffff", textShadow: "0 0 30px rgba(217,178,107,0.45)", opacity: prog(f, 0, 8) }}>5 DAYS</div>
         <div style={{ position: "relative", width: W, height: 120 * u, marginTop: 30 * u }}>
           <div style={{ position: "absolute", top: 30 * u, left: 0, right: 0, height: 4 * u, background: "rgba(255,255,255,0.15)" }} />
-          <div style={{ position: "absolute", top: 30 * u, left: 0, width: W * p, height: 4 * u, background: "#3ddc84", boxShadow: "0 0 14px #3ddc84" }} />
+          <div style={{ position: "absolute", top: 30 * u, left: 0, width: W * p, height: 4 * u, background: C.gold, boxShadow: "0 0 14px #D9B26B" }} />
           {days.map((d, i) => {
             const x = (i / 5) * W;
             const on = p >= i / 5 - 0.001;
             return (
               <div key={i} style={{ position: "absolute", left: x - 60 * u, width: 120 * u, textAlign: "center" }}>
-                <div style={{ width: 22 * u, height: 22 * u, borderRadius: "50%", margin: `${21 * u}px auto 0`, background: on ? (i === 0 ? C.red : "#3ddc84") : "#333" }} />
-                <div style={{ fontFamily: MONO, fontSize: 22 * u, color: "#cfe", marginTop: 12 * u }}>{d}</div>
+                <div style={{ width: 22 * u, height: 22 * u, borderRadius: "50%", margin: `${21 * u}px auto 0`, background: on ? (i === 0 ? C.red : C.gold) : "#333" }} />
+                <div style={{ fontFamily: MONO, fontSize: 22 * u, color: "#ddd", marginTop: 12 * u }}>{d}</div>
                 {i === 0 ? <div style={{ fontFamily: MONO, fontSize: 24 * u, color: C.red, letterSpacing: 3 * u }}>FIRED</div> : null}
-                {i === 5 ? <div style={{ fontFamily: MONO, fontSize: 24 * u, color: "#3ddc84", letterSpacing: 3 * u, opacity: on ? 1 : 0 }}>BACK</div> : null}
+                {i === 5 ? <div style={{ fontFamily: MONO, fontSize: 24 * u, color: C.gold, letterSpacing: 3 * u, opacity: on ? 1 : 0 }}>BACK</div> : null}
               </div>
             );
           })}
@@ -657,8 +656,8 @@ export const GRival: React.FC<GProps> = ({ mark = 14 }) => {
     <AbsoluteFill>
       {termBg(u)}
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", translate: `0px ${-50 * u}px` }}>
-        <div style={{ fontFamily: MONO, fontSize: 26 * u, letterSpacing: 6 * u, color: "#8fbfa5", marginBottom: 24 * u }}>MICROSOFT ANNUAL REPORT · FY2024 · ON OPENAI</div>
-        <div style={{ position: "relative", fontFamily: DISPLAY, fontWeight: 800, fontSize: 140 * u, color: "#eafff3", opacity: interpolate(s, [0, 1], [1, 0.4]) }}>
+        <div style={{ fontFamily: MONO, fontSize: 26 * u, letterSpacing: 6 * u, color: "#a9a39a", marginBottom: 24 * u }}>MICROSOFT ANNUAL REPORT · FY2024 · ON OPENAI</div>
+        <div style={{ position: "relative", fontFamily: DISPLAY, fontWeight: 800, fontSize: 140 * u, color: "#ffffff", opacity: interpolate(s, [0, 1], [1, 0.4]) }}>
           PARTNER
           <div style={{ position: "absolute", left: -20 * u, top: "52%", height: 14 * u, width: `calc(${s * 100}% + ${40 * u * s}px)`, background: C.red, rotate: "-3deg", borderRadius: 7 * u }} />
         </div>
@@ -676,7 +675,7 @@ export const GStructure: React.FC<GProps> = () => {
   const b = prog(f, 12, 24);
   const box = (t: string, sub: string, col: string, o: number) => (
     <div style={{ opacity: o, padding: `${30 * u}px ${40 * u}px`, border: `${3 * u}px solid ${col}`, borderRadius: 18 * u, background: "rgba(0,0,0,0.4)", textAlign: "center", minWidth: 460 * u }}>
-      <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 72 * u, color: "#eafff3" }}>{t}</div>
+      <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 72 * u, color: "#ffffff" }}>{t}</div>
       <div style={{ fontFamily: MONO, fontSize: 22 * u, color: col, letterSpacing: 4 * u, marginTop: 8 * u }}>{sub}</div>
     </div>
   );
@@ -684,9 +683,9 @@ export const GStructure: React.FC<GProps> = () => {
     <AbsoluteFill>
       {termBg(u)}
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", flexDirection: "row", gap: 50 * u, translate: `0px ${-50 * u}px` }}>
-        {box("NON-PROFIT", "OPENAI · 2015", "#8fbfa5", a)}
-        <div style={{ fontFamily: DISPLAY, fontSize: 110 * u, color: "#3ddc84", opacity: b }}>→</div>
-        {box("FOR-PROFIT", "PUBLIC BENEFIT CORP · 2025", "#3ddc84", b)}
+        {box("NON-PROFIT", "OPENAI · 2015", "#a9a39a", a)}
+        <div style={{ fontFamily: DISPLAY, fontSize: 110 * u, color: C.gold, opacity: b }}>→</div>
+        {box("FOR-PROFIT", "PUBLIC BENEFIT CORP · 2025", C.gold, b)}
       </AbsoluteFill>
     </AbsoluteFill>
   );

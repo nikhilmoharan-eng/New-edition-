@@ -3,7 +3,7 @@ import enRaw from "../timelines/microsoft-openai.json";
 import hiRaw from "../timelines/microsoft-openai-hi.json";
 import { makeMetaReel, type Shot, type Timing } from "./MetaReel";
 
-/** Reel 4: "Microsoft's $13B Bet" (Microsoft x OpenAI). Own look: market terminal ("ticker" theme). */
+/** Reel 4: "Microsoft's $13B Bet" (Microsoft x OpenAI). Classic look, same as reels 1–2 (set theme: "ticker" for the market-terminal look). */
 type TLT = { duration: number; lines: Line[] };
 const EN = enRaw as TLT;
 
@@ -61,7 +61,7 @@ const shots = ({ w, at, lineStart }: Timing): Shot[] => [
   { k: "g", g: "outro", img: "nadella-altman.jpg", label: "card", text: "$13,000,000,000", text2: "PARTNER... OR RIVAL?", at: lineStart("outro2"), cap: "low" },
 ];
 
-const base = { theme: "ticker" as const, tape: TAPE, shots };
+const base = { theme: "classic" as const, tape: TAPE, shots };
 
 export const MSFT_EN = makeMetaReel({
   ...base,
