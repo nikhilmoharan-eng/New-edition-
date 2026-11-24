@@ -160,6 +160,8 @@ export type Lang = {
   extra?: (hw: (id: string, i: number) => number) => Shot[];
   /** visual identity: "classic" (reels 1–2), "chat" (reel 3) or "ticker" (reel 4: market terminal) */
   theme?: Theme;
+  /** sound-effect folder in public/: "sfx" (synthesized, reels 1–4) or "sfx-earshot" (made with earshot) */
+  sfxDir?: string;
   /** ticker-theme headline tape (facts only) */
   tape?: string;
 };
@@ -459,7 +461,7 @@ export const makeMetaReel = (L: Lang) => {
         />
         {CUES.map((c, i) => (
           <Sequence key={i} from={Math.round(c.at * FPS)} durationInFrames={2 * FPS} layout="none" name={`sfx ${c.src}`}>
-            <Audio src={staticFile(`sfx/${c.src}.wav`)} volume={c.vol} />
+            <Audio src={staticFile(`${L.sfxDir ?? "sfx"}/${c.src}.wav`)} volume={c.vol} />
           </Sequence>
         ))}
       </AbsoluteFill>
