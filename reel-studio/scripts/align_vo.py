@@ -16,7 +16,8 @@ ap.add_argument("script")
 ap.add_argument("audio")
 ap.add_argument("--name", required=True)
 ap.add_argument("--lang", default="en")
-ap.add_argument("--whisper", required=True)
+ap.add_argument("--whisper", required=True, help="faster-whisper model dir, or with --engine openai a model name (turbo, large-v3, small)")
+ap.add_argument("--engine", default="faster", choices=["faster", "openai"], help="openai = OpenAI Whisper (more accurate word timing, bigger models)")
 a = ap.parse_args()
 
 spec = json.load(open(a.script))
@@ -38,7 +39,11 @@ import librosa
 from faster_whisper import WhisperModel
 
 y, _ = librosa.load(wav, sr=16000)
-wm = WhisperModel(a.whisper, device="cpu", compute_type="int8", cpu_threads=4)
+if a.engine == "faster":
+    wm = WhisperModel(a.whisper, device="cpu", compute_type="int8", cpu_threads=4)
+else:
+    import whisper as _ow
+    owm = _ow.load_model(a.whisper, device="cpu")
 
 # Transcribe in short pieces cut at pauses: on long takes Whisper otherwise skips whole sections.
 _sd = subprocess.run(["ffmpeg", "-hide_banner", "-i", wav, "-af", "silencedetect=noise=-38dB:d=0.25", "-f", "null", "-"],
@@ -60,8 +65,13 @@ class _W:  # word with absolute times
 ww = []
 for c0, c1 in zip(cuts, cuts[1:]):
     piece = y[int(c0 * 16000): int(c1 * 16000)]
-    segs, _ = wm.transcribe(piece, language=a.lang, word_timestamps=True, beam_size=5, condition_on_previous_text=False)
-    ww += [_W(w.word, w.start + c0, w.end + c0) for s in segs for w in s.words]
+    if a.engine == "faster":
+        segs, _ = wm.transcribe(piece, language=a.lang, word_timestamps=True, beam_size=5, condition_on_previous_text=False)
+        ww += [_W(w.word, w.start + c0, w.end + c0) for s in segs for w in s.words]
+    else:
+        r = owm.transcribe(piece.astype("float32"), language=a.lang, word_timestamps=True, fp16=False,
+                           condition_on_previous_text=False, beam_size=5)
+        ww += [_W(w["word"], w["start"] + c0, w["end"] + c0) for s in r["segments"] for w in s.get("words", [])]
 print("transcribed", len(ww), "words in", len(cuts) - 1, "pieces")
 chars, ctimes = [], []
 for w in ww:

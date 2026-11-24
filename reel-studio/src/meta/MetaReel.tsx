@@ -164,6 +164,9 @@ export type Lang = {
   sfxDir?: string;
   /** ticker-theme headline tape (facts only) */
   tape?: string;
+  /** beat times from scripts/beats.py; each cut moves to the nearest beat within `beatSnap` s */
+  beats?: number[];
+  beatSnap?: number;
 };
 
 const lineOf = (tl: TLT, id: string) => {
@@ -288,6 +291,8 @@ const MediaView: React.FC<{ s: MediaShot; dur: number; idx: number }> = ({ s, du
                   border: `${12 * u}px solid #f4f1ea`,
                   boxShadow: `0 ${30 * u}px ${80 * u}px rgba(0,0,0,0.7)`,
                   rotate: idx % 2 ? "-2deg" : "2deg",
+                  // sit above the caption band so captions never cover the print
+                  translate: `0px ${-70 * u}px`,
                 }}
               />
             </AbsoluteFill>
@@ -369,6 +374,12 @@ export const makeMetaReel = (L: Lang) => {
   const at = (id: string, i: number) => Math.max(0, w(id, i) - 0.04);
   const SHOTS = [...(L.shots ?? buildShots)({ w, at, lineStart }), ...(L.extra ? L.extra(hw) : [])]
     .map((s) => (s.k === "big" && L.texts?.[s.text] ? { ...s, text: L.texts[s.text] } : s))
+    .map((s) => {
+      // nudge the cut onto the music's beat when one is close (never more than a few frames off the word)
+      if (!L.beats?.length || s.at <= 0) return s;
+      const near = L.beats.reduce((p, b) => (Math.abs(b - s.at) < Math.abs(p - s.at) ? b : p), L.beats[0]);
+      return Math.abs(near - s.at) <= (L.beatSnap ?? 0.1) ? { ...s, at: near } : s;
+    })
     .sort((x, y) => x.at - y.at);
 
   const theme: Theme = L.theme ?? "classic";

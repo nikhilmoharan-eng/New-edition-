@@ -1,6 +1,7 @@
 import type { Line } from "../reel/timeline";
 import enRaw from "../timelines/microsoft-openai.json";
 import hiRaw from "../timelines/microsoft-openai-hi.json";
+import hiBeats from "../../public/microsoft-openai-hi/beats.json";
 import { makeMetaReel, type Shot, type Timing } from "./MetaReel";
 
 /** Reel 4: "Microsoft's $13B Bet" (Microsoft x OpenAI). Classic look, same as reels 1–2 (set theme: "ticker" for the market-terminal look). */
@@ -78,6 +79,7 @@ export const MSFT_HI = makeMetaReel({
   base: EN,
   vo: "microsoft-openai-hi/vo.wav",
   music: "microsoft-openai-hi/music.wav",
+  beats: hiBeats.beats,
   // Hinglish captions; indices refer to script/microsoft-openai-hi.json `show`
   hide: { hook1: [4, 5], hook2: [9, 10, 13, 14, 15], founded: [0], chatgpt: [1], allin: [8, 9], total: [3, 4], restructure: [16] },
   map: {

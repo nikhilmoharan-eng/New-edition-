@@ -496,7 +496,7 @@ export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = 
             <Img src={M(img)} style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", filter: "blur(28px) brightness(0.45)", scale: "1.2" }} />
             <Img
               src={M(img)}
-              style={{ position: "relative", maxWidth: "72%", maxHeight: "56%", border: `${10 * u}px solid #f4f1ea`, boxShadow: `0 ${30 * u}px ${80 * u}px rgba(0,0,0,0.7)`, rotate: "-2deg", translate: `0px ${-40 * u}px`, filter: `grayscale(${1 - prog(f, 20, 60)})`, scale: String(interpolate(f, [0, dur], [1.0, 1.06], clamp)) }}
+              style={{ position: "relative", maxWidth: "72%", maxHeight: "56%", border: `${10 * u}px solid #f4f1ea`, boxShadow: `0 ${30 * u}px ${80 * u}px rgba(0,0,0,0.7)`, rotate: "-2deg", translate: `0px ${-90 * u}px`, filter: `grayscale(${1 - prog(f, 20, 60)})`, scale: String(interpolate(f, [0, dur], [1.0, 1.06], clamp)) }}
             />
           </>
         ) : (
@@ -505,10 +505,10 @@ export const GOutro: React.FC<GProps> = ({ dur, img = "wang-redtie.jpg", text = 
             style={{ position: "absolute", width: "100%", height: "100%", objectFit: "cover", objectPosition: "45% 35%", filter: `grayscale(${1 - prog(f, 20, 60)}) contrast(1.1)`, scale: String(interpolate(f, [0, dur], [1.05, 1.15], clamp)) }}
           />
         )}
-        <div style={{ position: "absolute", bottom: 40 * u, fontFamily: MONO, fontSize: 26 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>{text2}</div>
+        <div style={{ position: "absolute", top: 60 * u, fontFamily: MONO, fontSize: 30 * u, color: "#fff", letterSpacing: 6 * u, textShadow: "0 0 12px #000" }}>{text2}</div>
       </div>
       <div style={{ ...half, ...(portrait ? { bottom: 0 } : { right: 0 }), background: C.cream, opacity: r }}>
-        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: (portrait ? 96 : 100) * u, color: C.ink, scale: String(interpolate(r, [0, 1], [1.2, 1])) }}>{text}</div>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: Math.min(portrait ? 96 : 100, (portrait ? 1500 : 1150) / Math.max(1, text.length)) * u, color: C.ink, whiteSpace: "nowrap", scale: String(interpolate(r, [0, 1], [1.2, 1])) }}>{text}</div>
         <div style={{ fontFamily: MONO, fontSize: 26 * u, color: "#6c6656", letterSpacing: 6 * u }}>THE PRICE</div>
       </div>
       <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", opacity: q, background: `rgba(5,5,5,${0.78 * q})` }}>
