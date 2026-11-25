@@ -6,6 +6,7 @@ import { buildChunks, Captions, CapPos, Tone } from "../reel/captions";
 import type { Line } from "../reel/timeline";
 import enRaw from "../timelines/meta-scale.json";
 import { GRAPHICS, M } from "./graphics";
+import { STORYBOARD } from "./storyboard";
 
 /* ------------------------------------------------------------------ languages */
 type TLT = { duration: number; lines: Line[] };
@@ -198,7 +199,7 @@ type Shot = MediaShot | BigShot | GShot;
 
 type Timing = { w: (id: string, i: number) => number; at: (id: string, i: number) => number; lineStart: (id: string) => number };
 
-const buildShots = ({ w, at, lineStart }: Timing): Shot[] => [
+export const buildShots = ({ w, at, lineStart }: Timing): Shot[] => [
   // HOOK
   { k: "img", src: "meta-hq.jpg", at: 0, pos: "42% 50%", zoom: [1.0, 1.12] },
   { k: "img", src: "zuck-mwc.jpg", at: at("hook1", 3), pos: "50% 16%" },
@@ -345,7 +346,7 @@ const ShotView: React.FC<{ s: Shot; dur: number; idx: number }> = ({ s, dur, idx
     );
   }
   const g = s as GShot;
-  const G = GRAPHICS[g.g];
+  const G = (GRAPHICS as Record<string, React.FC<any>>)[g.g] ?? (STORYBOARD as Record<string, React.FC<any>>)[g.g];
   const mark = g.mark !== undefined ? Math.round((g.mark - g.at) * FPS) : undefined;
   return (
     <Camera dur={dur} from={1.0} to={1.04}>
@@ -402,6 +403,10 @@ export const makeMetaReel = (L: Lang) => {
       if (s.k === "g" && (s.g === "strike" || s.g === "snap") && s.mark) c.push({ at: s.mark + 0.08, src: "stamp", vol: 0.42 });
       if (s.k === "img" && s.stamp) c.push({ at: s.stamp.at, src: "stamp", vol: 0.45 });
       if (s.k === "g" && s.g === "termSheet") c.push({ at: s.at + 0.2, src: "ding", vol: 0.2 });
+      if (s.k === "g" && s.g === "pipeline") for (let k = 0; k < 4; k++) c.push({ at: s.at + 1.35 + k * 0.38, src: "tick", vol: 0.2 });
+      if (s.k === "g" && s.g === "clients") c.push({ at: s.at + 1.0, src: "ding", vol: 0.16 });
+      if (s.k === "g" && s.g === "layoffs" && s.mark) c.push({ at: s.mark + 0.05, src: "stamp", vol: 0.4 });
+      if (s.k === "g" && s.g === "balance") c.push({ at: s.at + 0.38 * 2.9, src: "impact", vol: 0.32 });
       if (s.k === "g" && s.g === "gpus") c.push({ at: s.at + 0.15, src: "powerup", vol: 0.3 });
       if (s.k === "g" && s.g === "fuel") {
         for (let k = 0; k < 6; k++) c.push({ at: s.at + 0.35 + k * 0.42, src: k % 2 ? "coin" : "bills", vol: k % 2 ? 0.12 : 0.16 });

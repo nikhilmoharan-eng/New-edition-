@@ -297,7 +297,11 @@ export const GLlama: React.FC<GProps> = ({ mark = 40 }) => {
 };
 
 /* The AI race: three runners pull ahead, the Meta runner falls behind. */
-export const GRace: React.FC<GProps> = ({ dur }) => {
+export const GRace: React.FC<GProps> = ({ dur, label }) => {
+  // label "labels": name the leaders and mark Meta falling behind (storyboard insert #3)
+  const named = label === "labels";
+  const NAMES = ["OPENAI", "GOOGLE", "", "ANTHROPIC"];
+  const lead = (l: number) => interpolate(f, [0, dur], [0.05, 0.05 + (0.85 + l * 0.04) * 0.9], clamp);
   const f = useCurrentFrame();
   const { u, w } = useU();
   const lanes = [0, 1, 2, 3];
@@ -333,6 +337,17 @@ export const GRace: React.FC<GProps> = ({ dur }) => {
                 </div>
                 {!meta ? (
                   <div style={{ position: "absolute", left: 0, top: 43 * u, height: 4 * u, width: x, background: "linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.35))" }} />
+                ) : null}
+                {named && !meta ? (
+                  <div style={{ position: "absolute", left: x + 110 * u, top: 26 * u, fontFamily: MONO, fontWeight: 700, fontSize: 30 * u, letterSpacing: 4 * u, color: "#F2F2F2", opacity: prog(f, 3, 10) }}>{NAMES[l]}</div>
+                ) : null}
+                {named && meta ? (
+                  <>
+                    <div style={{ position: "absolute", left: x + 100 * u, top: 43 * u, width: Math.max(0, (lead(1) * (trackW - 90 * u) - x - 100 * u) * prog(f, 4, 22)), height: 0, borderTop: `${3 * u}px dashed #E53935` }} />
+                    <div style={{ position: "absolute", left: x + 100 * u, top: 28 * u, width: 3 * u, height: 34 * u, background: "#E53935", opacity: prog(f, 4, 8) }} />
+                    <div style={{ position: "absolute", left: x + 100 * u + Math.max(0, (lead(1) * (trackW - 90 * u) - x - 100 * u) * prog(f, 4, 22)), top: 28 * u, width: 3 * u, height: 34 * u, background: "#E53935", opacity: prog(f, 4, 8) }} />
+                    <div style={{ position: "absolute", left: x + 120 * u, top: -34 * u, padding: `${4 * u}px ${12 * u}px`, background: "#E53935", fontFamily: MONO, fontWeight: 700, fontSize: 22 * u, letterSpacing: 3 * u, color: "#fff", opacity: prog(f, 10, 18) }}>FALLING BEHIND</div>
+                  </>
                 ) : null}
               </div>
             );

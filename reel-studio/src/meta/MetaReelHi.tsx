@@ -1,6 +1,6 @@
 import type { Line } from "../reel/timeline";
 import hiRaw from "../timelines/meta-scale-hi.json";
-import { makeMetaReel } from "./MetaReel";
+import { buildShots, makeMetaReel, type Shot } from "./MetaReel";
 
 /**
  * Hindi version of "The $14B Hire": same edit, timed to the Hindi ElevenLabs v3 voice.
@@ -36,16 +36,24 @@ export const META_HI = makeMetaReel({
     reframe: { 4: 2, 5: 5, 9: 8 }, // कंपनी, एक, और
     outro1: { 7: 7 }, // स्मार्ट
   },
+  // Re-edit storyboard: the stock fillers (servers, empty offices) are swapped for drop-in animations
+  shots: (t) =>
+    buildShots(t)
+      .filter((s) => !(s.k === "vid" && ["servers1.mp4", "office1.mp4", "office2.mp4", "office3.mp4"].includes(s.src)))
+      .filter((s) => !(s.k === "big" && s.text === "14%"))
+      .map((s): Shot => (s.k === "g" && s.g === "race" ? { ...s, label: "labels" } : s)),
   // the Hindi hook also gives the rupee figure; Hindi lines run longer, so a few extra cuts keep the pace
   extra: (hw) => [
     { k: "big", text: "₹1.2 lakh crore", bg: "cream", at: hw("hook1", 9) - 0.04, cap: "top", tone: "dark" },
     { k: "img", src: "meta-hq.jpg", at: hw("hook1", 13) + 0.35, bw: true, pos: "42% 50%", zoom: [1.2, 1.35] },
     { k: "vid", src: "wang-yc3.mp4", at: hw("name", 3) - 0.04 }, // अलेक्ज़ेंडर
     { k: "vid", src: "wang-yc4.mp4", at: hw("origin", 13) - 0.04 }, // AI.
-    { k: "vid", src: "servers2.mp4", at: hw("labels", 17) - 0.04, bw: true }, // ट्रेन
+    { k: "g", g: "pipeline", at: hw("feeds", 3) - 0.04, cap: "low" }, // #1 nahi banati... AI ko khaana khilaati
+    { k: "g", g: "clients", at: hw("labels", 16) - 0.04, cap: "low" }, // #2 AI train hota hai
+    { k: "g", g: "layoffs", at: hw("layoffs", 0) - 0.06, mark: hw("layoffs", 7), cap: "low" }, // #4 ek mahine baad ... 14%
     { k: "img", src: "zuck-team.jpg", at: hw("why", 6) - 0.04, pos: "50% 45%", bw: true, zoom: [1.15, 1.3] }, // इतना
     { k: "img", src: "meta-hq.jpg", at: hw("llama", 12) - 0.04, bw: true, zoom: [1.3, 1.45] }, // आया।
     { k: "vid", src: "wang-yc3.mp4", at: hw("deal", 17) - 0.04 }, // कमान
-    { k: "vid", src: "office2.mp4", at: hw("reframe", 12) - 0.04, red: true }, // कंपनी
+    { k: "g", g: "balance", at: hw("reframe", 8) - 0.04, cap: "low" }, // #5 Aur uski keemat chukaayi... company ne
   ],
 });
