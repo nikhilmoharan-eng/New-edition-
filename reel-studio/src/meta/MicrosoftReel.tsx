@@ -24,8 +24,8 @@ const shots = ({ w, at, lineStart }: Timing): Shot[] => [
   { k: "big", text: "2015.", bg: "cream", at: lineStart("founded"), cap: "top" },
   { k: "img", src: "devday.jpg", at: at("founded", 3), bw: true, zoom: [1.25, 1.4] },
   // "But AI needs giant computers... and giant computers need money."
-  { k: "img", src: "datacenter.jpg", card: true, at: lineStart("compute") },
-  { k: "vid", src: "servers1.mp4", at: at("compute", 5) },
+  { k: "g", g: "gpus", at: lineStart("compute"), cap: "low" },
+  { k: "g", g: "fuel", at: at("compute", 5), cap: "low" },
   // "So Microsoft paid in cash, and in Azure cloud credits."
   { k: "vid", src: "nadella1.mp4", fit: "blur", zoom: [1.0, 1.06], at: lineStart("cash"), label: { title: "SATYA NADELLA", sub: "CEO, Microsoft" }, cap: "top" },
   { k: "g", g: "logoCard", logo: "logo-azure.png", label: "CLOUD CREDITS", at: at("cash", 7), cap: "low", tone: "dark" },

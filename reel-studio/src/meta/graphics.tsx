@@ -691,7 +691,117 @@ export const GStructure: React.FC<GProps> = () => {
   );
 };
 
+
+/* One GPU chip, drawn in code: package, gold pins, die. `on` 0..1 lights it up. */
+const Chip: React.FC<{ size: number; on: number; label?: boolean }> = ({ size, on, label }) => (
+  <div
+    style={{
+      width: size,
+      height: size,
+      borderRadius: size * 0.08,
+      background: "linear-gradient(145deg, #2a2a2a, #121212)",
+      border: `${Math.max(1, size * 0.02)}px solid rgba(217,178,107,${0.25 + 0.6 * on})`,
+      boxShadow: on > 0 ? `0 0 ${size * 0.35 * on}px rgba(217,178,107,${0.55 * on})` : "none",
+      position: "relative",
+      flexShrink: 0,
+    }}
+  >
+    {/* pins */}
+    <div style={{ position: "absolute", inset: -size * 0.06, borderRadius: size * 0.1, background: `repeating-linear-gradient(90deg, rgba(217,178,107,0.55) 0 ${size * 0.03}px, transparent ${size * 0.03}px ${size * 0.075}px)`, zIndex: -1, opacity: 0.8 }} />
+    {/* die */}
+    <div
+      style={{
+        position: "absolute",
+        inset: size * 0.2,
+        borderRadius: size * 0.04,
+        background: `linear-gradient(135deg, rgba(${Math.round(60 + 190 * on)},${Math.round(60 + 140 * on)},${Math.round(60 + 60 * on)},1), #1b1b1b)`,
+        backgroundSize: "cover",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {label ? <div style={{ fontFamily: MONO, fontWeight: 700, fontSize: size * 0.13, color: on > 0.5 ? "#141414" : "#888", letterSpacing: size * 0.01 }}>GPU</div> : null}
+    </div>
+  </div>
+);
+
+/* "AI needs giant computers": one chip -> the camera pulls back on a field of chips lighting up,
+   counter to 10,000 GPUs (the Azure supercomputer Microsoft built for OpenAI, announced May 2020). */
+export const GGpus: React.FC<GProps> = ({ dur }) => {
+  const f = useCurrentFrame();
+  const { u, w, h } = useU();
+  const N = 29; // 29 x 29 grid, fills the frame when pulled back
+  const cell = 150 * u;
+  const pull = interpolate(f, [8, Math.max(20, dur - 10)], [0, 1], { ...clamp, easing: INOUT });
+  const zoom = interpolate(pull, [0, 1], [3.2, 0.5]);
+  const reach = interpolate(f, [4, dur - 6], [0, N * 0.75], clamp); // light-up wave radius in cells
+  const count = Math.round(interpolate(f, [6, dur - 8], [1, 10000], { ...clamp, easing: Easing.in(Easing.cubic) }));
+  const c = (N - 1) / 2;
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, #1a1712 0%, #050505 70%)", overflow: "hidden" }}>
+      <div style={{ position: "absolute", left: w / 2 - (N * cell) / 2, top: h / 2 - (N * cell) / 2 - 40 * u, width: N * cell, height: N * cell, scale: String(zoom), rotate: `${interpolate(pull, [0, 1], [0, -5])}deg`, display: "grid", gridTemplateColumns: `repeat(${N}, ${cell}px)`, placeItems: "center" }}>
+        {Array.from({ length: N * N }, (_, i) => {
+          const d = Math.hypot((i % N) - c, Math.floor(i / N) - c);
+          const on = Math.min(1, Math.max(0, reach - d + 1));
+          return <Chip key={i} size={cell * 0.72} on={on} label={d === 0} />;
+        })}
+      </div>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 35%, rgba(0,0,0,0.85) 100%)" }} />
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 300 * u, background: "linear-gradient(rgba(5,5,5,0.92) 55%, rgba(5,5,5,0))" }} />
+      <div style={{ position: "absolute", top: 60 * u, width: "100%", textAlign: "center", opacity: prog(f, 4, 12) }}>
+        <div style={{ fontFamily: DISPLAY, fontWeight: 800, fontSize: 120 * u, color: "#fff", textShadow: "0 0 30px rgba(217,178,107,0.5)", fontVariantNumeric: "tabular-nums" }}>
+          {count.toLocaleString("en-US")} <span style={{ color: C.gold }}>{count === 1 ? "GPU" : "GPUs"}</span>
+        </div>
+        <div style={{ fontFamily: MONO, fontSize: 24 * u, letterSpacing: 6 * u, color: "#a9a39a", marginTop: 6 * u }}>AZURE SUPERCOMPUTER FOR OPENAI · 2020</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/* "...and giant computers need money": bills fly into a glowing chip and burn up; a FUNDS meter drains to red. */
+export const GFuel: React.FC<GProps> = ({ dur }) => {
+  const f = useCurrentFrame();
+  const { u, w, h } = useU();
+  const cx = w / 2, cy = h / 2 - 40 * u;
+  const fuel = interpolate(f, [6, dur - 8], [1, 0.06], { ...clamp, easing: Easing.in(Easing.quad) });
+  const low = fuel < 0.25;
+  const blink = low ? 0.55 + 0.45 * Math.sin(f * 0.9) : 1;
+  const BILLS = 30;
+  const hot = 0.6 + 0.4 * Math.sin(f * 0.5);
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, #1b1510 0%, #050505 72%)", overflow: "hidden" }}>
+      {/* heat behind the chip */}
+      <div style={{ position: "absolute", left: cx - 380 * u, top: cy - 380 * u, width: 760 * u, height: 760 * u, borderRadius: "50%", background: `radial-gradient(circle, rgba(255,140,40,${0.28 * hot}) 0%, rgba(215,38,43,0.08) 45%, rgba(0,0,0,0) 70%)` }} />
+      {Array.from({ length: BILLS }, (_, i) => {
+        const t0 = 2 + i * ((dur - 16) / BILLS);
+        const p = interpolate(f, [t0, t0 + 18], [0, 1], { ...clamp, easing: Easing.in(Easing.quad) });
+        if (p <= 0 || p >= 1) return null;
+        const side = i % 2 ? 1 : -1;
+        const sx = cx + side * (w * 0.55), sy = cy + ((i * 97) % 600 - 300) * u;
+        const x = interpolate(p, [0, 1], [sx, cx]);
+        const y = interpolate(p, [0, 1], [sy, cy]) - Math.sin(p * Math.PI) * 120 * u;
+        return (
+          <div key={i} style={{ position: "absolute", left: x - 130 * u, top: y - 59 * u, width: 260 * u, height: 118 * u, borderRadius: 8 * u, background: "linear-gradient(135deg, #8fbf8a, #3f7a47)", border: `${4 * u}px solid #d8ead2`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: DISPLAY, fontWeight: 800, fontSize: 60 * u, color: "#1e4424", rotate: `${side * (20 + p * 160) + i * 13}deg`, scale: String(interpolate(p, [0, 0.8, 1], [1, 0.7, 0.1])), opacity: interpolate(p, [0, 0.1, 0.85, 1], [0, 1, 1, 0]), boxShadow: "0 10px 30px rgba(0,0,0,0.5)" }}>
+            $
+          </div>
+        );
+      })}
+      <div style={{ position: "absolute", left: cx - 190 * u, top: cy - 190 * u, scale: String(1 + 0.03 * Math.sin(f * 0.8)) }}>
+        <Chip size={380 * u} on={0.85 + 0.15 * hot} label />
+      </div>
+      {/* FUNDS meter */}
+      <div style={{ position: "absolute", right: 120 * u, top: cy - 260 * u, width: 70 * u, height: 520 * u, border: `${4 * u}px solid #555`, borderRadius: 14 * u, padding: 8 * u, display: "flex", alignItems: "flex-end", opacity: prog(f, 0, 10) }}>
+        <div style={{ width: "100%", height: `${fuel * 100}%`, borderRadius: 8 * u, background: low ? C.red : fuel < 0.5 ? "#e0a030" : "#5fb86a", opacity: blink, boxShadow: low ? "0 0 24px rgba(215,38,43,0.7)" : "none" }} />
+      </div>
+      <div style={{ position: "absolute", right: 70 * u, width: 170 * u, top: cy + 280 * u, textAlign: "center", fontFamily: MONO, fontSize: 26 * u, letterSpacing: 4 * u, color: low ? C.red : "#a9a39a", opacity: prog(f, 0, 10) * (low ? blink : 1) }}>{low ? "LOW" : "FUNDS"}</div>
+    </AbsoluteFill>
+  );
+};
+
 export const GRAPHICS: Record<string, React.FC<GProps>> = {
+  gpus: GGpus,
+  fuel: GFuel,
   strike: GStrikeLogo,
   logoCard: GLogoCard,
   logoPop: GLogoPop,

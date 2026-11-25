@@ -402,6 +402,11 @@ export const makeMetaReel = (L: Lang) => {
       if (s.k === "g" && (s.g === "strike" || s.g === "snap") && s.mark) c.push({ at: s.mark + 0.08, src: "stamp", vol: 0.42 });
       if (s.k === "img" && s.stamp) c.push({ at: s.stamp.at, src: "stamp", vol: 0.45 });
       if (s.k === "g" && s.g === "termSheet") c.push({ at: s.at + 0.2, src: "ding", vol: 0.2 });
+      if (s.k === "g" && s.g === "gpus") c.push({ at: s.at + 0.15, src: "powerup", vol: 0.3 });
+      if (s.k === "g" && s.g === "fuel") {
+        for (let k = 0; k < 6; k++) c.push({ at: s.at + 0.35 + k * 0.42, src: k % 2 ? "coin" : "bills", vol: k % 2 ? 0.12 : 0.16 });
+        c.push({ at: s.at + 2.2, src: "alarm", vol: 0.14 });
+      }
       if (s.k === "g" && s.g === "quote") for (let k = 0; k < 14; k++) c.push({ at: s.at + 0.1 + k * 0.06, src: "key", vol: 0.05 });
     });
     c.push({ at: lineStart("crazy") - 1.5, src: "riser", vol: 0.25 });
