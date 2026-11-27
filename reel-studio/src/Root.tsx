@@ -5,7 +5,7 @@ import { FPS, TOTAL_FRAMES } from "./reel/timeline";
 import { MetaReel, TOTAL_FRAMES as META_FRAMES } from "./meta/MetaReel";
 import { META_HI } from "./meta/MetaReelHi";
 import { GOOGLE_EN, GOOGLE_HI } from "./meta/GoogleReel";
-import { MSFT_EN, MSFT_HI } from "./meta/MicrosoftReel";
+import { MSFT_EN, MSFT_HI, MSFT_HI_HOUSE } from "./meta/MicrosoftReel";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -30,6 +30,8 @@ export const RemotionRoot: React.FC = () => (
     <Folder name="Microsoft-OpenAI-13B">
       <Composition id="Msft16x9" component={MSFT_EN.Reel} width={1920} height={1080} fps={30} durationInFrames={MSFT_EN.totalFrames} />
       <Composition id="MsftHi16x9" component={MSFT_HI.Reel} width={1920} height={1080} fps={30} durationInFrames={MSFT_HI.totalFrames} />
+      {/* reference "house" style: fast noun-cut hook, centred captions, yellow-marker press inserts */}
+      <Composition id="MsftHiHouse16x9" component={MSFT_HI_HOUSE.Reel} width={1920} height={1080} fps={30} durationInFrames={MSFT_HI_HOUSE.totalFrames} />
     </Folder>
   </>
 );

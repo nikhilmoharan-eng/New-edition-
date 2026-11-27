@@ -105,3 +105,50 @@ export const MSFT_HI = makeMetaReel({
     { k: "img", src: "altman.jpg", at: hw("fired", 13) - 0.04, pos: "50% 20%", zoom: [1.0, 1.12] }, // nikaal
   ],
 });
+
+/** Reel 4 Hindi in the reference "house" style: 0.5 s noun cuts in the hook, centred captions,
+    press inserts with a yellow marker. Same voice, music and captions as MSFT_HI. */
+const press = (at: number, label: string, text: string, text2: string): Shot => ({ k: "g", g: "press", at, label, text, text2, cap: "low", tone: "dark" });
+export const MSFT_HI_HOUSE = makeMetaReel({
+  ...base,
+  tl: hiRaw as TLT,
+  base: EN,
+  vo: "microsoft-openai-hi/vo.wav",
+  music: "microsoft-openai-hi/music.wav",
+  beats: hiBeats.beats,
+  capCenter: true,
+  hide: { hook1: [4, 5], hook2: [9, 10, 13, 14, 15], founded: [0], chatgpt: [1], allin: [8, 9], total: [3, 4], restructure: [16] },
+  map: {
+    hook1: { 4: 4, 6: 7 },
+    hook2: { 8: 9 },
+    founded: { 3: 4 },
+    compute: { 5: 7 },
+    cash: { 7: 9 },
+    chatgpt: { 4: 6, 6: 8 },
+    allin: { 4: 8 },
+    total: { 3: 3 },
+    fired: { 10: 10 },
+    offer: { 8: 11 },
+    back: { 3: 3 },
+    rival: { 5: 9 },
+    restructure: { 13: 16 },
+    outro1: { 5: 4 },
+  },
+  extra: (hw) => [
+    // hook: a new visual on every noun, about every 0.5 s
+    { k: "img", src: "msft-sign.jpg", at: hw("hook1", 1) - 0.04, zoom: [1.15, 1.25] }, // mein
+    { k: "g", g: "logoPop", logo: "logo-msft.png", at: hw("hook1", 2) - 0.04 }, // Microsoft
+    { k: "img", src: "nadella.jpg", at: hw("hook1", 3) - 0.1, pos: "50% 18%", zoom: [1.0, 1.08] }, // ne
+    { k: "img", src: "msft-courtyard.jpg", at: hw("hook1", 6) - 0.04, bw: true, pos: "30% 62%", zoom: [1.3, 1.4] }, // diye
+    { k: "img", src: "msft-stock.jpg", at: hw("hook2", 2) - 0.04, bw: true, zoom: [1.3, 1.45] }, // baad
+    { k: "img", src: "nadella-altman.jpg", at: hw("hook2", 4) - 0.04, pos: "50% 20%", zoom: [1.0, 1.08] }, // hisse
+    { k: "img", src: "msft-sign.jpg", at: hw("hook2", 8) - 0.04, bw: true, zoom: [1.35, 1.5] }, // kareeb
+    { k: "big", text: "₹12 lakh crore", bg: "cream", at: hw("hook2", 11) - 0.04, cap: "top" },
+    // press inserts (yellow marker), dates from the fact sources in script/microsoft-openai.md
+    press(hw("allin", 6) - 0.04, "JAN 23, 2023", "Microsoft announces a multibillion-dollar investment in OpenAI", "multibillion-dollar investment"),
+    press(hw("fired", 13) - 0.04, "NOV 17, 2023", "OpenAI's board removes Sam Altman as CEO", "removes Sam Altman"),
+    press(hw("restructure", 11) - 0.04, "OCT 28, 2025", "Microsoft keeps about 27% of the new OpenAI", "about 27%"),
+    { k: "vid", src: "altman3.mp4", at: hw("offer", 14) - 0.04 },
+    { k: "img", src: "devday.jpg", at: hw("founded", 9) - 0.04, pos: "70% 40%", zoom: [1.1, 1.2] }, // jo poori insaaniyat
+  ],
+});

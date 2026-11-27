@@ -1,7 +1,7 @@
 import React from "react";
 import { Video } from "@remotion/media";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { clamp, DISPLAY, MONO, prog, useU } from "../reel/kit";
+import { clamp, DISPLAY, MONO, prog, SANS, useU } from "../reel/kit";
 import type { GProps } from "./graphics";
 import { M } from "./graphics";
 
@@ -223,4 +223,36 @@ export const GBalance: React.FC<GProps> = ({ dur }) => {
   );
 };
 
-export const STORYBOARD = { pipeline: GPipeline, clients: GClients, layoffs: GLayoffs, balance: GBalance };
+
+/* Reference-style press insert: a plain news article (no outlet branding), one phrase swept with a yellow marker.
+   text = headline, text2 = the phrase to highlight (must appear in text), label = date kicker. */
+export const GPress: React.FC<GProps> = ({ dur, text = "", text2 = "", label = "" }) => {
+  const f = useCurrentFrame();
+  const { u } = useU();
+  const sweep = interpolate(f, [8, 20], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+  const i = text2 ? text.indexOf(text2) : -1;
+  const [a, b, c] = i >= 0 ? [text.slice(0, i), text2, text.slice(i + text2.length)] : [text, "", ""];
+  return (
+    <AbsoluteFill style={{ background: "#d9d6cf", overflow: "hidden" }}>
+      <AbsoluteFill style={{ scale: String(interpolate(f, [0, dur], [1.0, 1.07])), rotate: `${interpolate(f, [0, dur], [-1.2, 0.4])}deg`, justifyContent: "center", alignItems: "center" }}>
+        <div style={{ width: 1300 * u, padding: `${70 * u}px ${90 * u}px`, background: "#ffffff", boxShadow: `0 ${30 * u}px ${90 * u}px rgba(0,0,0,0.25)`, translate: `0px ${-70 * u}px` }}>
+          <div style={{ fontFamily: MONO, fontSize: 24 * u, letterSpacing: 4 * u, color: "#8a8a8a", marginBottom: 22 * u }}>{label}</div>
+          <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 76 * u, lineHeight: 1.12, color: "#111", letterSpacing: -1.5 * u }}>
+            {a}
+            <span style={{ backgroundImage: "linear-gradient(#F5C518, #F5C518)", backgroundRepeat: "no-repeat", backgroundSize: `${sweep * 100}% 88%`, backgroundPosition: "0 60%", padding: `0 ${4 * u}px` }}>{b}</span>
+            {c}
+          </div>
+          {/* soft-focus body text */}
+          <div style={{ marginTop: 36 * u, display: "flex", flexDirection: "column", gap: 16 * u, filter: `blur(${3 * u}px)`, opacity: 0.55 }}>
+            {[96, 88, 93, 60].map((wd, k) => (
+              <div key={k} style={{ height: 18 * u, width: `${wd}%`, background: "#9a9a9a", borderRadius: 4 * u }} />
+            ))}
+          </div>
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+export const STORYBOARD = {
+  press: GPress, pipeline: GPipeline, clients: GClients, layoffs: GLayoffs, balance: GBalance };

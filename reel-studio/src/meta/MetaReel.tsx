@@ -167,6 +167,8 @@ export type Lang = {
   tape?: string;
   /** beat times from scripts/beats.py; each cut moves to the nearest beat within `beatSnap` s */
   beats?: number[];
+  /** reference "house" style: captions dead centre on photos and footage */
+  capCenter?: boolean;
   beatSnap?: number;
 };
 
@@ -384,7 +386,10 @@ export const makeMetaReel = (L: Lang) => {
     .sort((x, y) => x.at - y.at);
 
   const theme: Theme = L.theme ?? "classic";
-  const look = (s: Shot) => (theme !== "classic" && s.k === "big" ? { ...lookOf(s), tone: "light" as Tone } : lookOf(s));
+  const look = (s: Shot) => {
+    if (L.capCenter && (s.k === "img" || s.k === "vid") && !s.card) return { pos: "center" as CapPos, tone: "light" as Tone };
+    return theme !== "classic" && s.k === "big" ? { ...lookOf(s), tone: "light" as Tone } : lookOf(s);
+  };
   const shotAt = (t: number) => {
     let s = SHOTS[0];
     for (const x of SHOTS) if (x.at <= t + 1e-6) s = x;
